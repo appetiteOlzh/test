@@ -1,0 +1,11 @@
+{
+  "applinks": {
+    "apps": [],
+    "details": [
+      {
+        "appID": "W559VX922X.com.monclips",
+        "paths": ["/share/p/*", "/share/c/*", "/p/*", "/c/*"]
+      }
+    ]
+  }
+}

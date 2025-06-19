@@ -1,0 +1,320 @@
+{
+  "meta": {
+    "title": "MonClips - Ваша видео галерея",
+    "description": " Ваша видео галерея - Сохраняйте свои видео в приложении, группируйте их по своим правилам и делитесь папками с друзьями"
+  },
+  "category_meta": {
+    "title": "С Вами поделились папкой \"{folder}\"",
+    "description": "С Вами поделились папкой \"{folder}\" в приложении Monclips Gallery. Перейдите по ссылке, что бы увидеть фото."
+  },
+  "post_meta": {
+    "title": "С Вами поделились постом",
+    "description": "С Вами поделились постом в приложении Monclips Gallery. Перейдите по ссылке, что бы увидеть фото."
+  },
+  "Hero": {
+    "title": "Ваша Видео <br />Галерея",
+    "description": "Сохраняйте свои видео в приложении, группируйте их по своим правилам <br/>и делитесь папками с друзьями"
+  },
+  "Essence": {
+    "title": "MonClips - лучший облачный видеоорганайзер",
+    "description": "MonClips — это лучшее приложение для тех, кто ценит порядок и удобство в работе с видео. Сохраняйте свои видео в приложении, группируйте их по своим правилам и делитесь папками с друзьями — всё это возможно с MonClips!"
+  },
+  "HowItWorks": {
+    "title": "Как работает приложение?",
+    "step": "Шаг {step}",
+    "steps": {
+      "step_1_description": "Храните и сортируйте <br />свои видео легко",
+      "step_2_description": "Сохраняйте видео <br />из галереи и соц.сетей",
+      "step_3_description": "Сохраняйте свои <br />видео в приложении",
+      "step_4_description": "Упрощайте просмотр <br />и организацию видео",
+      "step_5_description": "Ваши видео не займут <br />место на телефоне"
+    }
+  },
+  "Application": {
+    "title": "Освободите память на телефоне <br />и упорядочьте контент!",
+    "description": "Скачайте MonClips сегодня и организуйте свои видео просто и стильно!"
+  },
+  "Open": {
+    "title": "Загружайте <br/>свои видео с<br/>MonClips"
+  },
+  "Blog": {
+    "title": "Полезный блог",
+    "description": "Изучайте наш блог в поисках советов, вдохновения и последних новостей",
+    "learn_more": "Читать далее",
+    "list": {
+      "blog1": {
+        "title": "Освободите память телефона"
+      }
+    },
+    "free-up-your-phones-memory": {
+      "meta_title": "MonClips: Освободите память телефона",
+      "meta_description": "MonClips - реальное решение для тех, кто хочет освободить место на своем устройстве.",
+      "title": "MonClips: Освободите память телефона",
+      "content": "<h3>MonClips - реальное решение для тех, кто хочет освободить место на своем устройстве.</h3><p>Переносите видео и фото с телефона в MonClips, освобождайте память для новых воспоминаний. Удобно загружайте файлы, сортируйте их по папкам и делитесь с друзьями.</p><h3>Основные возможности MonClips</h3><h4>1. Легкая загрузка медиа</h4><p>Загружайте до 200 видеофайлов бесплатно - экономьте место на вашем телефоне.</p><h4>2. Удобная организация</h4><p>Создавайте папки для видеоконтента и держите контент в одном месте, будь то путешествия, семья или просто видео, которые вам нравятся.</p><h4>3. Обмен с друзьями</h4><p>MonClips позволяет легко делиться вашими видео с друзьями и семьей — просто отправьте им ссылки на папки.</p><h3>С MonClips вы можете очистить память телефона и держать ваши фото и видео всегда под рукой.</h3><p>Загрузите MonClips и начните организовывать свои видео уже сегодня!</p>"
+    }
+  },
+  "Sharing": {
+    "folder": "Альбом",
+    "you_were_shared": "С вами поделились альбомом в MonClips Gallery",
+    "author": "Автор",
+    "qr": "Отсканируйте QR-код для загрузки приложения </br>MonClips Gallery",
+    "download_from_stores": "Загрузка из магазинов приложений",
+    "download_from_stores_extended_text": "Скачайте мобильное приложение, <br/>чтобы удобно просматривать <br/>и загружать фото",
+    "no_qr": "Воспользуйтесь всеми функциями приложения"
+  },
+  "footer": {
+    "term": "Terms of use",
+    "policy": "Privacy Policy",
+    "eula": "End-User License Agreement (EULA)"
+  },
+  "common": {
+    "back_to_main": "Назад на Главную",
+    "open_in_monclips": "Открыть в Monclips",
+    "show_more": "показать больше",
+    "show_less": "скрыть",
+    "not_now": "Не сейчас",
+    "free_download": "Скачать бесплатно",
+    "download_monclips": "DOWNLOAD MONCLIPS"
+  },
+  "app": {
+    "button_action": "Скачать",
+    "open_in_app": "Открыть в приложении <br/>“MonClips”",
+    "monclips_gallery": "MonClips Gallery"
+  },
+  "Premium": {
+    "nav": {
+      "benefits": "Преимущества",
+      "how_it_works": "Как это работает",
+      "review": "Отзывы"
+    },
+    "title": "Премиум-галерея для твоих знаний",
+    "description": "Ты сохраняешь видео, чтобы учиться. </br/>Мы — чтобы ты больше их никогда не теряла.",
+    "loyal_users": "лояльных пользователей",
+    "average_rating": "средняя оценка приложения",
+    "description_section": "MonClips — это твоё личное пространство для роста, где каждое обучающее видео, которое ты любишь, разложено по красивым, умным папкам. <span class=\"text-yellow-darker\">Это порядок, который вдохновляет.</span>",
+    "app_capabilities": "Что ты можешь </br>с <span class=\"text-yellow-darker\">MonClips Gallery</span>?",
+    "features": {
+      "store": {
+        "title": "Хранить обучающие видео",
+        "description": "Сохраняй важные ролики по английскому, которые ты нашла в соцсетях или хранишь в галерее"
+      },
+      "watch": {
+        "title": "Пересматривай, когда хочешь",
+        "description": "Возвращайся к любимым рилсам, урокам и мотивационным видео без хаоса и лишнего поиска"
+      },
+      "sort": {
+        "title": "Сортировать их по темам",
+        "description": "Создавай умные папки: “Present Simple”, “Фразовые глаголы”, “Видео от @englishcoach” — чтобы всё было на своих местах"
+      }
+    },
+    "why_is_important": "Почему это <span class=\"text-yellow-darker\">важно</span>",
+    "importancy_description": "В обычной галерее всё смешано: фото, мемы, видео, скриншоты… ",
+    "unordinary": {
+      "title": "А ты — не обычная",
+      "description": "Ты хочешь учиться, структурно и красиво. MonClips помогает превратить телефон в твою личную библиотеку роста."
+    },
+    "benefits": {
+      "title": "Что ты <span class=\"text-yellow-darker\">получаешь</span>",
+      "photo": {
+        "title": "Фото бесплатно",
+        "description": "Безлимитное хранилище для фото"
+      },
+      "video": {
+        "title": "1 гб видео в Подарок",
+        "description": "Для загрузки и хранения видео"
+      },
+      "friend": {
+        "title": "+2 гб видео за подругу",
+        "description": "За каждую приглашённую подругу"
+      },
+      "space": {
+        "title": "в 10 раз больше места",
+        "description": "Чем в обычном облаке, благодаря технологии сжатия"
+      }
+    },
+    "how_to_use": {
+      "title": "<span class=\"text-yellow-darker\">Простой</span> путь",
+      "save_time": {
+        "title": "Экономьте время",
+        "description": "Сохраняйте нужное видео из галереи или соцсетей"
+      },
+      "organize": {
+        "title": "Удобно организуйте",
+        "description": "Назовите свою первую папку: “Лайфхаки английского”"
+      },
+      "focus": {
+        "title": "Держите фокус",
+        "description": "Ощутите спокойствие, когда знания всегда под рукой"
+      }
+    },
+    "review": {
+      "title": "Что говорят <span class=\"text-yellow-darker\">наши пользователи?</span>",
+      "list": {
+        "0": {
+          "name": "Алина, eduблогер",
+          "text": "Я не просто наводила порядок. Я почувствовала, что снова управляю своей учёбой."
+        },
+        "1": {
+          "name": "Дарья, преподаватель",
+          "text": "MonClips стал для меня личной системой. Это как Pinterest, только для знаний."
+        },
+        "2": {
+          "name": "Лейла, изучает язык самостоятельно",
+          "text": "Теперь мои видео по английскому не теряются среди мемов. MonClips — это порядок, который мотивирует."
+        }
+      }
+    },
+    "step_up": {
+      "title": "Создайте своё пространство для роста",
+      "description": "Сделай первый шаг к системе, в которую хочется возвращаться"
+    }
+  },
+  "Family": {
+    "nav": {
+      "benefits": "Benefits",
+      "how_it_works": "How It Works",
+      "review": "Reviews"
+    },
+    "title": "Don’t lose your family’s precious moments",
+    "description": "Save photos and videos </br>from chats — in one tap",
+    "loyal_users": "loyal users",
+    "average_rating": "average app rating",
+    "description_section": "I accidentally deleted the family chat. All my baby’s videos — gone. Now I use MonClips. Everything I love is saved and easy to find",
+    "description_section_author": "Anna, mom of two",
+    "app_capabilities": "WHAT CAN YOU DO WITH </br><span class=\"text-yellow-darker\">MonClips Gallery</span>?",
+
+    "why_is_important": "How many precious photos and videos have you <span class=\"text-yellow-darker\">lost in chats?</span>",
+    "importancy_description": "Photos of your kids. Videos from family. Little moments that made you smile — all sent through chats. But chats get messy. Important memories disappear. Sometimes you can’t find them. Sometimes you accidentally delete them.",
+    "dont_make_mistake": "Don’t let that happen again",
+    "how_to_use": {
+      "title": "MonClips helps you <span class=\"text-yellow-darker\">save what matters</span> — easily",
+      "save": {
+        "title": "Save photos & videos from any chat — in one tap"
+      },
+      "organize": {
+        "title": "Organize them into albums — family, kids, friends, trips…"
+      },
+      "easy_find": {
+        "title": "Quickly find and revisit your memories"
+      },
+      "easy_media": {
+        "title": "No more scrolling through conversations"
+      },
+      "no-lost": {
+        "title": "No more lost moments"
+      },
+      "privacy": {
+        "title": "Safe, private, and always with you"
+      }
+    },
+    "step_up": {
+      "title": "Your memories deserve more than a chat",
+      "description": "Save them with MonClips — today"
+    },
+    "faq": {
+      "title": "FAQ",
+      "questions": [
+        {
+          "question": "Is it free?",
+          "answer": "Yes — you get free storage for photos and 250 videos. Invite friends and get even more"
+        },
+        {
+          "question": "What happens if I delete a chat?",
+          "answer": "No worries — your saved photos and videos stay safe in MonClips"
+        },
+        {
+          "question": "Does it work with WhatsApp, Telegram, Messenger?",
+          "answer": "Yes — MonClips works with any chat app where you can save files"
+        }
+      ]
+    }
+  },
+  "Gallery": {
+    "nav": {
+      "benefits": "Преимущества",
+      "how_it_works": "Как это работает",
+      "review": "Отзывы"
+    },
+    "title": "MonClips - Новая облачная галерея",
+    "description": "Сохраняете рецепты, лайфхаки, уроки или мотивационные видео из социальных сетей, но потом не можете их найти? MonClips поможет вам навести порядок.",
+    "loyal_users": "лояльных пользователей",
+    "average_rating": "средняя оценка приложения",
+    "description_section": "MonClips — это твоё личное пространство для роста, где каждое обучающее видео, которое ты любишь, разложено по красивым, умным папкам. <span class=\"text-yellow-darker\">Это порядок, который вдохновляет.</span>",
+    "app_capabilities": "Что ты можешь </br>с <span class=\"text-yellow-darker\">MonClips Gallery</span>?",
+    "features": {
+      "store": {
+        "title": "УПОРЯДОЧИТЬ ВСЁ ВАЖНОЕ",
+        "description": "Больше никакого хаоса. Видео теперь по темам, а не в случайном порядке."
+      },
+      "watch": {
+        "title": "Пересматривай, когда хочешь",
+        "description": "Открывай, пересматривай, используй. MonClips помогает не терять важное в потоке"
+      },
+      "sort": {
+        "title": "Сортировать их по темам",
+        "description": "Учёба, вдохновение, рецепты, мотивация — каждое видео на своём месте."
+      }
+    },
+    "why_is_important": "Почему это <span class=\"text-yellow-darker\">важно</span>",
+    "importancy_description": "В обычной галерее всё смешано: фото, мемы, видео, скриншоты… ",
+    "unordinary": {
+      "title": "Порядок, в котором легко найти важное",
+      "description": "MonClips помогает навести порядок в твоих видео: разложи всё по папкам, находи нужное за секунды, пересматривай, когда действительно нужно."
+    },
+    "benefits": {
+      "title": "Что ты <span class=\"text-yellow-darker\">получаешь</span>",
+      "photo": {
+        "title": "Фото бесплатно",
+        "description": "Безлимитное хранилище для фото"
+      },
+      "video": {
+        "title": "Экономия памяти в 10 раз",
+        "description": "Не перегружайте телефон, 10 ГБ на телефоне ≈ 1 ГБ в MonClips Gallery"
+      },
+      "friend": {
+        "title": "1 гб видео в Подарок",
+        "description": "Просто пригласи одну подругу "
+      },
+      "space": {
+        "title": "Готова к большему?",
+        "description": "Купи доступ к расширенному хранилищу — когда тебе понадобится"
+      }
+    },
+    "how_to_use": {
+      "title": "<span class=\"text-yellow-darker\">Простой</span> путь",
+      "save_time": {
+        "title": "Экономьте время",
+        "description": "Сохраняйте нужное видео из галереи или соцсетей"
+      },
+      "organize": {
+        "title": "Удобно организуйте",
+        "description": "Назовите свою первую папку: “Рецепты”"
+      },
+      "focus": {
+        "title": "Держите фокус",
+        "description": "Ощутите спокойствие, когда знания всегда под рукой"
+      }
+    },
+    "review": {
+      "title": "Что говорят <span class=\"text-yellow-darker\">наши пользователи?</span>",
+      "list": {
+        "0": {
+          "name": "Алина, студентка",
+          "text": "MonClips помог мне организовать все мои обучающие видео. Теперь я легко нахожу нужный материал и продолжаю учиться"
+        },
+        "1": {
+          "name": "Дарья, преподаватель",
+          "text": "Отличное приложение для хранения и организации контента. Рекомендую всем!"
+        },
+        "2": {
+          "name": "Лейла, изучает язык самостоятельно",
+          "text": "Теперь мои видео по английскому не теряются среди мемов. MonClips — это порядок, который мотивирует."
+        }
+      }
+    },
+    "step_up": {
+      "title": "Создайте своё пространство для роста",
+      "description": "Сделай первый шаг к системе, в которую хочется возвращаться"
+    }
+  }
+}

@@ -1,0 +1,46 @@
+.animatable {
+  @apply transition ease-in-out duration-300;
+}
+
+.slide-up {
+  @apply translate-y-12 opacity-0;
+  &:nth-child(2) {
+    @apply delay-200;
+  }
+  &:nth-child(3) {
+    @apply delay-300;
+  }
+  &:nth-child(4) {
+    @apply delay-[0.4s];
+  }
+}
+.slide-left {
+  @apply translate-x-1/2 opacity-0;
+  &:nth-child(2) {
+    @apply delay-200;
+  }
+  &:nth-child(3) {
+    @apply delay-300;
+  }
+}
+.fade-in {
+  @apply opacity-0;
+}
+.animate .slide-up {
+  @apply translate-y-0 opacity-100;
+}
+.animate .slide-left {
+  @apply translate-x-0 opacity-100;
+}
+.animate .fade-in {
+  @apply opacity-100;
+}
+
+@keyframes scroll {
+  0% {
+    transform: translateX(0);
+  }
+  100% {
+    transform: translateX(-50%);
+  }
+}

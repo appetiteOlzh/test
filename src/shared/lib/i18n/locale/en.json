@@ -1,0 +1,320 @@
+{
+  "meta": {
+    "title": "MonClips - Your Video Gallery",
+    "description": "Your Cloud Video Gallery - Save your videos in the app, organize them your way, and share folders with friends"
+  },
+  "category_meta": {
+    "title": "The folder \"{folder}\" was shared with you",
+    "description": "The folder \"{folder}\" was shared with you in the Monclips Gallery app. Click the link to view the photos."
+  },
+  "post_meta": {
+    "title": "The post was shared with you",
+    "description": "The post was shared with you in the Monclips Gallery app. Click the link to view the photos."
+  },
+  "Hero": {
+    "title": "Your Video <br />Gallery",
+    "description": "Your Cloud Video Gallery - Save your videos in the app, organize them your way, and share folders with friends"
+  },
+  "Essence": {
+    "title": "MonClips — the best cloud video organizer!",
+    "description": "MonClips is the perfect app for those who value order and convenience in managing their videos. Save your videos in the app, organize them your way, and share folders with friends — all this is possible with MonClips!"
+  },
+  "HowItWorks": {
+    "title": "How It Works?",
+    "step": "Step {step}",
+    "steps": {
+      "step_1_description": "Create folders and <br />organize videos by topics",
+      "step_2_description": "Collect videos from the gallery & social media",
+      "step_3_description": "Save your videos <br />in the app",
+      "step_4_description": "Simplify video viewing <br />and organization",
+      "step_5_description": "Save and sort your <br />videos with ease"
+    }
+  },
+  "Application": {
+    "title": "Are you ready to upload your videos with ease?",
+    "description": "Download MonClips today and organize your videos with simplicity and style!"
+  },
+  "Open": {
+    "title": "Upload <br/>your videos<br/>on MonClips"
+  },
+  "Blog": {
+    "title": "Explore our blog",
+    "description": "Explore our blog for tips, inspiration, and the latest news",
+    "learn_more": "Learn more",
+    "list": {
+      "blog1": {
+        "title": "Free Up Your Phone’s Memory"
+      }
+    },
+    "free-up-your-phones-memory": {
+      "meta_title": "MonClips: Free Up Your Phone’s Memory",
+      "meta_description": "MonClips is the real solution for those who want to free up space on their device. With MonClips, you can clear your phone’s memory and always keep your photos and videos at your fingertips.",
+      "title": "MonClips: <br/>Free Up Your Phone’s Memory",
+      "content": "<h3>MonClips is the real solution for those who want to free up space on their device.</h3><p>Transfer videos and photos from your phone to MonClips, and make room for new memories. Easily upload files, sort them into folders, and share them with friends.</p><h3>Key Features of MonClips</h3><h4>1. Easy File Uploading</h4><p>Upload up to 200 video files for free — save space on your phone.</p><h4>2. Convenient Organization</h4><p>Create folders for your video content and keep everything in one place, whether it’s travel, family, or just videos you like.</p><h4>3. Sharing with Friends</h4><p>MonClips makes it easy to share your videos with friends and family — simply send them links to your folders.</p><h3>With MonClips, you can clear your phone’s memory and always keep your photos and videos at your fingertips.</h3><p>Download MonClips and start organizing your videos today!</p>"
+    }
+  },
+  "Sharing": {
+    "folder": "Albom",
+    "you_were_shared": "An albom has been shared with you in MonClips Gallery",
+    "author": "Author",
+    "qr": "Scan the QR code to download </br>the MonClips Gallery app",
+    "download_from_stores": "Download from app stores",
+    "download_from_stores_extended_text": "Download the mobile app for an easy way to view and upload photos",
+    "no_qr": "Take advantage of all the features of the application"
+  },
+  "footer": {
+    "term": "Terms of use",
+    "policy": "Privacy Policy",
+    "eula": "End-User License Agreement (EULA)"
+  },
+  "common": {
+    "back_to_main": "Back to Main",
+    "open_in_monclips": "Open in Monclips",
+    "show_more": "show more",
+    "show_less": "hide",
+    "not_now": "Not now",
+    "free_download": "DOWNLOAD FOR FREE",
+    "download_monclips": "DOWNLOAD MONCLIPS"
+  },
+  "app": {
+    "button_action": "Download",
+    "open_in_app": "Open in the app <br/>“MonClips Gallery”",
+    "monclips_gallery": "MonClips Gallery"
+  },
+  "Premium": {
+    "nav": {
+      "benefits": "Benefits",
+      "how_it_works": "How It Works",
+      "review": "Reviews"
+    },
+    "title": "A PREMIUM GALLERY FOR YOUR KNOWLEDGE",
+    "description": "You save videos to learn. We make sure you never lose them again.",
+    "loyal_users": "loyal users",
+    "average_rating": "average app rating",
+    "description_section": "MonClips is your personal growth space, where every educational video you love is stored in beautiful, smart folders. <span class=\"text-yellow-darker\">It’s the kind of order that inspires.</span>",
+    "app_capabilities": "WHAT CAN YOU DO WITH </br><span class=\"text-yellow-darker\">MonClips Gallery</span>?",
+    "features": {
+      "store": {
+        "title": "STORE LEARNING VIDEOS",
+        "description": "Save valuable English videos from social media or your phone gallery"
+      },
+      "watch": {
+        "title": "REWATCH ANYTIME",
+        "description": "Return to your favorite Reels, lessons, and motivational clips—without chaos or endless searching"
+      },
+      "sort": {
+        "title": "SORT THEM BY TOPICS",
+        "description": "Create smart folders like: “Present Simple”, “Phrasal Verbs”, “Videos from @englishcoach” — so everything is in its place."
+      }
+    },
+    "why_is_important": "WHY IT <span class=\"text-yellow-darker\">MATTERS</span>",
+    "importancy_description": "In your regular gallery, everything is mixed: photos, memes, videos, screenshots…",
+    "unordinary": {
+      "title": "BUT YOU’RE NOT ORDINARY",
+      "description": "You want to learn—clearly and beautifully. MonClips helps turn your phone into a personal growth library"
+    },
+    "benefits": {
+      "title": "WHAT YOU <span class=\"text-yellow-darker\">GET</span>",
+      "photo": {
+        "title": "PHOTOS – FREE",
+        "description": "Unlimited photo storage"
+      },
+      "video": {
+        "title": "1 GB OF VIDEO – AS A GIFT",
+        "description": "To upload and store your first videos"
+      },
+      "friend": {
+        "title": "+2 GB VIDEO FOR EACH FRIEND",
+        "description": "Invite a friend — get extra space"
+      },
+      "space": {
+        "title": "10X MORE STORAGE",
+        "description": "Than typical cloud services thanks to smart compression"
+      }
+    },
+    "how_to_use": {
+      "title": "<span class=\"text-yellow-darker\">A SIMPLE</span> PATH",
+      "save_time": {
+        "title": "SAVE TIME",
+        "description": "Upload the videos you need directly from your gallery or social media"
+      },
+      "organize": {
+        "title": "ORGANIZE WITH EASE",
+        "description": "Name your first folder: “English Lifehacks”"
+      },
+      "focus": {
+        "title": "STAY FOCUSED",
+        "description": "Feel the peace of mind that comes from having your knowledge at hand"
+      }
+    },
+    "review": {
+      "title": "WHAT OUR <span class=\"text-yellow-darker\">USERS SAY?</span>",
+      "list": {
+        "0": {
+          "name": "Emily, study vlogger",
+          "text": "I wasn’t just organizing—I finally felt in control of my learning"
+        },
+        "1": {
+          "name": "Rachel, high school teacher",
+          "text": "MonClips became my personal system. It’s like Pinterest, but for knowledge"
+        },
+        "2": {
+          "name": "Sophie, learning English on her own",
+          "text": "Now my English videos don’t get lost among memes. MonClips is motivation through order"
+        }
+      }
+    },
+    "step_up": {
+      "title": "CREATE YOUR OWN SPACE FOR GROWTH",
+      "description": "Take the first step toward a system you’ll love coming back to"
+    }
+  },
+  "Family": {
+    "nav": {
+      "benefits": "Benefits",
+      "how_it_works": "How It Works",
+      "review": "Reviews"
+    },
+    "title": "Don’t lose your family’s precious moments",
+    "description": "Save photos and videos </br>from chats — in one tap",
+    "loyal_users": "loyal users",
+    "average_rating": "average app rating",
+    "description_section": "I accidentally deleted the family chat. All my baby’s videos — gone. Now I use MonClips. Everything I love is saved and easy to find",
+    "description_section_author": "Anna, mom of two",
+    "app_capabilities": "WHAT CAN YOU DO WITH </br><span class=\"text-yellow-darker\">MonClips Gallery</span>?",
+
+    "why_is_important": "How many precious photos and videos have you <span class=\"text-yellow-darker\">lost in chats?</span>",
+    "importancy_description": "Photos of your kids. Videos from family. Little moments that made you smile — all sent through chats. But chats get messy. Important memories disappear. Sometimes you can’t find them. Sometimes you accidentally delete them.",
+    "dont_make_mistake": "Don’t let that happen again",
+    "how_to_use": {
+      "title": "MonClips helps you <span class=\"text-yellow-darker\">save what matters</span> — easily",
+      "save": {
+        "title": "Save photos & videos from any chat — in one tap"
+      },
+      "organize": {
+        "title": "Organize them into albums — family, kids, friends, trips…"
+      },
+      "easy_find": {
+        "title": "Quickly find and revisit your memories"
+      },
+      "easy_media": {
+        "title": "No more scrolling through conversations"
+      },
+      "no-lost": {
+        "title": "No more lost moments"
+      },
+      "privacy": {
+        "title": "Safe, private, and always with you"
+      }
+    },
+    "step_up": {
+      "title": "Your memories deserve more than a chat",
+      "description": "Save them with MonClips — today"
+    },
+    "faq": {
+      "title": "FAQ",
+      "questions": [
+        {
+          "question": "Is it free?",
+          "answer": "Yes — you get free storage for photos and 250 videos. Invite friends and get even more"
+        },
+        {
+          "question": "What happens if I delete a chat?",
+          "answer": "No worries — your saved photos and videos stay safe in MonClips"
+        },
+        {
+          "question": "Does it work with WhatsApp, Telegram, Messenger?",
+          "answer": "Yes — MonClips works with any chat app where you can save files"
+        }
+      ]
+    }
+  },
+  "Gallery": {
+    "nav": {
+      "benefits": "Benefits",
+      "how_it_works": "How It Works",
+      "review": "Reviews"
+    },
+    "title": "MonClips - A NEW CLOUD GALLERY",
+    "description": "You save recipes, life hacks, lessons, or motivational videos from social media — but then can’t find them? MonClips helps you bring order to the chaos",
+    "loyal_users": "loyal users",
+    "average_rating": "average app rating",
+    "description_section": "MonClips is your personal space for growth — a place where every educational video you love is beautifully organized into smart folders. <span class=\"text-yellow-darker\">It’s the kind of order that inspires.</span>",
+    "app_capabilities": "WHAT CAN YOU DO WITH </br><span class=\"text-yellow-darker\">MonClips Gallery</span>?",
+    "features": {
+      "store": {
+        "title": "ORGANIZE WHAT MATTERS",
+        "description": "No more chaos. Your videos are now sorted by themes, not scattered randomly."
+      },
+      "watch": {
+        "title": "REWATCH WHENEVER YOU NEED",
+        "description": "Open, review, apply. MonClips helps you keep important content within reach."
+      },
+      "sort": {
+        "title": "SORT BY TOPICS",
+        "description": "Learning, inspiration, recipes, motivation — every video is in its place."
+      }
+    },
+    "why_is_important": "WHY IT <span class=\"text-yellow-darker\">MATTERS</span>",
+    "importancy_description": "In your regular gallery, everything is mixed: photos, memes, videos, screenshots…",
+    "unordinary": {
+      "title": "Order that makes what matters easy to find",
+      "description": "MonClips helps bring order to your videos: sort everything into folders, find what you need in seconds, and rewatch only when it really matters."
+    },
+    "benefits": {
+      "title": "WHAT YOU <span class=\"text-yellow-darker\">GET</span>",
+      "photo": {
+        "title": "PHOTOS – FREE",
+        "description": "Unlimited storage for your pictures"
+      },
+      "video": {
+        "title": "10× Less Space Used",
+        "description": "Don’t overload your phone: 10 GB on your device = 1 GB in MonClips Gallery"
+      },
+      "friend": {
+        "title": "1 GB Bonus Video Storage",
+        "description": "Just invite a friend"
+      },
+      "space": {
+        "title": "Ready for More?",
+        "description": "Upgrade to extended storage — only when you need it"
+      }
+    },
+    "how_to_use": {
+      "title": "<span class=\"text-yellow-darker\">A SIMPLE</span> PATH",
+      "save_time": {
+        "title": "SAVE TIME",
+        "description": "Save important videos from your gallery or social media"
+      },
+      "organize": {
+        "title": "ORGANIZE WITH EASE",
+        "description": "Name your first folder: “Recipes”"
+      },
+      "focus": {
+        "title": "STAY FOCUSED",
+        "description": "Feel calm knowing your knowledge is always at hand"
+      }
+    },
+    "review": {
+      "title": "WHAT OUR <span class=\"text-yellow-darker\">USERS SAY?</span>",
+      "list": {
+        "0": {
+          "name": "Emily, student",
+          "text": "MonClips helped me organize all my learning videos. Now I can easily find what I need and keep learning."
+        },
+        "1": {
+          "name": "Rachel, teacher",
+          "text": "Great app for storing and organizing content. I recommend it to everyone!"
+        },
+        "2": {
+          "name": "Sophie, learning English on her own",
+          "text": "Now my English videos don’t get lost among memes. MonClips is the kind of order that keeps you motivated"
+        }
+      }
+    },
+    "step_up": {
+      "title": "CREATE YOUR OWN SPACE FOR GROWTH",
+      "description": "Take the first step toward a system you’ll love coming back to"
+    }
+  }
+}
