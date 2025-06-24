@@ -2,7 +2,7 @@
 import { FC, useState } from "react";
 import { useForm } from "react-hook-form";
 import { zodResolver } from "@hookform/resolvers/zod";
-import { FormUI, Modal } from "@/shared/ui";
+import { FormUI, Loader, Modal } from "@/shared/ui";
 import { RecaptchaLoader } from "@/shared/ui/form/recaptch-loader";
 import { formSchema, FromType } from "../data";
 
@@ -56,7 +56,11 @@ export const Form: FC = () => {
           Ошибка при обработке формы
         </p>
       ) : null}
-
+      {isLoading ? (
+        <div className="absolute bg-[#181818]/30 inset-0 flex items-center justify-center z-50">
+          <Loader />
+        </div>
+      ) : null}
       <form onSubmit={handleSubmit(onSubmit)}>
         <div className="mb-2.5">
           <FormUI.Input

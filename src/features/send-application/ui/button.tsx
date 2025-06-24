@@ -1,10 +1,14 @@
 "use client";
 import { FC, useState } from "react";
+import { twMerge } from "tailwind-merge";
+import cn from "classnames";
 import { Modal } from "@/shared/ui/modal";
 import { Form } from "./form";
-// import { Form } from "./form";
 
-export const SendApplicationButton: FC = () => {
+export const SendApplicationButton: FC<{
+  buttonText?: string;
+  buttonClassName?: string;
+}> = ({ buttonText, buttonClassName = "" }) => {
   const [isOpen, setOpen] = useState(false);
 
   const onClick = () => {
@@ -15,10 +19,15 @@ export const SendApplicationButton: FC = () => {
   return (
     <>
       <button
-        className="bg-gradient-to-br from-[#018C6E] via-[#014F42] to-[#035846] py-4 px-7 rounded-full text-yellow uppercase font-bold w-full md:w-72 block text-center"
+        className={twMerge(
+          cn(
+            "bg-gradient-to-br from-[#018C6E] via-[#014F42] to-[#035846] py-4 px-7 rounded-full text-yellow uppercase font-bold w-full md:w-72 block text-center",
+            buttonClassName
+          )
+        )}
         onClick={onClick}
       >
-        Оставить заявку
+        {buttonText ? buttonText : "Оставить заявку"}
       </button>
       <Modal
         isOpen={isOpen}

@@ -33,7 +33,7 @@ export const Hero: FC = () => {
       </div>
       <div className="absolute w-full h-full top-0 left-0 bg-gradient-to-r from-[#181818]/80 to-[#181818]/0 pointer-events-none z-10"></div>
       <div className="absolute w-full h-full top-0 left-0 flex flex-wrap items-center z-20">
-        <div className="max-w-[1270px] mx-auto px-4">
+        <div className="w-full max-w-[1270px] mx-auto px-4">
           {/* <div className="mb-5">
             <CountdownTimer targetDate={targetDate} />
           </div> */}

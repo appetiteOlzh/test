@@ -3,16 +3,16 @@
 @tailwind utilities;
 
 :root {
-  --background: #1a1a1a;
-  --secondary-background: #1a2927;
+  --background: #181818;
+  --secondary-background: #1a1a1a;
   --foreground: #fff;
   --accent: #00896f;
 }
 
 @media (prefers-color-scheme: dark) {
   :root {
-    --background: #1a1a1a;
-    --secondary-background: #1a2927;
+    --background: #181818;
+    --secondary-background: #1a1a1a;
     --foreground: #fff;
     --accent: #00896f;
   }
@@ -45,28 +45,6 @@ body {
   .container {
     @apply max-w-[1180px];
   }
-  .card-radial-gradient::before {
-    content: "";
-    position: absolute;
-    top: 0;
-    left: 0;
-    right: 0;
-    bottom: 0;
-    background: radial-gradient(
-      86.27% 84.24% at 53.99% 48.48%,
-      #1c3a33 6.52%,
-      #202d2a 61.65%,
-      #09735b 100%,
-      #09735b 100%
-    );
-    opacity: 0.2;
-  }
-}
-
-.overlay {
-  @apply bg-fill rounded-[2.5rem] relative z-10 bg-[#22322F] overflow-hidden;
-  @apply lg:rounded-[4rem];
-  @apply before:absolute before:top-0 before:left-0 before:right-0 before:bottom-0 before:rounded-[2.5rem] before:lg:rounded-[4rem] before:-z-10 before:bg-fill before:bg-[#22322F];
 }
 
 /* swiper */
@@ -84,38 +62,4 @@ body {
 
 .full-page > footer {
   @apply mt-auto;
-}
-
-.swiper-pagination-bullets-dynamic .swiper-pagination-bullet {
-  @apply bg-white/50;
-}
-
-.swiper-pagination-bullets-dynamic .swiper-pagination-bullet-active-main {
-  @apply bg-white;
-}
-
-.swiper-button-prev,
-.swiper-button-next {
-  @apply cursor-pointer;
-}
-.swiper-button-prev.swiper-button-disabled,
-.swiper-button-next.swiper-button-disabled {
-  @apply cursor-default opacity-50;
-}
-
-.swiper-button-prev:after,
-.swiper-button-next:after {
-  @apply font-[swiper-icons] normal-case leading-none;
-}
-
-.swiper-button-prev:after {
-  content: "prev";
-}
-.swiper-button-next:after {
-  content: "next";
-}
-
-.swiper-button-disabled:has(+ .swiper-button-disabled),
-.swiper-button-disabled + .swiper-button-disabled {
-  @apply hidden;
 }

@@ -1,20 +1,19 @@
-"use client";
+import { Header } from "@/widgets/header";
+import { Footer } from "@/widgets/footer";
 import {
   Application,
   Design,
-  Header,
   Hero,
   HowToUse,
   Traveling,
   TryIt,
   WhyItPossible,
 } from "./ui";
-import { Footer } from "@/widgets/footer";
 
 export default function Limitless() {
   return (
-    <>
-      <Header />
+    <main className="leading-tight">
+      <Header isWider />
       <Hero />
       <Traveling />
       <WhyItPossible />
@@ -23,6 +22,6 @@ export default function Limitless() {
       <Application />
       <TryIt />
       <Footer />
-    </>
+    </main>
   );
 }

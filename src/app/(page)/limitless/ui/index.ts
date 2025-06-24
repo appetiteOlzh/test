@@ -1,4 +1,3 @@
-export { Header } from "./header";
 export { Hero } from "./hero";
 export { Traveling } from "./traveling";
 export { WhyItPossible } from "./why-it-possible";

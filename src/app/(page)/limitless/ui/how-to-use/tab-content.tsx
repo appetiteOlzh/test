@@ -10,7 +10,7 @@ export const TabContent: FC<{ list: { title: string; img: string }[] }> = ({
     <Swiper slidesPerView={"auto"} wrapperClass="flex" className="w-full">
       {list.map(({ title, img }, index) => {
         return (
-          <SwiperSlide className="min-w-[300px] px-2.5 mb-4" key={index}>
+          <SwiperSlide className="min-w-[300px] px-2.5 mb-4 flex-1" key={index}>
             <Card image={img} title={title} />
           </SwiperSlide>
         );

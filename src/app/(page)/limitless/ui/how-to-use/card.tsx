@@ -16,8 +16,8 @@ export const Card: FC<{ image: string; title: string }> = (props) => {
           <div className="mx-auto relative">
             <Image
               src={image}
-              width={205.32}
-              height={445.02}
+              width={206}
+              height={446}
               alt=""
               className="mx-auto w-full rounded-[26px]"
               quality={100}
