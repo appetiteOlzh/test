@@ -1,6 +1,7 @@
 import { Header } from "@/widgets/header";
 import { Footer } from "@/widgets/footer";
 import {
+  AppList,
   BeforeOut,
   Hero,
   Medicine,
@@ -33,6 +34,7 @@ export default function Limitless() {
       <Preparation />
       <WithChildren />
       <Medicine />
+      <AppList />
       <BeforeOut />
       <WhyUs />
       <TryIt />
