@@ -18,7 +18,7 @@ export default function Limitless() {
       <Hero />
       <section className="pt-40">
         <div className="max-w-[1270px] mx-auto px-4 md:text-center">
-          <h2 className="text-h1-clamp text-yellow-darker mb-4">
+          <h2 className="text-h1-clamp text-yellow-darker mb-4 uppercase font-apple font-bold">
             Что внутри чек-листа
           </h2>
           <p className="md:text-2xl text-lg">
