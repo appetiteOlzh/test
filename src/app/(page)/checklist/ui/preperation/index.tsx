@@ -19,7 +19,7 @@ const list2 = [
 
 export const Preparation: FC = () => {
   return (
-    <section className="pt-[100px]">
+    <section className="pt-16 md:pt-[100px]">
       <div className="max-w-[1270px] mx-auto px-4">
         <div className="bg-[#202020] p-9 md:p-12 lg:p-16 rounded-[36px] md:rounded-4xl lg:rounded-[64px]">
           <h2 className="mb-[30px] text-yellow-darker md:text-4xl text-xl font-apple font-bold uppercase">

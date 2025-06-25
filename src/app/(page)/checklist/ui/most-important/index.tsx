@@ -16,7 +16,7 @@ const list = [
 
 export const MostImportant: FC = () => {
   return (
-    <section className="pt-9 md:pt-20">
+    <section className="pt-9 md:pt-[100px]">
       <div className="max-w-[1270px] mx-auto px-4">
         <h2 className="text-xl md:text-4xl font-bold font-apple md:mb-8 mb-4 uppercase text-yellow-darker">
           Самое важное

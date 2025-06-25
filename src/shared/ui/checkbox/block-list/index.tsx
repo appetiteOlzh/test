@@ -1,12 +1,12 @@
 "use client";
 
-import { FC, MouseEventHandler, useEffect, useState } from "react";
+import { FC, MouseEventHandler, ReactNode, useEffect, useState } from "react";
 import { Block } from "../block";
 
 type Props = {
   className?: string;
   name: string;
-  list: string[];
+  list: ReactNode[];
 };
 
 export const BlockList: FC<Props> = ({ list, name, className }) => {

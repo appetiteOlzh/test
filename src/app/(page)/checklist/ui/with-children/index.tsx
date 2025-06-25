@@ -16,7 +16,7 @@ const list = [
 
 export const WithChildren: FC = () => {
   return (
-    <section className="pt-9 md:pt-20">
+    <section className="pt-16 md:pt-[100px]">
       <div className="max-w-[1270px] mx-auto px-4">
         <h2 className="text-xl md:text-4xl font-bold font-apple md:mb-8 mb-4 uppercase text-yellow-darker">
           Если вы с детьми
@@ -27,7 +27,7 @@ export const WithChildren: FC = () => {
           </div>
           <div className="basis-full lg:basis-1/2 md:basis-7/12 px-4">
             <Image
-              src="/assets/img/checklist/important.png"
+              src="/assets/img/checklist/with-children.png"
               width={605}
               height={480}
               alt="Самое важное"
