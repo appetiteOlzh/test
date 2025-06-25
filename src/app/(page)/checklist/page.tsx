@@ -1,6 +1,6 @@
 import { Header } from "@/widgets/header";
 import { Footer } from "@/widgets/footer";
-import { Hero, MostImportant, TryIt } from "./ui";
+import { Hero, MostImportant, Preparation, TryIt, WithChildren } from "./ui";
 
 export default function Limitless() {
   return (
@@ -21,6 +21,8 @@ export default function Limitless() {
         </div>
       </section>
       <MostImportant />
+      <Preparation />
+      <WithChildren />
       <TryIt />
       <Footer />
     </>
