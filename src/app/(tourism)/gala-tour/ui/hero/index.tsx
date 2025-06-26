@@ -15,7 +15,7 @@ export const Hero: FC = () => {
             Чек-лист <br />
             путешественника
           </h1>
-          <a href="#checklist">
+          <a href="#checklist" className="block animate-bounce">
             <svg
               width="32"
               height="32"
