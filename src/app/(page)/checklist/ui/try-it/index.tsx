@@ -1,9 +1,9 @@
-import { AppOpenerButton } from "@/features/app-opener/ui/button";
+import { AppOpener } from "@/features/app-opener";
 import { FC } from "react";
 
 export const TryIt: FC = () => {
   return (
-    <section className="pt-[160px] pb-[148px]">
+    <section className="py-16 md:py-[100px]">
       <div className="max-w-[1080px] mx-auto px-4 text-center">
         <h2 className="text-yellow-darker text-2xl md:text-4xl lg:text-5xl mb-6 font-apple font-black uppercase text-balance">
           Готовы попробовать?
@@ -15,7 +15,7 @@ export const TryIt: FC = () => {
           Навсегда.
         </p>
         <div className="flex justify-center">
-          <AppOpenerButton />
+          <AppOpener buttonText="Начать бесплатно" />
         </div>
       </div>
     </section>

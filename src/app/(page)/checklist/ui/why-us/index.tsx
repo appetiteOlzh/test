@@ -34,7 +34,7 @@ export const WhyUs: FC = () => {
         <div className="flex flex-wrap -mx-[5px]">
           {list.map((card, index) => (
             <div
-              className="px-[5px] basis-full md:basis-1/2 lg:basis-1/4 mb-2.5"
+              className="px-[5px] basis-full md:basis-1/2 xl:basis-1/4 mb-2.5"
               key={index}
             >
               <Card {...card} />

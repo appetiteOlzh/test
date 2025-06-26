@@ -1,7 +1,5 @@
 import { FC } from "react";
 import { Slider } from "./slider";
-import { SendApplicationButton } from "@/features/send-application";
-// import CountdownTimer from "@/widgets/timer";
 
 const firstArr = Array(22)
   .fill(0)
@@ -18,8 +16,6 @@ const thirdArr = Array(22)
   );
 
 export const Hero: FC = () => {
-  // const targetDate = new Date("2025-07-01T00:00:00"); // до 1 июля 2025
-
   return (
     <section className="relative">
       <div className="mb-2">
@@ -41,10 +37,12 @@ export const Hero: FC = () => {
           <p className="text-foreground md:text-2xl text-lg mb-6 md:mb-9">
             Всё, что нужно для лёгкого путешествия — в одном чек-листе
           </p>
-          <SendApplicationButton
-            buttonText={"Посмотреть чек-лист онлайн"}
-            buttonClassName="md:w-[340px] py-5"
-          />
+          <a
+            href="#checklist"
+            className="bg-gradient-to-br from-[#018C6E] via-[#014F42] to-[#035846] px-7 rounded-full text-yellow uppercase font-bold w-full block text-center md:w-[340px] py-5"
+          >
+            Посмотреть чек-лист онлайн
+          </a>
         </div>
       </div>
     </section>

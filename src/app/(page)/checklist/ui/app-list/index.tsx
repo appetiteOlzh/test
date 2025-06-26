@@ -46,7 +46,7 @@ export const AppList: FC = () => {
         <CheckboxUI.CardList
           list={list}
           name="beforeOut1"
-          className="basis-full md:basis-1/2 px-4"
+          className="basis-full md:basis-1/2"
         />
       </div>
     </section>

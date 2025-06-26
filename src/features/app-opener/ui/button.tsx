@@ -1,5 +1,4 @@
 "use client";
-import { useTranslations } from "next-intl";
 import { usePathname } from "next/navigation";
 import { FC, useEffect, useState } from "react";
 import { QRCode } from "react-qrcode-logo";
@@ -9,12 +8,9 @@ import { AppStoreButton, GoogleplayButton } from "@/shared/ui";
 // media
 
 export const AppOpenerButton: FC<{
-  isPremium?: boolean;
-  textVarity?: "family";
-}> = ({ isPremium, textVarity }) => {
+  buttonText: string;
+}> = ({ buttonText }) => {
   const [fullUrl, setFullUrl] = useState("");
-  const common_t = useTranslations("common");
-  const sharing_t = useTranslations("Sharing");
   const [isOpen, setOpen] = useState(false);
   const pathname = usePathname();
 
@@ -33,16 +29,11 @@ export const AppOpenerButton: FC<{
     <>
       <button
         className={cn(
-          "bg-gradient-to-br from-[#018C6E] via-[#014F42] to-[#035846] py-4 px-7 rounded-2xl text-yellow uppercase font-bold",
-          { "w-full md:w-80 block text-center": isPremium }
+          "bg-gradient-to-br from-[#018C6E] via-[#014F42] to-[#035846] py-4 px-7 rounded-2xl text-yellow uppercase font-bold"
         )}
         onClick={onClick}
       >
-        {textVarity === "family"
-          ? common_t("download_monclips")
-          : isPremium
-          ? common_t("free_download")
-          : common_t("open_in_monclips")}
+        {buttonText}
       </button>
       <Modal
         isOpen={isOpen}
@@ -63,12 +54,12 @@ export const AppOpenerButton: FC<{
               quietZone={0}
             />
           </div>
-          <h4
-            className="gradient-text text-center text-xl leading-none mb-4 font-bold"
-            dangerouslySetInnerHTML={{ __html: sharing_t.raw("qr") }}
-          ></h4>
+          <h4 className="gradient-text text-center text-xl leading-none mb-4 font-bold">
+            Отсканируйте QR-код для загрузки приложения <br />
+            MonClips Gallery
+          </h4>
           <p className="text-input-default mb-6 font-medium">
-            {sharing_t("download_from_stores")}
+            Загрузка из магазинов приложений
           </p>
           <div className="flex flex-wrap -mx-2 justify-center">
             <div className="basis-1/2 px-2">
