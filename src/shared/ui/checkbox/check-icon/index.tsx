@@ -12,7 +12,7 @@ export const CheckIcon: FC<HTMLAttributes<SVGElement>> = (props) => {
     >
       <path
         d="M1.33594 4.9999L5.10927 8.77323L12.6693 1.22656"
-        stroke="#333333"
+        stroke="currentColor"
         strokeWidth="1.5"
         strokeLinecap="round"
         strokeLinejoin="round"

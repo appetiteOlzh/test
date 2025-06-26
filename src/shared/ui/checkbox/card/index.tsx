@@ -22,7 +22,7 @@ export const Card: FC<Props> = ({
     <div
       className={twMerge(
         cn(
-          `relative md:py-9 md:pl-20 md:pr-6 py-6 pl-4 pr-14 cursor-pointer bg-[#202020] rounded-3xl md:rounded-[2.25rem]`,
+          `relative md:py-9 md:pl-20 md:pr-6 py-6 pl-4 pr-14 cursor-pointer bg-overlay rounded-3xl md:rounded-[2.25rem]`,
           className
         )
       )}
@@ -30,10 +30,11 @@ export const Card: FC<Props> = ({
     >
       <div
         className={cn(
-          "w-8 h-8 rounded-lg border-2 text-white flex items-center justify-center pointer-events-none absolute md:left-6 md:top-9 top-6 right-4",
+          "w-8 h-8 rounded-lg border-2 flex items-center justify-center pointer-events-none absolute md:left-6 md:top-9 top-6 right-4",
           {
-            "border-white": !isChecked,
-            "border-yellow-darker bg-yellow-darker": isChecked,
+            "border-current": !isChecked,
+            "border-[var(--secondary)] bg-[var(--secondary)] text-[var(--check)]":
+              isChecked,
           }
         )}
       >

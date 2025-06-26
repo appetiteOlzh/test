@@ -22,16 +22,17 @@ export const Block: FC<Props> = ({
     >
       <div
         className={cn(
-          "w-8 h-8 rounded-lg border-2  text-white flex items-center justify-center pointer-events-none",
+          "w-8 h-8 rounded-lg border-2 flex items-center justify-center pointer-events-none",
           {
-            "border-white": !isChecked,
-            "border-yellow-darker bg-yellow-darker": isChecked,
+            "border-current": !isChecked,
+            "border-[var(--secondary)] bg-[var(--secondary)] text-[var(--check)]":
+              isChecked,
           }
         )}
       >
         {isChecked ? <CheckIcon /> : ""}
       </div>
-      <div className="flex-1 min-w-0 pl-4 md:text-2xl text-lg pointer-events-none">
+      <div className="flex-1 min-w-0 pl-4 md:text-2xl text-lg pointer-events-none text-balance">
         {children}
       </div>
     </div>

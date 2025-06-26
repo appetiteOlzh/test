@@ -1,0 +1,45 @@
+@tailwind utilities;
+
+html {
+  background: #fff;
+  line-height: 1.2;
+  color: #333;
+}
+
+:root {
+  --secondary: #007aff;
+  --check: #fff;
+}
+
+@layer utilities {
+  .text-balance {
+    text-wrap: balance;
+  }
+  .container {
+    @apply w-full max-w-[1272px] mx-auto px-4;
+  }
+  h1,
+  h2,
+  h3,
+  h4,
+  h5 {
+    @apply font-apple font-black uppercase;
+  }
+
+  .description {
+    @apply md:text-2xl text-lg;
+  }
+
+  .overlay {
+    @apply p-9 md:p-12 lg:p-16 bg-[#EFEFEF] rounded-[36px] md:rounded-[48px] lg:rounded-[54px] bg-cover bg-center;
+  }
+  .overlay_larger {
+    @apply pt-14 px-6 md:p-20 bg-[#EFEFEF] rounded-[36px] md:rounded-[48px] lg:rounded-[54px] bg-cover bg-center;
+  }
+  .bg-overlay {
+    @apply bg-[#EFEFEF];
+  }
+  .btn {
+    @apply bg-[#007aff] text-white uppercase font-bold flex flex-wrap items-center rounded-full h-16 justify-center max-w-[340px] mx-auto gap-2.5;
+  }
+}

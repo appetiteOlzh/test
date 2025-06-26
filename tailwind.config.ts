@@ -31,9 +31,9 @@ const config: Config = {
         "15": "3.75rem",
       },
       fontSize: {
-        "h4-clamp": ["clamp(1.125rem, 5vw, 1.375rem)", { lineHeight: "1.15" }],
-        "h3-clamp": ["clamp(1.25rem, 7vw, 2.25rem)", { lineHeight: "1.15" }],
-        "h2-clamp": ["clamp(1.625rem, 9.6vw, 3.5rem)", { lineHeight: "1.15" }],
+        "h4-clamp": ["clamp(1.125rem, 5vw, 1.5rem)", { lineHeight: "1.2" }],
+        "h3-clamp": ["clamp(1.25rem, 7vw, 2.25rem)", { lineHeight: "1.2" }],
+        "h2-clamp": ["clamp(1.625rem, 9.6vw, 3.5rem)", { lineHeight: "1.2" }],
         "h1-clamp": ["clamp(1.75rem, 7vw, 3rem)", { lineHeight: "1.2" }],
       },
       borderRadius: {

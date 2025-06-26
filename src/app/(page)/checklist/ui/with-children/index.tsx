@@ -23,7 +23,7 @@ export const WithChildren: FC = () => {
         </h2>
         <div className="flex flex-wrap flex-row-reverse -mx-4">
           <div className="basis-full lg:basis-1/2 md:basis-5/12 px-4 mb-9 md:mb-0">
-            <CheckboxUI.BlockList list={list} name="mostImportant" />
+            <CheckboxUI.BlockList list={list} name="withChildren" />
           </div>
           <div className="basis-full lg:basis-1/2 md:basis-7/12 px-4">
             <Image

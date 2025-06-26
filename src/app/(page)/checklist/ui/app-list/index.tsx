@@ -43,11 +43,7 @@ export const AppList: FC = () => {
         <h2 className="mb-[30px] text-yellow-darker md:text-4xl text-xl font-apple font-bold uppercase">
           Нужные приложения
         </h2>
-        <CheckboxUI.CardList
-          list={list}
-          name="beforeOut1"
-          className="basis-full md:basis-1/2"
-        />
+        <CheckboxUI.CardList list={list} name="appList" />
       </div>
     </section>
   );
