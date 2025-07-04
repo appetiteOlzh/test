@@ -10,9 +10,9 @@ export const Traveling: FC = () => {
             <h2 className="text-yellow-darker text-2xl md:text-4xl lg:text-5xl mb-4 font-apple font-black uppercase md:text-balance">
               Сохраняй каждую поездку
             </h2>
-            <p className="text-lg md:text-2xl text-balance max-w-[462px]">
-              Мальдивы, Париж, Стамбул, Бали... Ты можешь хранить сколько угодно
-              снимков —{" "}
+            <p className="text-lg md:text-2xl max-w-[494px]">
+              Дубай, Мальдивы, Париж, Стамбул, Бали... Ты можешь хранить сколько
+              угодно снимков —{" "}
               <span className="text-yellow-darker">
                 бесплатно и без подписки
               </span>
