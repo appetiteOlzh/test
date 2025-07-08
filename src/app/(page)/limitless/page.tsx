@@ -1,13 +1,13 @@
 import { Header } from "@/widgets/header";
 import { Footer } from "@/widgets/footer";
 import {
-  // Application,
-  // Design,
+  Application,
+  Design,
   Hero,
-  // HowToUse,
+  HowToUse,
   Traveling,
   TryIt,
-  // WhyItPossible,
+  WhyItPossible,
 } from "./ui";
 
 export default function Limitless() {
@@ -16,10 +16,10 @@ export default function Limitless() {
       <Header isWider />
       <Hero />
       <Traveling />
-      {/* <WhyItPossible />
+      <WhyItPossible />
       <Design />
       <HowToUse />
-      <Application /> */}
+      <Application />
       <TryIt />
       <Footer />
     </main>

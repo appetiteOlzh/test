@@ -1,6 +1,6 @@
 import { FC } from "react";
 import { Slider } from "./slider";
-import { SendApplicationButton } from "@/features/send-application";
+import { AppOpener } from "@/features/app-opener";
 // import CountdownTimer from "@/widgets/timer";
 
 const firstArr = Array(22)
@@ -40,7 +40,7 @@ export const Hero: FC = () => {
           <h1 className="max-w-[815px] lg:text-5xl md:text-4xl text-2xl text-yellow-darker uppercase font-black font-apple text-balance mb-9">
             Бесконечная память для твоих путешествий
           </h1>
-          <SendApplicationButton />
+          <AppOpener buttonText="Скачать бесплатно" />
         </div>
       </div>
     </section>

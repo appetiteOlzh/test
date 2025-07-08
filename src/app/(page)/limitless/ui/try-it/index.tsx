@@ -1,5 +1,5 @@
-import { SendApplicationButton } from "@/features/send-application";
 import { FC } from "react";
+import { AppOpener } from "@/features/app-opener";
 
 export const TryIt: FC = () => {
   return (
@@ -12,7 +12,8 @@ export const TryIt: FC = () => {
           MonClips Gallery — бесконечная память для твоих путешествий
         </p>
         <div className="flex justify-center">
-          <SendApplicationButton />
+          {/* <SendApplicationButton /> */}
+          <AppOpener buttonText="Скачать бесплатно" />
         </div>
       </div>
     </section>
