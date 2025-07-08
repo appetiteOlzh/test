@@ -36,9 +36,12 @@ export const Form: FC = () => {
     });
     const response = await res.json();
     setLoading(false);
-    if (response.ok) {
+    console.log(response, response.ok);
+
+    if (response.statusCode >= 200 && response.statusCode < 300) {
       reset();
       setOpen(true);
+      setError(false);
     } else {
       setError(true);
       console.error("Ошибка при отправке формы:", response);
