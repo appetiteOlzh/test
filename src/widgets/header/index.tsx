@@ -3,8 +3,12 @@ import Link from "next/link";
 import { FC } from "react";
 import { twMerge } from "tailwind-merge";
 import cn from "classnames";
+import { Select } from "./select";
 
-export const Header: FC<{ isWider?: boolean }> = ({ isWider }) => {
+export const Header: FC<{ isWider?: boolean; withLocale?: boolean }> = ({
+  isWider,
+  withLocale,
+}) => {
   return (
     <header className="md:pt-12 pt-[30px] absolute w-full top-0 left-0 z-50">
       <div
@@ -24,6 +28,11 @@ export const Header: FC<{ isWider?: boolean }> = ({ isWider }) => {
               />
             </Link>
           </div>
+          {withLocale ? (
+            <div className="basis-auto ml-auto">
+              <Select />
+            </div>
+          ) : null}
         </div>
       </div>
     </header>

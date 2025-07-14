@@ -5,3 +5,4 @@ export { Design } from "./design";
 export { HowToUse } from "./how-to-use";
 export { Application } from "./application";
 export { TryIt } from "./try-it";
+export { Review } from "./review";

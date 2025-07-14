@@ -69,7 +69,7 @@ export const Footer = () => {
         ></div>
         <p className="text-center">
           MONCLIPS, INC. 2024 <br />
-          DOVER, DELAWARE
+          {/* DOVER, DELAWARE */}
         </p>
       </div>
     </footer>

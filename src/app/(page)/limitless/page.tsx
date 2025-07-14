@@ -1,25 +1,27 @@
 import { Header } from "@/widgets/header";
 import { Footer } from "@/widgets/footer";
 import {
-  Application,
+  // Application,
   Design,
   Hero,
-  HowToUse,
+  // HowToUse,
+  // Review,
   Traveling,
   TryIt,
-  WhyItPossible,
+  // WhyItPossible,
 } from "./ui";
 
 export default function Limitless() {
   return (
     <main className="leading-tight">
-      <Header isWider />
+      <Header isWider withLocale />
       <Hero />
       <Traveling />
-      <WhyItPossible />
+      {/* <WhyItPossible /> */}
       <Design />
-      <HowToUse />
-      <Application />
+      {/* <HowToUse /> */}
+      {/* <Application /> */}
+      {/* <Review /> */}
       <TryIt />
       <Footer />
     </main>

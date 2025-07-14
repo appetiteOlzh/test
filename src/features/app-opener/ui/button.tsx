@@ -5,11 +5,13 @@ import { QRCode } from "react-qrcode-logo";
 import cn from "classnames";
 import { Modal } from "@/shared/ui/modal";
 import { AppStoreButton, GoogleplayButton } from "@/shared/ui";
+import { useTranslations } from "next-intl";
 // media
 
 export const AppOpenerButton: FC<{
   buttonText: string;
 }> = ({ buttonText }) => {
+  const t = useTranslations("app");
   const [fullUrl, setFullUrl] = useState("");
   const [isOpen, setOpen] = useState(false);
   const pathname = usePathname();
@@ -55,11 +57,10 @@ export const AppOpenerButton: FC<{
             />
           </div>
           <h4 className="gradient-text text-center text-xl leading-none mb-4 font-bold">
-            Отсканируйте QR-код для загрузки приложения <br />
-            MonClips Gallery
+            {t("scan_qr")}
           </h4>
           <p className="text-input-default mb-6 font-medium">
-            Загрузка из магазинов приложений
+            {t("app_stores")}
           </p>
           <div className="flex flex-wrap -mx-2 justify-center">
             <div className="basis-1/2 px-2">

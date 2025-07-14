@@ -1,6 +1,7 @@
 import { FC } from "react";
 import { Slider } from "./slider";
 import { AppOpener } from "@/features/app-opener";
+import { useTranslations } from "next-intl";
 // import CountdownTimer from "@/widgets/timer";
 
 const firstArr = Array(22)
@@ -18,7 +19,8 @@ const thirdArr = Array(22)
   );
 
 export const Hero: FC = () => {
-  // const targetDate = new Date("2025-07-01T00:00:00"); // до 1 июля 2025
+  const t = useTranslations("Unlimited.hero");
+  const t_common = useTranslations("common");
 
   return (
     <section className="relative">
@@ -34,13 +36,10 @@ export const Hero: FC = () => {
       <div className="absolute w-full h-full top-0 left-0 bg-gradient-to-r from-[#181818]/80 to-[#181818]/0 pointer-events-none z-10"></div>
       <div className="absolute w-full h-full top-0 left-0 flex flex-wrap items-center z-20">
         <div className="w-full max-w-[1270px] mx-auto px-4">
-          {/* <div className="mb-5">
-            <CountdownTimer targetDate={targetDate} />
-          </div> */}
           <h1 className="max-w-[815px] lg:text-5xl md:text-4xl text-2xl text-yellow-darker uppercase font-black font-apple text-balance mb-9">
-            Бесконечная память для твоих путешествий
+            {t("title")}
           </h1>
-          <AppOpener buttonText="Скачать бесплатно" />
+          <AppOpener buttonText={t_common("free_download")} />
         </div>
       </div>
     </section>
