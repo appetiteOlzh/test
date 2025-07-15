@@ -73,7 +73,7 @@
     "show_more": "показать больше",
     "show_less": "скрыть",
     "not_now": "Не сейчас",
-    "free_download": "Скачать бесплатно",
+    "free_download": "Создай аккаунт — это бесплатно",
     "download_monclips": "DOWNLOAD MONCLIPS"
   },
   "app": {
@@ -96,8 +96,8 @@
       "description": "Каждое фото и видео — это не просто файл. Это доказательство того, что вы жили, чувствовали, мечтали. <br /><br />Но когда память заканчивается, приходится выбирать: удалить или заплатить? <br /><br /><span class='text-yellow-darker'>MonClips Gallery</span> даёт вам свободу от этих выборов. Просто скачайте и храните всё важное — <b class='text-yellow-darker'>бесплатно</b>."
     },
     "tryIt": {
-      "title": "Готовы попробовать?",
-      "description": "MonClips Gallery — бесконечная память для ваших путешествий. <br class='md:block hidden' />Бесплатно. Красиво. Навсегда."
+      "title": "Сохраняй то, что важно. <br/>Храни навсегда.",
+      "description": "Без давления. Без подписок. Без уловок."
     },
     "review": {
       "title": "Что говорят <span class=\"text-yellow-darker\">наши пользователи?</span>",
@@ -117,44 +117,46 @@
       }
     },
     "faq": {
-      "title": "Built for Trust",
+      "title": "Доверие — основа всего",
       "questions": [
         {
-          "question": "Can I trust MonClips?",
-          "answer": "Yes. All data is stored on secure, US-based servers (AWS). Only you can access your files."
+          "question": "Можно ли доверять MonClips?",
+          "answer": "Да. Мы храним данные на надёжных американских серверах (AWS). Только вы имеете доступ к своим фото и видео."
         },
         {
-          "question": "Why is it free?",
-          "answer": "Because we believe memories shouldn't be behind a paywall. In the future, we’ll launch a content marketplace — where creators can sell curated folders. But core storage will stay free."
+          "question": "Почему это бесплатно?",
+          "answer": "Потому что мы считаем, что за воспоминания не нужно платить. В будущем появится “Магазин папок” — пользователи смогут продавать подборки. Но основное хранилище всегда будет бесплатным."
         },
         {
-          "question": "Do you compress media?",
-          "answer": "Yes — and that’s a good thing. Our smart compression reduces photo size by up to 10×, and video by 4× — with no visible quality loss. It makes free storage possible."
+          "question": "Вы сжимаете фото и видео? Это плохо?",
+          "answer": "Наоборот. Мы разработали технологию, которая сжимает фото до 10 раз, а видео — в 4 раза — без видимой потери качества. Это позволяет делать хранение бесплатным — и при этом красивым."
         },
         {
-          "question": "Will you delete my photos if I'm inactive?",
-          "answer": "Never. Your content stays safe, even if you don’t open the app for months."
+          "question": "А если я не захожу в приложение несколько месяцев?",
+          "answer": "Ничего. Мы ничего не удалим. Всё сохранится."
         }
       ]
     },
     "benefits": {
       "title": "WHAT YOU <span class=\"text-yellow-darker\">GET</span>",
-      "photo": {
-        "title": "PHOTOS – FREE",
-        "description": "Unlimited photo storage"
-      },
-      "video": {
-        "title": "1 GB OF VIDEO – AS A GIFT",
-        "description": "To upload and store your first videos"
-      },
-      "friend": {
-        "title": "+2 GB VIDEO FOR EACH FRIEND",
-        "description": "Invite a friend — get extra space"
-      },
-      "space": {
-        "title": "10X MORE STORAGE",
-        "description": "Than typical cloud services thanks to smart compression"
+      "list": {
+        "0": "Безлимитное облачное хранилище для фото",
+        "1": "2 000 загрузок видео — бесплатно",
+        "2": "+50 видео за каждого приглашённого друга",
+        "3": "Красивые, удобные альбомы",
+        "4": "Заметки, фильтры, комментарии",
+        "5": "Полный контроль приватности"
       }
+    },
+    "album": {
+      "title": "Живые альбомы от реальных людей",
+      "description": "MonClips уже используют люди по всему миру, чтобы сохранять то, что дорого. Вот как выглядят их альбомы:",
+      "made_by": "Автор: {author}",
+      "description_second": "Каждый альбом — это история. Пришло время создать свою."
+    },
+    "dubai": {
+      "title": "Сделано в Дубае. <br/>Для мира.",
+      "description": "MonClips появился в Дубае — городе, где сочетаются мечта, масштаб и технологии. Мы сами устали платить за память. Теперь мы возвращаем свободу — вам."
     }
   }
 }

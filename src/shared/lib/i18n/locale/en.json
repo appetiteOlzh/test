@@ -139,22 +139,24 @@
     },
     "benefits": {
       "title": "WHAT YOU <span class=\"text-yellow-darker\">GET</span>",
-      "photo": {
-        "title": "PHOTOS – FREE",
-        "description": "Unlimited photo storage"
-      },
-      "video": {
-        "title": "1 GB OF VIDEO – AS A GIFT",
-        "description": "To upload and store your first videos"
-      },
-      "friend": {
-        "title": "+2 GB VIDEO FOR EACH FRIEND",
-        "description": "Invite a friend — get extra space"
-      },
-      "space": {
-        "title": "10X MORE STORAGE",
-        "description": "Than typical cloud services thanks to smart compression"
+      "list": {
+        "0": "Unlimited cloud storage for photos",
+        "1": "2,000 free video uploads",
+        "2": "+50 videos for every friend you invite",
+        "3": "Beautiful shareable albums",
+        "4": "Notes, filters, comments",
+        "5": "Full privacy control"
       }
+    },
+    "album": {
+      "title": "Real Albums from Real People",
+      "description": "People all over the world are already using MonClips to create and keep what matters. Here’s what their albums look like:",
+      "made_by": "Made by {author}",
+      "description_second": "Every album is a story. Now it’s your turn to start one."
+    },
+    "dubai": {
+      "title": "Built in Dubai for the world",
+      "description": "MonClips was born in Dubai — a place where ambition, beauty and innovation meet. We built it because we were tired of paying to remember. Now we give that freedom to you."
     }
   }
 }

@@ -35,16 +35,6 @@ export const Design: FC = () => {
                     className="block"
                     quality={100}
                   />
-                  {/* <div className="absolute top-1/2 left-full scale-75 md:scale-100 md:translate-x-6 -translate-x-20 -translate-y-1/2 -z-10">
-                    <Image
-                      src="/assets/img/limitless/iphone-design.png"
-                      width={286}
-                      height={589}
-                      alt="iPhone 15 Pro max"
-                      title="Your video list"
-                      className="block max-w-none"
-                    />
-                  </div> */}
                 </div>
               </div>
             </div>
