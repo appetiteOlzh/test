@@ -15,10 +15,10 @@ export const DescriptionSection: React.FC = () => {
           />
         </div>
         <h2 className="text-2xl md:text-4xl lg:text-5xl mb-8 font-apple font-black uppercase text-balance text-center text-yellow-darker">
-          Built in Dubai, for the world
+          Built in Dubai for the world
         </h2>
         <p className="text-center text-xl md:text-2xl">
-          MonClips was born in Dubai — a place where ambition, beauty, and
+          MonClips was born in Dubai — a place where ambition, beauty and
           innovation meet. We built it because we were tired of paying to
           remember. Now we give that freedom to you.
         </p>

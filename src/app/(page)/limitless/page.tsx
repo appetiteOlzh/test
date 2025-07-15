@@ -20,11 +20,11 @@ export default function Limitless() {
     <main className="leading-tight">
       <Header isWider withLocale />
       <Hero />
-      <DescriptionSection />
       <Traveling />
       {/* <WhyItPossible /> */}
       <Design />
       <Albums />
+      <DescriptionSection />
       {/* <HowToUse /> */}
       {/* <Application /> */}
       {/* <Review /> */}
