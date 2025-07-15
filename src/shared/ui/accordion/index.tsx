@@ -11,7 +11,7 @@ type Props = {
 
 export const AccordionItem: FC<Props> = ({ title, children }) => {
   const contentRef = useRef<HTMLDivElement>(null);
-  const [isOpen, setIsOpen] = useState(false);
+  const [isOpen, setIsOpen] = useState(true);
 
   const toggleAccordion = () => {
     const content = contentRef.current;
@@ -57,7 +57,7 @@ export const AccordionItem: FC<Props> = ({ title, children }) => {
           />
         </div>
       </button>
-      <div ref={contentRef} style={{ height: 0, overflow: "hidden" }}>
+      <div ref={contentRef} style={{ overflow: "hidden" }} className="text-xl">
         <div className="pb-5 text-[#B9B9B9]">{children}</div>
       </div>
     </div>

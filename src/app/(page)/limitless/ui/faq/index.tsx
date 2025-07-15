@@ -21,7 +21,7 @@ export const Faq: React.FC = () => {
       <div className="w-full max-w-3xl mx-auto px-4">
         {Array.isArray(faqList) &&
           faqList.map((item, index) => (
-            <div key={index} className="animatable slide-up">
+            <div key={index}>
               <AccordionItem title={item.question}>{item.answer}</AccordionItem>
             </div>
           ))}

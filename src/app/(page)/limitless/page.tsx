@@ -28,8 +28,8 @@ export default function Limitless() {
       {/* <HowToUse /> */}
       {/* <Application /> */}
       {/* <Review /> */}
-      <Faq />
       <Benefits />
+      <Faq />
       <TryIt />
       <Footer />
     </main>

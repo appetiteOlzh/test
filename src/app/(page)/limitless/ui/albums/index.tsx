@@ -30,9 +30,12 @@ export const Albums: FC = () => {
           People all over the world are already using MonClips to create and
           keep what matters. Here’s what their albums look like:
         </p>
-        <div className="overflow-hidden">
+        <div className="overflow-hidden mb-4">
           <TabContent list={galleryList} />
         </div>
+        <p className="text-lg md:text-2xl leading-tight mb-14 text-balance text-yellow-darker md:text-center">
+          Every album is a story. Now it’s your turn to start one.
+        </p>
       </div>
     </section>
   );
