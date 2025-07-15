@@ -73,7 +73,7 @@
     "show_more": "show more",
     "show_less": "hide",
     "not_now": "Not now",
-    "free_download": "DOWNLOAD FOR FREE",
+    "free_download": "Create your account — it’s free",
     "download_monclips": "DOWNLOAD MONCLIPS"
   },
   "app": {
@@ -88,7 +88,7 @@
       "title": "Free unlimited storage for your travels"
     },
     "traveling": {
-      "title": "Your memories deserve more than a phone gallery",
+      "title": "Save Every Journey",
       "description": "Dubai, Maldives, Paris, Istanbul, Bali… Every trip leaves behind a trail of photos and videos — a story only you can tell.<br /><br />With MonClips, you can create folders for every city and country. Save all your photos. Store up to 2,000 videos — <b className='text-yellow-darker'>free</b>.<br /><br /><span className='text-yellow-darker'>No subscriptions. No limits. No risk of losing what matters.</span>"
     },
     "design": {
@@ -96,8 +96,8 @@
       "description": "Your photos aren’t just images.They’re proof you were there. That you felt something. <br /><br />But every time your phone runs out of space, you’re asked to make a choice: What to delete? What to pay for? <br /><br /><span class='text-yellow-darker'>MonClips Gallery</span> gives you a different choice. The freedom to save everything beautifully <b class='text-yellow-darker'>forever</b>. <br /><br />No pressure. No hidden fees. Just peace of mind."
     },
     "tryIt": {
-      "title": "Ready to try?",
-      "description": "MonClips Gallery — unlimited storage for your travels. <br class='md:block hidden' />Free. Beautifully. Forever."
+      "title": "Save what matters. <br/>Keep it forever",
+      "description": "No stress. No tricks. No subscriptions."
     },
     "review": {
       "title": "WHAT OUR <span class=\"text-yellow-darker\">USERS SAY?</span>",
@@ -114,6 +114,46 @@
           "name": "Sophie, learning English on her own",
           "text": "Now my English videos don’t get lost among memes. MonClips is the kind of order that keeps you motivated"
         }
+      }
+    },
+    "faq": {
+      "title": "Built for Trust",
+      "questions": [
+        {
+          "question": "Can I trust MonClips?",
+          "answer": "Yes. All data is stored on secure, US-based servers (AWS). Only you can access your files."
+        },
+        {
+          "question": "Why is it free?",
+          "answer": "Because we believe memories shouldn't be behind a paywall. In the future, we’ll launch a content marketplace — where creators can sell curated folders. But core storage will stay free."
+        },
+        {
+          "question": "Do you compress media?",
+          "answer": "Yes — and that’s a good thing. Our smart compression reduces photo size by up to 10×, and video by 4× — with no visible quality loss. It makes free storage possible."
+        },
+        {
+          "question": "Will you delete my photos if I'm inactive?",
+          "answer": "Never. Your content stays safe, even if you don’t open the app for months."
+        }
+      ]
+    },
+    "benefits": {
+      "title": "WHAT YOU <span class=\"text-yellow-darker\">GET</span>",
+      "photo": {
+        "title": "PHOTOS – FREE",
+        "description": "Unlimited photo storage"
+      },
+      "video": {
+        "title": "1 GB OF VIDEO – AS A GIFT",
+        "description": "To upload and store your first videos"
+      },
+      "friend": {
+        "title": "+2 GB VIDEO FOR EACH FRIEND",
+        "description": "Invite a friend — get extra space"
+      },
+      "space": {
+        "title": "10X MORE STORAGE",
+        "description": "Than typical cloud services thanks to smart compression"
       }
     }
   }

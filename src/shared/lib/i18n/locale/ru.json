@@ -115,6 +115,46 @@
           "text": "Теперь мои видео по английскому не теряются среди мемов. MonClips — это порядок, который мотивирует."
         }
       }
+    },
+    "faq": {
+      "title": "Built for Trust",
+      "questions": [
+        {
+          "question": "Can I trust MonClips?",
+          "answer": "Yes. All data is stored on secure, US-based servers (AWS). Only you can access your files."
+        },
+        {
+          "question": "Why is it free?",
+          "answer": "Because we believe memories shouldn't be behind a paywall. In the future, we’ll launch a content marketplace — where creators can sell curated folders. But core storage will stay free."
+        },
+        {
+          "question": "Do you compress media?",
+          "answer": "Yes — and that’s a good thing. Our smart compression reduces photo size by up to 10×, and video by 4× — with no visible quality loss. It makes free storage possible."
+        },
+        {
+          "question": "Will you delete my photos if I'm inactive?",
+          "answer": "Never. Your content stays safe, even if you don’t open the app for months."
+        }
+      ]
+    },
+    "benefits": {
+      "title": "WHAT YOU <span class=\"text-yellow-darker\">GET</span>",
+      "photo": {
+        "title": "PHOTOS – FREE",
+        "description": "Unlimited photo storage"
+      },
+      "video": {
+        "title": "1 GB OF VIDEO – AS A GIFT",
+        "description": "To upload and store your first videos"
+      },
+      "friend": {
+        "title": "+2 GB VIDEO FOR EACH FRIEND",
+        "description": "Invite a friend — get extra space"
+      },
+      "space": {
+        "title": "10X MORE STORAGE",
+        "description": "Than typical cloud services thanks to smart compression"
+      }
     }
   }
 }

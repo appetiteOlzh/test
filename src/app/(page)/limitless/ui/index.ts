@@ -6,3 +6,7 @@ export { HowToUse } from "./how-to-use";
 export { Application } from "./application";
 export { TryIt } from "./try-it";
 export { Review } from "./review";
+export { Faq } from "./faq";
+export { Albums } from "./albums";
+export { DescriptionSection } from "./description";
+export { Benefits } from "./benefits";
