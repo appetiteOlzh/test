@@ -1,6 +1,5 @@
 import { FC } from "react";
 import { TabContent } from "./tab-content";
-import { link } from "fs";
 
 export const Albums: FC = () => {
   const galleryList = [
