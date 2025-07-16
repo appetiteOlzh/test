@@ -1,7 +1,7 @@
 import { Header } from "@/widgets/header";
 import { Footer } from "@/widgets/footer";
 import {
-  // Albums,
+  Albums,
   Benefits,
   DescriptionSection,
   Design,
@@ -18,7 +18,7 @@ export default function Limitless() {
       <Hero />
       <Traveling />
       <Design />
-      {/* <Albums /> */}
+      <Albums />
       <DescriptionSection />
       <Benefits />
       <Faq />
