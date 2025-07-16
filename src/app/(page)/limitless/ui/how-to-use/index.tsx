@@ -8,7 +8,7 @@ export const HowToUse: FC = () => {
   const [tabItem, setTabItem] = useState<"gallery" | "messenger">("gallery");
 
   return (
-    <section className="md:pt-40 pt-[180px]">
+    <section className="md:pt-40 pt-[150px]">
       <div className="max-w-[1270px] mx-auto px-4">
         <h2 className="text-2xl md:text-4xl lg:text-5xl mb-8 font-apple font-black uppercase text-balance text-center">
           <span className="text-yellow-darker">Как загружать фото</span> <br />в

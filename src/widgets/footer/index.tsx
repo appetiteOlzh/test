@@ -3,7 +3,7 @@ import Link from "next/link";
 import { useTranslations } from "next-intl";
 import tiktok from "/public/assets/img/social/tiktok.svg";
 import instagram from "/public/assets/img/social/instagram.svg";
-import monclips from "/public/assets/img/monclips.svg";
+import monclips from "/public/assets/img/monclips-icon.svg";
 
 export const Footer = () => {
   const t = useTranslations("footer");

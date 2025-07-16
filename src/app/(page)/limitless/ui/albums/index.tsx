@@ -24,7 +24,7 @@ export const Albums: FC = () => {
   ];
 
   return (
-    <section className="md:pt-[120px] pt-[180px]">
+    <section className="pt-[160px]">
       <div className="max-w-[970px] mx-auto px-4">
         <h2 className="text-2xl md:text-4xl lg:text-5xl mb-8 font-apple font-black uppercase text-balance md:text-center text-yellow-darker">
           {t("title")}

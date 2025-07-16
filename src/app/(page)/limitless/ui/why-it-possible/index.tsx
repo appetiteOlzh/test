@@ -3,7 +3,7 @@ import { FC } from "react";
 
 export const WhyItPossible: FC = () => {
   return (
-    <section className="md:pt-[200px] pt-[180px]">
+    <section className="md:pt-[200px] pt-[150px]">
       <div className="max-w-[1270px] mx-auto px-4">
         <h2 className="text-yellow-darker text-2xl md:text-4xl lg:text-5xl mb-4 font-apple font-black uppercase text-balance">
           Почему это возможно?

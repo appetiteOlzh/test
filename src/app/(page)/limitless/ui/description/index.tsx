@@ -6,7 +6,7 @@ export const DescriptionSection: React.FC = () => {
   const t = useTranslations("Unlimited.dubai");
 
   return (
-    <section id="description" className="pt-[180px]">
+    <section id="description" className="pt-[150px]">
       <div className="max-w-[50rem] px-4 mx-auto relative animatable fade-in">
         <div className="absolute -top-[100px] lg:-left-[171px] left-0">
           <Image
