@@ -89,11 +89,11 @@
     },
     "traveling": {
       "title": "Save Every Journey",
-      "description": "Dubai, Maldives, Paris, Istanbul, Bali… Every trip leaves behind a trail of photos and videos — a story only you can tell.<br /><br />With MonClips, you can create folders for every city and country. Save all your photos. Store up to 2,000 videos — <b class='text-yellow-darker'>free</b>.<br /><br /><span class='text-yellow-darker'>No subscriptions. No limits. No risk of losing what matters.</span>"
+      "description": "Dubai, Maldives, Paris, Istanbul, Bali… Every trip leaves behind a trail of photos and videos — a story only you can tell.<br /><br />With MonClips, you can create folders for every city and country. Save all your photos. Store up to 2,000 videos <b class='text-yellow-darker'>for free</b>.<br /><br /><span class='text-yellow-darker'>No subscriptions. No limits. No risk of losing what matters.</span>"
     },
     "design": {
       "title": "You capture life. <br /><span class='text-yellow-darker'> We make it last.</span>",
-      "description": "Your photos aren’t just images.They’re proof you were there. That you felt something. <br /><br />But every time your phone runs out of space, you’re asked to make a choice: What to delete? What to pay for? <br /><br /><span class='text-yellow-darker'>MonClips Gallery</span> gives you a different choice. The freedom to save everything beautifully <b class='text-yellow-darker'>forever</b>. <br /><br /><span class='text-yellow-darker'>No pressure. No hidden fees. Just peace of mind.</span>"
+      "description": "Your photos aren’t just images. They’re proof you were there and felt something. <br /><br />But every time your phone runs out of space, you have to make a choice on what to delete and what to pay for? <br /><br /><span class='text-yellow-darker'>MonClips Gallery</span> gives you a different opportunity to save everything <b class='text-yellow-darker'>forever</b>. <br /><br /><span class='text-yellow-darker'>No pressure. No hidden fees. Just peace of mind.</span>"
     },
     "tryIt": {
       "title": "Save what matters. <br/>Keep it forever",
@@ -125,7 +125,7 @@
         },
         {
           "question": "Why is it free?",
-          "answer": "Because we believe memories shouldn't be behind a paywall. In the future, we’ll launch a content marketplace — where creators can sell curated folders. But core storage will stay free."
+          "answer": "Because we believe memories shouldn't be the thing that you subscribe for. In the future, we’ll launch a content marketplace — where creators can sell curated folders. But core storage will stay free."
         },
         {
           "question": "Do you compress media?",
@@ -133,7 +133,7 @@
         },
         {
           "question": "Will you delete my photos if I'm inactive?",
-          "answer": "Never. Your content stays safe, even if you don’t open the app for months."
+          "answer": "Never. Your content remains safe, even if you don’t open the app for months."
         }
       ]
     },
@@ -155,8 +155,8 @@
       "description_second": "Every album is a story. Now it’s your turn to start one."
     },
     "dubai": {
-      "title": "Built in Dubai for the world",
-      "description": "MonClips was born in Dubai — a place where ambition, beauty and innovation meet. We built it because we were tired of paying to remember. Now we give that freedom to you."
+      "title": "Founded in Dubai for the world",
+      "description": "MonClips was created in Dubai — a place where ambition, beauty and innovation meet. We made it because we were tired of paying to remember. Now we share that freedom with you."
     }
   }
 }
