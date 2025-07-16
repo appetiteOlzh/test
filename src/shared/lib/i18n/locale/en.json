@@ -121,7 +121,7 @@
       "questions": [
         {
           "question": "Can I trust MonClips?",
-          "answer": "Yes. All data is stored on secure, US-based servers (AWS). Only you can access your files."
+          "answer": "Yes. All data is stored on secure, US-based servers. Only you can access your files."
         },
         {
           "question": "Why is it free?",
@@ -142,9 +142,9 @@
       "list": {
         "0": "Unlimited cloud storage for photos",
         "1": "2,000 free video uploads",
-        "2": "+50 videos for every friend you invite",
-        "3": "Beautiful shareable albums",
-        "4": "Notes, filters, comments",
+        "2": "Beautiful shareable albums",
+        "3": "Notes, filters, comments",
+        "4": "Save media directly from chats",
         "5": "Full privacy control"
       }
     },

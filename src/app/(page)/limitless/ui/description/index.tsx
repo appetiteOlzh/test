@@ -7,7 +7,7 @@ export const DescriptionSection: React.FC = () => {
 
   return (
     <section id="description" className="pt-[150px]">
-      <div className="max-w-[50rem] px-4 mx-auto relative animatable fade-in">
+      <div className="max-w-[50rem] px-4 mx-auto relative">
         <div className="absolute -top-[100px] lg:-left-[171px] left-0">
           <Image
             src="/assets/icons/quote-down.svg"
@@ -21,7 +21,10 @@ export const DescriptionSection: React.FC = () => {
           className="text-2xl md:text-4xl lg:text-5xl mb-8 font-apple font-black uppercase text-center text-yellow-darker"
           dangerouslySetInnerHTML={{ __html: t.raw("title") }}
         ></h2>
-        <p className="text-center text-xl md:text-2xl">{t("description")}</p>
+        <p
+          className="text-center text-xl md:text-2xl"
+          dangerouslySetInnerHTML={{ __html: t.raw("description") }}
+        ></p>
       </div>
     </section>
   );
