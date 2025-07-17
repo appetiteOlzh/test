@@ -32,7 +32,7 @@ export const Albums: FC = () => {
         <h2 className="text-2xl md:text-4xl lg:text-5xl mb-8 font-apple font-black uppercase text-balance md:text-center text-yellow-darker">
           {t("title")}
         </h2>
-        <p className="text-lg md:text-2xl leading-tight mb-14 text-balance text-[#B9B9B9] md:text-center">
+        <p className="text-xl md:text-2xl leading-tight mb-14 text-balance md:text-center">
           {t("description")}
         </p>
         <div className="overflow-hidden mb-4">
