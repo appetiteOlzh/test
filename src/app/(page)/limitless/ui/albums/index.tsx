@@ -27,7 +27,7 @@ export const Albums: FC = () => {
   ];
 
   return (
-    <section className="pt-[160px]">
+    <section className="md:pt-[160px] pt-20">
       <div className="max-w-[970px] mx-auto px-4">
         <h2 className="text-2xl md:text-4xl lg:text-5xl mb-8 font-apple font-black uppercase text-balance md:text-center text-yellow-darker">
           {t("title")}
@@ -38,8 +38,8 @@ export const Albums: FC = () => {
         <div className="overflow-hidden mb-4">
           <TabContent list={galleryList} />
         </div>
-        <p className="text-lg md:text-2xl leading-tight mb-14 text-balance text-yellow-darker md:text-center">
-          {t("description_second")}
+        <p className="text-lg md:text-2xl leading-tight text-balance text-yellow-darker text-center">
+          <b>{t("description_second")}</b>
         </p>
       </div>
     </section>

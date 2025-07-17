@@ -7,7 +7,7 @@ export const TryIt: FC = () => {
   const t = useTranslations("Unlimited.tryIt");
 
   return (
-    <section className="pt-[160px] pb-[148px]">
+    <section className="md:pt-[180px] pt-20 md:pb-[148px] pb-20">
       <div className="max-w-[1080px] mx-auto px-4 text-center">
         <h2
           className="text-yellow-darker text-2xl md:text-4xl lg:text-5xl mb-6 font-apple font-black uppercase text-balance"

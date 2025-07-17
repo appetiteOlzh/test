@@ -6,7 +6,7 @@ export const Benefits: React.FC = () => {
   const listArr = Array.from({ length: 6 });
 
   return (
-    <section id="benefits" className="md:pt-[120px] pt-[150px]">
+    <section id="benefits" className="md:pt-[180px] pt-20">
       <div className="container mx-auto px-4">
         <h2
           className="text-h1-clamp font-apple font-black mb-9 uppercase text-center"

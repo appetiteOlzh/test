@@ -22,22 +22,22 @@ export const Footer = () => {
               <li className="mb-3">
                 <div className="flex flex-wrap items-center md:justify-end justify-center -mx-2">
                   <div className="flex-none px-2">
-                    <a
+                    {/* <a
                       href="https://www.tiktok.com/@monclips.app?_t=8qud0MxXOY1&_r=1"
                       target="_blank"
                       rel="noopener noreferrer"
                     >
                       <Image src={tiktok} alt="Tiktok" />
-                    </a>
+                    </a> */}
                   </div>
                   <div className="flex-none px-2">
-                    <a
+                    {/* <a
                       href="https://www.instagram.com/monclips.app?igsh=MWRtZzM3M3lobTB2Mw=="
                       target="_blank"
                       rel="noopener noreferrer"
                     >
                       <Image src={instagram} alt="Instagram" />
-                    </a>
+                    </a> */}
                   </div>
                 </div>
               </li>

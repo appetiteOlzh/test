@@ -7,7 +7,7 @@ export const Design: FC = () => {
   const locale = useLocale();
 
   return (
-    <section id="unordinary" className="pt-[160px]">
+    <section id="unordinary" className="md:pt-[180px] pt-20">
       <div className="max-w-[1270px] mx-auto px-4">
         <div className="flex flex-wrap flex-row-reverse">
           <div className="basis-full md:basis-1/2 min-h-full flex flex-wrap content-justify mb-9 md:mb-0">

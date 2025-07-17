@@ -7,7 +7,7 @@ export const Traveling: FC = () => {
   const locale = useLocale();
 
   return (
-    <section className="md:pt-[180px] pt-[120px]">
+    <section className="md:pt-[180px] pt-20">
       <div className="max-w-[920px] mx-auto px-4">
         <div className="flex flex-wrap items-center">
           <div className="basis-full md:basis-7/12 mb-9 md:mb-0">

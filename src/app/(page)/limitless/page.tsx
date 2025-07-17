@@ -16,8 +16,8 @@ export default function Limitless() {
     <main className="leading-tight">
       <Header isWider withLocale />
       <Hero />
-      <Traveling />
       <Design />
+      <Traveling />
       <Albums />
       <DescriptionSection />
       <Benefits />
