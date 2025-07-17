@@ -73,7 +73,7 @@
     "show_more": "show more",
     "show_less": "hide",
     "not_now": "Not now",
-    "free_download": "Create your account — it’s free",
+    "free_download": "Download now",
     "download_monclips": "DOWNLOAD MONCLIPS"
   },
   "app": {
@@ -89,7 +89,7 @@
     },
     "traveling": {
       "title": "Save Every Journey",
-      "description": "Dubai, Maldives, Paris, Istanbul, Bali… <br />Every trip leaves behind a trail of photos and videos — a story only you can tell.<br /><br />With MonClips, you can create folders for every city and country. Save all your photos. Store up to 2,000 videos <b class='text-yellow-darker'>for free</b>.<br /><br /><span class='text-yellow-darker'>No subscriptions. No limits. No risk of losing what matters.</span>"
+      "description": "Dubai, Maldives, Paris, Istanbul, Bali… <br />Every trip leaves behind a trail of photos and videos — a story only you can tell.<br /><br />With MonClips, you can create folders for every city and country. Save all your photos. Store up to 2,000 videos <b class='text-yellow-darker'>for free</b>.<br /><br /><b class='text-yellow-darker'>No subscriptions. No limits. No risk of losing what matters.</b>"
     },
     "design": {
       "title": "You capture life. <br /><span class='text-yellow-darker'> We make it last.</span>",

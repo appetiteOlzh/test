@@ -15,7 +15,7 @@ export const Traveling: FC = () => {
               {t("title")}
             </h2>
             <p
-              className="text-lg md:text-2xl max-w-[494px]"
+              className="text-lg md:text-2xl leading-tight max-w-[494px]"
               dangerouslySetInnerHTML={{ __html: t.raw("description") }}
             ></p>
           </div>
