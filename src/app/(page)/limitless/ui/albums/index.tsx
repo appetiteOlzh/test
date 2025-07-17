@@ -10,16 +10,19 @@ export const Albums: FC = () => {
       title: t("made_by", { author: "Гаухар" }),
       img: "/assets/img/limitless/album/maldives.png",
       link: "https://share.monclips.com/c/13fgc77nvow8sl",
+      text: "«На второй день поездки телефон написал: “Память заполнена”. Удалять ничего не хотелось. В турагентстве ещё до вылета посоветовали MonClips — и это реально спасло. Скинула все видео и фото в папку “Мальдивы”. И дальше просто жила и снимала.»",
     },
     {
       title: t("made_by", { author: "Aru" }),
       img: "/assets/img/limitless/album/maldives-1.png",
       link: "https://share.monclips.com/c/1797vek78fxwdgj",
+      text: "«Я обычно всё хранила в телефоне — а тут, пока ехали на остров, уже некуда было снимать. Дочка вспомнила, что турагент дал ссылку на MonClips. Всё загрузили в облако — и больше не думали о памяти. Очень удобно.»",
     },
     {
       title: t("made_by", { author: "Hoc" }),
       img: "/assets/img/limitless/album/viet.png",
       link: "https://share.monclips.com/c/105786vvjdwxqkxw45",
+      text: "«Во время поездки во Вьетнам собрал все фото и видео в один альбом и просто отправил ссылку друзьям. Это удобно. Без рекламы. Без подписок. Просто красиво и понятно. Я бы хотел, чтобы такое приложение появилось раньше.»",
     },
   ];
 
