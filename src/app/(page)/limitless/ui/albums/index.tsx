@@ -1,9 +1,12 @@
 import { FC } from "react";
 import { TabContent } from "./tab-content";
-import { useTranslations } from "next-intl";
+import { useLocale, useTranslations } from "next-intl";
 
 export const Albums: FC = () => {
   const t = useTranslations("Unlimited.album");
+  const locale = useLocale();
+
+  if (locale !== "en") return null; // Hide albums for non-English locales
 
   const galleryList = [
     {
