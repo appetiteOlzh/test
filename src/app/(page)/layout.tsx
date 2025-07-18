@@ -26,19 +26,20 @@ export async function generateMetadata(): Promise<Metadata> {
     description: t("description"),
     openGraph: {
       type: "website",
-      // url: "https://monclips.com",
       siteName: "Monclips",
       images: [
         {
           url: "/public/assets/img/og-bg.png", // Must be an absolute url
         },
       ],
+      description: t("description"),
     },
     twitter: {
       card: "summary_large_image",
       site: "@monclips",
       creator: "@olzh_zh",
       images: "/public/assets/img/og-bg.png",
+      description: t("description"),
     },
     icons: {
       icon: "/favicon.ico",

@@ -36,7 +36,7 @@ export const Hero: FC = () => {
       <div className="absolute w-full h-full top-0 left-0 bg-gradient-to-r from-[#181818]/80 to-[#181818]/0 pointer-events-none z-10"></div>
       <div className="absolute w-full h-full top-0 left-0 flex flex-wrap items-center z-20">
         <div className="w-full max-w-[1270px] mx-auto px-4">
-          <h1 className="max-w-[815px] lg:text-5xl md:text-4xl text-2xl text-yellow-darker uppercase font-black font-apple text-balance mb-9">
+          <h1 className="max-w-[815px] text-h1-clamp text-yellow-darker uppercase font-black font-apple text-balance mb-9">
             {t("title")}
           </h1>
           <AppOpener buttonText={t_common("free_download")} />
