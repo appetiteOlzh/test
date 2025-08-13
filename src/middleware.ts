@@ -27,6 +27,8 @@ export const middleware: NextMiddleware = (req) => {
   const {
     os: { name: deviceOS },
   } = userAgent({ headers: req.headers });
+  const requestHeaders = new Headers(req.headers);
+  requestHeaders.set("next-url", req.url);
 
   if (
     req.nextUrl.pathname.startsWith("/_next") ||
@@ -58,12 +60,20 @@ export const middleware: NextMiddleware = (req) => {
   }
   if (!lng) lng = routing.defaultLocale;
   if (lng && lng !== req.cookies.get(localeCookie)?.value) {
-    const response = NextResponse.next();
+    const response = NextResponse.next({
+      request: {
+        headers: requestHeaders,
+      },
+    });
     response.cookies.set(localeCookie, lng);
     return response;
   }
 
-  return NextResponse.next();
+  return NextResponse.next({
+    request: {
+      headers: requestHeaders,
+    },
+  });
 };
 
 export const config = {

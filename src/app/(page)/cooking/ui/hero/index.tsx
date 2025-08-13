@@ -6,20 +6,16 @@ import { AutoCarousel } from "@/widgets/auto-carousel";
 
 const firstArr = Array(22)
   .fill(0)
-  .map((_, index) => `/assets/img/limitless/hero/img(${index + 1}).png`);
+  .map((_, index) => `/assets/img/cooking/hero/img(${index + 1}).jpg`);
 const secondArr = Array(22)
   .fill(0)
-  .map(
-    (_, index) => `/assets/img/limitless/hero/img(${(index % 11) + 11}).png`
-  );
+  .map((_, index) => `/assets/img/cooking/hero/img(${(index % 11) + 10}).jpg`);
 const thirdArr = Array(22)
   .fill(0)
-  .map(
-    (_, index) => `/assets/img/limitless/hero/img(${(index % 11) + 21}).png`
-  );
+  .map((_, index) => `/assets/img/cooking/hero/img(${(index % 11) + 20}).jpg`);
 
 export const Hero: FC = () => {
-  const t = useTranslations("Unlimited.hero");
+  const t = useTranslations("Cooking.hero");
   const t_common = useTranslations("common");
 
   return (
@@ -36,10 +32,11 @@ export const Hero: FC = () => {
       <div className="absolute w-full h-full top-0 left-0 bg-gradient-to-r from-[#181818]/80 to-[#181818]/0 pointer-events-none z-10"></div>
       <div className="absolute w-full h-full top-0 left-0 flex flex-wrap items-center z-20">
         <div className="w-full max-w-[1270px] mx-auto px-4">
-          <h1 className="max-w-[815px] text-h1-clamp text-yellow-darker uppercase font-black font-apple text-balance mb-9">
+          <h1 className="max-w-[815px] text-h1-clamp text-yellow-darker heading text-balance mb-4">
             {t("title")}
           </h1>
-          <AppOpener buttonText={t_common("free_download")} />
+          <p className="mb-9 text-h4-clamp max-w-[544px]">{t("description")}</p>
+          <AppOpener buttonText={t_common("start_for_free")} />
         </div>
       </div>
     </section>

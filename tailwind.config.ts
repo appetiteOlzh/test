@@ -33,7 +33,7 @@ const config: Config = {
       fontSize: {
         "h4-clamp": ["clamp(1.125rem, 5vw, 1.5rem)", { lineHeight: "1.2" }],
         "h3-clamp": ["clamp(1.25rem, 7vw, 2.25rem)", { lineHeight: "1.2" }],
-        "h2-clamp": ["clamp(1.625rem, 9.6vw, 3.5rem)", { lineHeight: "1.2" }],
+        "h2-clamp": ["clamp(1.5rem, 6.4vw, 2.625rem)", { lineHeight: "1.2" }],
         "h1-clamp": ["clamp(1.75rem, 7vw, 3rem)", { lineHeight: "1.2" }],
       },
       borderRadius: {
