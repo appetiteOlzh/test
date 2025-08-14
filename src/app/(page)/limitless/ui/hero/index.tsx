@@ -4,19 +4,15 @@ import { useTranslations } from "next-intl";
 import { AutoCarousel } from "@/widgets/auto-carousel";
 // import CountdownTimer from "@/widgets/timer";
 
-const firstArr = Array(22)
-  .fill(0)
-  .map((_, index) => `/assets/img/limitless/hero/img(${index + 1}).png`);
-const secondArr = Array(22)
-  .fill(0)
-  .map(
-    (_, index) => `/assets/img/limitless/hero/img(${(index % 11) + 11}).png`
-  );
-const thirdArr = Array(22)
-  .fill(0)
-  .map(
-    (_, index) => `/assets/img/limitless/hero/img(${(index % 11) + 21}).png`
-  );
+const firstArr = Array.from(Array(22)).map(
+  (_, index) => `/assets/img/limitless/hero/img(${index + 1}).png`
+);
+const secondArr = Array.from(Array(22)).map(
+  (_, index) => `/assets/img/limitless/hero/img(${(index % 11) + 11}).png`
+);
+const thirdArr = Array.from(Array(22)).map(
+  (_, index) => `/assets/img/limitless/hero/img(${(index % 11) + 21}).png`
+);
 
 export const Hero: FC = () => {
   const t = useTranslations("Unlimited.hero");

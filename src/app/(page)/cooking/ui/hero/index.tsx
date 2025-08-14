@@ -4,15 +4,15 @@ import { useTranslations } from "next-intl";
 import { AutoCarousel } from "@/widgets/auto-carousel";
 // import CountdownTimer from "@/widgets/timer";
 
-const firstArr = Array(22)
-  .fill(0)
-  .map((_, index) => `/assets/img/cooking/hero/img(${index + 1}).jpg`);
-const secondArr = Array(22)
-  .fill(0)
-  .map((_, index) => `/assets/img/cooking/hero/img(${(index % 11) + 10}).jpg`);
-const thirdArr = Array(22)
-  .fill(0)
-  .map((_, index) => `/assets/img/cooking/hero/img(${(index % 11) + 20}).jpg`);
+const firstArr = Array.from(Array(30)).map(
+  (_, index) => `/assets/img/cooking/hero/img(${(index % 10) + 1}).jpg`
+);
+const secondArr = Array.from(Array(30)).map(
+  (_, index) => `/assets/img/cooking/hero/img(${(index % 10) + 10}).jpg`
+);
+const thirdArr = Array.from(Array(30)).map(
+  (_, index) => `/assets/img/cooking/hero/img(${(index % 10) + 20}).jpg`
+);
 
 export const Hero: FC = () => {
   const t = useTranslations("Cooking.hero");
