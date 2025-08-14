@@ -13,12 +13,11 @@ export default getRequestConfig(async () => {
   const isMain = isRu(pathname);
 
   const cookieStore = cookies();
-  const locale =
-    (cookieStore.get("NEXT_LOCALE")?.value as Locale | undefined) || "en";
+  const locale = isMain
+    ? "ru" // Default to Russian for the main page
+    : (cookieStore.get("NEXT_LOCALE")?.value as Locale | undefined) || "en";
 
-  const filePath = isMain
-    ? await import(`./locale/ru.json`) // temporary only ru locale on main page
-    : await import(`./locale/${locale}.json`);
+  const filePath = await import(`./locale/${locale}.json`);
 
   return {
     locale,

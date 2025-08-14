@@ -1,6 +1,6 @@
 import { Header } from "@/widgets/header";
 import { Footer } from "@/widgets/footer";
-import { Gift, Hero, Organizer, Question } from "./ui";
+import { Benefits, Gift, Hero, Organizer, Question, Quote, TryIt } from "./ui";
 
 export default function Limitless() {
   return (
@@ -10,6 +10,9 @@ export default function Limitless() {
       <Question />
       <Organizer />
       <Gift />
+      <Quote />
+      <Benefits />
+      <TryIt />
       <Footer />
     </main>
   );

@@ -3,6 +3,7 @@ import { useTranslations } from "next-intl";
 
 export const Question: FC = () => {
   const t = useTranslations("Cooking.question");
+  const forUseInTw = ["lg:block"];
 
   return (
     <section className="section">
@@ -12,7 +13,7 @@ export const Question: FC = () => {
           dangerouslySetInnerHTML={{ __html: t.raw("title") }}
         ></h2>
         <p
-          className="md:text-center text-h4-clamp max-w-3xl mx-auto"
+          className="md:text-center text-h4-clamp max-w-3xl mx-auto "
           dangerouslySetInnerHTML={{ __html: t.raw("description") }}
         ></p>
       </div>

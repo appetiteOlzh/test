@@ -6,11 +6,13 @@ import cn from "classnames";
 import { Modal } from "@/shared/ui/modal";
 import { AppStoreButton, GoogleplayButton } from "@/shared/ui";
 import { useTranslations } from "next-intl";
+import { twMerge } from "tailwind-merge";
 // media
 
 export const AppOpenerButton: FC<{
   buttonText: string;
-}> = ({ buttonText }) => {
+  className?: string;
+}> = ({ buttonText, className }) => {
   const t = useTranslations("app");
   const [fullUrl, setFullUrl] = useState("");
   const [isOpen, setOpen] = useState(false);
@@ -30,8 +32,11 @@ export const AppOpenerButton: FC<{
   return (
     <>
       <button
-        className={cn(
-          "bg-gradient-to-br from-[#018C6E] via-[#014F42] to-[#035846] py-4 px-7 rounded-2xl text-yellow uppercase font-bold"
+        className={twMerge(
+          cn(
+            "bg-gradient-to-br from-[#018C6E] via-[#014F42] to-[#035846] py-4 px-7 rounded-2xl text-yellow uppercase font-bold",
+            className
+          )
         )}
         onClick={onClick}
       >

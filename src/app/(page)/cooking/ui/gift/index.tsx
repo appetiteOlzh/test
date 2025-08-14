@@ -7,19 +7,19 @@ const list = [
     title: "Завтраки",
     description: "Открыть в MonClips",
     image: "/assets/img/cooking/gifts/1.jpg",
-    link: "#",
-  },
-  {
-    title: "Десерты",
-    description: "Открыть в MonClips",
-    image: "/assets/img/cooking/gifts/2.jpg",
-    link: "#",
+    link: "https://share.monclips.com/c/126phhe7dfo7jr2",
   },
   {
     title: "Обеды",
     description: "Открыть в MonClips",
     image: "/assets/img/cooking/gifts/3.jpg",
-    link: "#",
+    link: "https://share.monclips.com/c/126ul9uml22xavm",
+  },
+  {
+    title: "Ужин",
+    description: "Открыть в MonClips",
+    image: "/assets/img/cooking/gifts/2.jpg",
+    link: "https://share.monclips.com/c/1265o59ea1f_8_h",
   },
 ];
 
@@ -44,6 +44,7 @@ export const Gift: FC = () => {
                 key={index}
                 href={item.link}
                 className="block cursor-pointer"
+                target="_blank"
               >
                 <div
                   style={{

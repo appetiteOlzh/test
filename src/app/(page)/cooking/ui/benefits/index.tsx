@@ -1,33 +1,24 @@
-import { useLocale, useTranslations } from "next-intl";
+import { useTranslations } from "next-intl";
 import Image from "next/image";
 import { FC } from "react";
 
-export const Organizer: FC = () => {
-  const t = useTranslations("Cooking.organizer");
-  const locale = useLocale();
-
-  const list = t.raw("description") as string[];
+export const Benefits: FC = () => {
+  const t = useTranslations("Cooking.benefits");
 
   return (
     <section className="section">
       <div className="container">
-        <div className="premium-overlay -mx-4 md:mx-0">
+        <div className="premium-overlay">
           <div className="flex flex-wrap">
-            <div className="basis-full md:basis-7/12 mb-12 md:mb-0 lg:p-10 min-w-0">
-              <p className="text-h4-clamp mb-3">{t("subtitle")}</p>
+            <div className="basis-full md:basis-7/12 mb-12 md:mb-0 lg:p-10 min-w-0 text-center md:text-left">
               <h2
-                className="text-h2-clamp heading mb-4"
+                className="text-h2-clamp heading mb-6 text-yellow-darker md:text-left text-center"
                 dangerouslySetInnerHTML={{ __html: t.raw("title") }}
               ></h2>
-              <ul className="list-disc pl-8 max-w-[486px]">
-                {list.map((item, index) => (
-                  <li
-                    key={index}
-                    className="text-h4-clamp"
-                    dangerouslySetInnerHTML={{ __html: item }}
-                  ></li>
-                ))}
-              </ul>
+              <p
+                className="text-h4-clamp"
+                dangerouslySetInnerHTML={{ __html: t.raw("description") }}
+              ></p>
             </div>
             <div className="basis-full md:basis-5/12 min-w-0 text-center md:text-left">
               <div className="relative inline-flex phone-glow z-10">

@@ -36,7 +36,10 @@ export const Hero: FC = () => {
             {t("title")}
           </h1>
           <p className="mb-9 text-h4-clamp max-w-[544px]">{t("description")}</p>
-          <AppOpener buttonText={t_common("start_for_free")} />
+          <AppOpener
+            buttonText={t_common("start_for_free")}
+            className="w-full sm:w-72 rounded-full"
+          />
         </div>
       </div>
     </section>
