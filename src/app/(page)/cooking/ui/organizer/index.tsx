@@ -1,11 +1,9 @@
-import { useLocale, useTranslations } from "next-intl";
+import { useTranslations } from "next-intl";
 import Image from "next/image";
 import { FC } from "react";
 
 export const Organizer: FC = () => {
   const t = useTranslations("Cooking.organizer");
-  const locale = useLocale();
-
   const list = t.raw("description") as string[];
 
   return (

@@ -4,6 +4,7 @@ import { useTranslations } from "next-intl";
 export const Question: FC = () => {
   const t = useTranslations("Cooking.question");
   const forUseInTw = ["lg:block"];
+  console.log(forUseInTw);
 
   return (
     <section className="section">
