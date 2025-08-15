@@ -8,7 +8,7 @@ const nextConfig = {
     return [
       {
         source: "/", // Отображается как /
-        destination: "/cooking", // при переходе открывается /home
+        destination: "/limitless", // при переходе открывается /home
       },
     ];
   },

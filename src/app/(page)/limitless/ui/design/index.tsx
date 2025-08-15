@@ -26,7 +26,7 @@ export const Design: FC = () => {
             <div className="xl:-my-[60px] xl:-mr-[60px] text-center">
               <div className="relative inline-flex phone-glow z-10">
                 <Image
-                  src={`/assets/img/limitless/iphone-design-2-${locale}.png`}
+                  src={`/assets/img/limitless/iphone-design-${locale}.png`}
                   width={286}
                   height={589}
                   alt="iPhone 15 Pro max"
