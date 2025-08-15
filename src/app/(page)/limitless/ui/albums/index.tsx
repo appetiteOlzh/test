@@ -6,7 +6,7 @@ export const Albums: FC = () => {
   const t = useTranslations("Unlimited.album");
   const locale = useLocale();
 
-  if (locale !== "en") return null; // Hide albums for non-English locales
+  if (locale === "en") return null; // Hide albums for English locales
 
   const galleryList = [
     {
