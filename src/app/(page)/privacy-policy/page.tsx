@@ -1118,7 +1118,7 @@ export default function PrivacyPolicy() {
             <br />
             If you are located in Switzerland, you may contact the Federal{" "}
             <a
-              href="https://www.edoeb.admin.ch/edoeb/en/home.html"
+              href="https://www.edoeb.admin.ch/edoeb/en/home"
               target="_blank"
               rel="noopener noreferrer"
               style={{ color: "#245dc1" }}

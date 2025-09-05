@@ -837,11 +837,11 @@ export default function TermsOfService() {
             We care about data privacy and security. Please review our Privacy
             Policy:{" "}
             <a
-              href="https://monclips.com/privacy-policy.html"
+              href="https://monclips.com/privacy-policy"
               target="_blank"
               rel="noopener noreferrer"
             >
-              https://monclips.com/privacy-policy.html
+              https://monclips.com/privacy-policy
             </a>
             . By using the Services, you agree to be bound by our Privacy
             Policy, which is incorporated into these Legal Terms. Please be

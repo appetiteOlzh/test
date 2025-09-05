@@ -10,6 +10,10 @@ const nextConfig = {
         source: "/", // Отображается как /
         destination: "/limitless", // при переходе открывается /home
       },
+      {
+        source: "/:path*\\.html",
+        destination: "/:path*",
+      },
     ];
   },
   images: {
