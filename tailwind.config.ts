@@ -29,6 +29,7 @@ const config: Config = {
       spacing: {
         "12.5": "3.125rem",
         "15": "3.75rem",
+        "18": "4.5rem",
       },
       fontSize: {
         "h4-clamp": ["clamp(1.125rem, 5vw, 1.5rem)", { lineHeight: "1.2" }],

@@ -4,11 +4,13 @@ import { FC } from "react";
 import { twMerge } from "tailwind-merge";
 import cn from "classnames";
 import { Select } from "./select";
+import { AppOpenerButton } from "@/features/app-opener/ui/button";
 
-export const Header: FC<{ isWider?: boolean; withLocale?: boolean }> = ({
-  isWider,
-  withLocale,
-}) => {
+export const Header: FC<{
+  isWider?: boolean;
+  withLocale?: boolean;
+  withDownload?: boolean;
+}> = ({ isWider, withLocale, withDownload }) => {
   return (
     <header className="md:pt-12 pt-[30px] absolute w-full top-0 left-0 z-50">
       <div
@@ -28,6 +30,14 @@ export const Header: FC<{ isWider?: boolean; withLocale?: boolean }> = ({
               />
             </Link>
           </div>
+          {withDownload && (
+            <div className="basis-auto ml-auto">
+              <AppOpenerButton
+                buttonText="Download"
+                className="rounded-full px-15 py-5"
+              />
+            </div>
+          )}
           {withLocale ? (
             <div className="basis-auto ml-auto">
               <Select />

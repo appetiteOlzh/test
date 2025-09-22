@@ -1,10 +1,16 @@
 import Image from "next/image";
 import { headers } from "next/headers";
+import { FC } from "react";
+import { useTranslations } from "next-intl";
+import cn from "classnames";
 import { matchDevice } from "@/shared/lib/match-device";
 import logo from "./logo.png";
-import { useTranslations } from "next-intl";
 
-export const OpenInAppHeader = () => {
+type Props = {
+  style?: "dark" | "transparent";
+};
+
+export const OpenInAppHeader: FC<Props> = ({ style = "dark" }) => {
   const t = useTranslations("app");
   const userAgent = headers().get("user-agent");
   if (matchDevice(userAgent).isWeb) return null;
@@ -17,7 +23,9 @@ export const OpenInAppHeader = () => {
     <>
       <a
         href={link}
-        className="fixed top-0 left-0 w-full bg-dark z-50 py-3"
+        className={cn("fixed top-0 left-0 w-full z-50 py-3", {
+          "bg-dark": style === "dark",
+        })}
         rel="noopener nofollow"
       >
         <div className="container px-4 mx-auto">
@@ -30,7 +38,10 @@ export const OpenInAppHeader = () => {
                 {t("monclips_gallery")}
               </p>
               <p
-                className="font-medium text-[10px] leading-3 text-inactive"
+                className={cn("font-medium text-[10px] leading-3 ", {
+                  "text-inactive": style === "dark",
+                  "text-[#9E9E9E]": style === "transparent",
+                })}
                 dangerouslySetInnerHTML={{ __html: t.raw("open_in_app") }}
               ></p>
             </div>

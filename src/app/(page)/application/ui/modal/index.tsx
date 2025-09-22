@@ -15,27 +15,21 @@ type ModalProps = {
   isOpen: boolean;
   onClose: () => void;
   children: ReactNode;
-  size?: "lg" | "md" | "sm";
-  isTransparent?: boolean;
-  isMedia?: boolean;
-  isRestricted?: boolean;
   portalId?: string;
 };
+// background: linear-gradient(180deg, rgba(0, 0, 0, 0) 9.11%, #000000 94.11%);
 
-const modalOverlay = "fixed top-0 left-0 bottom-0 right-0 bg-black/60  z-50";
+const modalOverlay =
+  "absolute top-0 left-0 bottom-0 right-0 bg-g z-50 pointer-events-none";
 const modalWrapper =
-  "fixed top-0 left-0 bottom-0 right-0 overflow-hidden text-center md:pt-2.5 md:px-2.5 after:inline-block after:h-full after:align-middle after:-ml-px";
+  "absolute top-0 left-0 bottom-0 right-0 overflow-hidden text-center md:pt-2.5 md:px-2.5 after:inline-block after:h-full after:align-middle after:-ml-px";
 const modal =
-  "relative outline-0 align-middle mb-2.5 w-full bg-green text-white inline-block rounded-2xl text-left";
+  "relative outline-0 align-bottom mb-2.5 w-full text-white inline-block text-left";
 
 export const Modal: FC<ModalProps> = ({
   isOpen = true,
   onClose,
   children,
-  size = "md",
-  isTransparent = false,
-  isMedia,
-  isRestricted,
   portalId = "modal-root",
 }) => {
   const [isVisible, setVisible] = useState(isOpen);
@@ -76,10 +70,14 @@ export const Modal: FC<ModalProps> = ({
 
   const modalContent = isVisible ? (
     <div
-      className={cn(modalOverlay, {
-        [s.show]: isOpen,
-        [s.hide]: !isOpen,
-      })}
+      className={cn(
+        modalOverlay,
+        {
+          [s.show]: isOpen,
+          [s.hide]: !isOpen,
+        },
+        "bg-gradient-to-b from-transparent to-black"
+      )}
       onAnimationEnd={handleAnimated}
     >
       <div
@@ -100,13 +98,7 @@ export const Modal: FC<ModalProps> = ({
         onAnimationEnd={handleAnimated}
       >
         <div
-          className={cn(modal, {
-            "max-w-3xl": size === "lg",
-            "max-w-md": size === "md",
-            "max-w-96": size === "sm",
-            "!bg-transparent": isTransparent,
-            "max-w-full md:max-w-[780px] md:mx-auto": isMedia,
-          })}
+          className={cn(modal)}
           onMouseDown={() => {
             isChildClick.current = true;
           }}
@@ -114,19 +106,7 @@ export const Modal: FC<ModalProps> = ({
             e.stopPropagation();
           }}
         >
-          <div className="absolute -top-px -left-px -right-px -bottom-px rounded-2xl block bg-gradient-to-r from-blue-light to-green -z-10"></div>
-          <div className={cn("modal-header", { relative: isRestricted })}>
-            <button
-              type="button"
-              onClick={handleCloseClick}
-              className={cn(
-                "w-10 h-10 rounded-full bg-white bg-opacity-10 fixed top-3 right-3 z-10",
-                { absolute: isRestricted }
-              )}
-            >
-              ⨉
-            </button>
-          </div>
+          <div className="absolute -top-px -left-px -right-px -bottom-px rounded-2xl block -z-10"></div>
           <div className="modal-body">{children}</div>
         </div>
       </div>

@@ -1,0 +1,10 @@
+import { FC, ReactNode } from "react";
+
+export const PhoneWrapper: FC<{ children: ReactNode }> = ({ children }) => {
+  return (
+    <div className="relative sm:w-80 sm:h-[654px] mx-auto sm:px-2.5 sm:pt-2.5 sm:pb-1.5 h-full">
+      <div className="absolute inset-0 pointer-events-none bg-cover z-20 sm:bg-[url('/assets/img/application/phone-wrapper.png')]"></div>
+      {children}
+    </div>
+  );
+};
