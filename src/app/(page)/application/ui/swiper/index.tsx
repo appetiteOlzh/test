@@ -66,7 +66,7 @@ export const VerticalScroll = () => {
                 <h1 className="text-4xl sm:text-3xl uppercase font-black font-apple text-balance">
                   {title}
                 </h1>
-                <p className="font-black text-lg font-apple mb-6">{subtitle}</p>
+                <p className="font-bold text-lg mb-6">{subtitle}</p>
                 <AppOpener
                   buttonText="Download now"
                   className="block text-center w-full rounded-full normal-case"
