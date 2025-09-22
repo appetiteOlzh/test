@@ -23,12 +23,19 @@ const PUBLIC_FILE = /\.(.*)$/;
 // This function can be marked `async` if using `await` inside
 export const middleware: NextMiddleware = (req) => {
   const pathname = req.nextUrl.pathname;
-  // device middleware - redirect depend on device
   const {
     os: { name: deviceOS },
   } = userAgent({ headers: req.headers });
   const requestHeaders = new Headers(req.headers);
   requestHeaders.set("next-url", req.url);
+  // requestHeaders.c
+
+  const response = NextResponse.next({
+    request: {
+      headers: requestHeaders,
+    },
+  });
+  response.cookies.set("deviceOs", deviceOS ?? "Other");
 
   if (
     req.nextUrl.pathname.startsWith("/_next") ||
@@ -60,20 +67,11 @@ export const middleware: NextMiddleware = (req) => {
   }
   if (!lng) lng = routing.defaultLocale;
   if (lng && lng !== req.cookies.get(localeCookie)?.value) {
-    const response = NextResponse.next({
-      request: {
-        headers: requestHeaders,
-      },
-    });
     response.cookies.set(localeCookie, lng);
     return response;
   }
 
-  return NextResponse.next({
-    request: {
-      headers: requestHeaders,
-    },
-  });
+  return response;
 };
 
 export const config = {

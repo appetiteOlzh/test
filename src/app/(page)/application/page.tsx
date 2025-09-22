@@ -7,7 +7,7 @@ export default function ApplicationPage() {
   return (
     <main className="min-h-full sm:flex sm:flex-col">
       <Header withDownload deskOnly />
-      <div className="flex-1 flex items-center sm:py-20 h-screen sm:h-auto">
+      <div className="flex-1 flex items-center sm:py-20 h-[100dvh] sm:h-auto">
         <Wrapper>
           <VerticalScroll />
         </Wrapper>

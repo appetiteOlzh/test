@@ -3,7 +3,7 @@ import { Swiper, SwiperSlide } from "swiper/react";
 import { Mousewheel } from "swiper/modules";
 import { Post } from "../post";
 import "swiper/css";
-import { AppOpenerButton } from "@/features/app-opener/ui/button";
+import { AppOpener } from "@/features/app-opener";
 
 const images = [
   "/assets/img/application/post-1.png",
@@ -52,9 +52,9 @@ export const VerticalScroll = () => {
                   <p className="font-black text-lg font-apple mb-6">
                     Stays on device
                   </p>
-                  <AppOpenerButton
+                  <AppOpener
                     buttonText="Download now"
-                    className="w-full rounded-full"
+                    className="block text-center w-full rounded-full"
                   />
                 </div>
               </div>
@@ -69,9 +69,9 @@ export const VerticalScroll = () => {
                   <p className="font-black text-lg font-apple mb-6">
                     Done in a couple of taps
                   </p>
-                  <AppOpenerButton
+                  <AppOpener
                     buttonText="Download now"
-                    className="w-full rounded-full"
+                    className="block text-center w-full rounded-full"
                   />
                 </div>
               </div>
@@ -79,15 +79,15 @@ export const VerticalScroll = () => {
             {idx === 8 ? (
               <div className="absolute top-0 bottom-0 left-0 right-0 flex flex-col content-end bg-gradient-to-b from-transparent to-black px-4 select-none">
                 <div className="mb-24 mt-auto">
-                  <h1 className="text-4xl uppercase font-black font-apple">
+                  <h1 className="text-3xl uppercase font-black font-apple">
                     Easy Organization
                   </h1>
                   <p className="font-black text-lg font-apple mb-6">
                     Photos and videos in place
                   </p>
-                  <AppOpenerButton
+                  <AppOpener
                     buttonText="Download now"
-                    className="w-full rounded-full"
+                    className="block text-center w-full rounded-full"
                   />
                 </div>
               </div>

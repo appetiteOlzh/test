@@ -1,7 +1,8 @@
+"use client";
 import { matchDevice } from "@/shared/lib/match-device";
 import { AppStoreCustomButton, GoogleplayCustomButton } from "@/shared/ui";
-import { headers } from "next/headers";
 import { AppOpenerButton } from "./button";
+import { useEffect, useState } from "react";
 
 export const AppOpener = ({
   buttonText,
@@ -10,7 +11,16 @@ export const AppOpener = ({
   buttonText: string;
   className?: string;
 }) => {
-  const userAgent = headers().get("user-agent");
+  const [userAgent, setUserAgent] = useState("");
+
+  useEffect(() => {
+    const value = document.cookie
+      .split("; ")
+      .find((row) => row.startsWith("deviceOs="))
+      ?.split("=")[1];
+
+    setUserAgent(value ?? "");
+  }, []);
 
   if (matchDevice(userAgent).isIos)
     return (

@@ -1,7 +1,7 @@
-export const matchDevice = (userAgent: string | undefined | null) => {
-  const isIos = userAgent && /iPad|iPhone|iPod/.test(userAgent);
-  const isAndroid = userAgent && /Android/.test(userAgent);
-  const isWeb = !userAgent || (!isAndroid && !isIos);
+export const matchDevice = (deviceOS: string | undefined | null) => {
+  const isIos = deviceOS && deviceOS === "iOS";
+  const isAndroid = deviceOS && deviceOS === "Android";
+  const isWeb = !deviceOS || (!isAndroid && !isIos);
 
   return {
     isIos,
