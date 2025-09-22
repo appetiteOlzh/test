@@ -5,14 +5,14 @@ import { Footer } from "@/widgets/footer";
 
 export default function ApplicationPage() {
   return (
-    <main className="min-h-screen flex flex-col">
-      <Header withDownload />
-      <div className="flex-1 flex items-center sm:py-20">
+    <main className="min-h-screen sm:flex sm:flex-col">
+      <Header withDownload deskOnly />
+      <div className="flex-1 flex items-center sm:py-20 h-screen sm:h-auto">
         <Wrapper>
           <VerticalScroll />
         </Wrapper>
       </div>
-      <Footer />
+      <Footer deskOnly />
     </main>
   );
 }

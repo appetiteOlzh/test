@@ -35,7 +35,7 @@ export const VerticalScroll = () => {
         className="h-full overflow-hidden"
         wrapperClass="h-full"
       >
-        <SwiperSlide className="h-full flex content-end pb-18">
+        <SwiperSlide className="h-full flex content-end pb-18 select-none">
           <h1 className="text-4xl uppercase font-black font-apple mb-24 px-4">
             Scroll your gallery like tiktok
           </h1>
@@ -44,7 +44,7 @@ export const VerticalScroll = () => {
           <SwiperSlide className="h-full" key={img}>
             <Post img={img} />
             {idx === 2 ? (
-              <div className="absolute top-0 bottom-0 left-0 right-0 flex flex-col content-end bg-gradient-to-b from-transparent to-black px-4">
+              <div className="absolute top-0 bottom-0 left-0 right-0 flex flex-col content-end bg-gradient-to-b from-transparent to-black px-4 select-none">
                 <div className="mb-24 mt-auto">
                   <h1 className="text-4xl uppercase font-black font-apple">
                     Local and private
@@ -60,7 +60,7 @@ export const VerticalScroll = () => {
               </div>
             ) : null}
             {idx === 5 ? (
-              <div className="absolute top-0 bottom-0 left-0 right-0 flex flex-col content-end bg-gradient-to-b from-transparent to-black px-4">
+              <div className="absolute top-0 bottom-0 left-0 right-0 flex flex-col content-end bg-gradient-to-b from-transparent to-black px-4 select-none">
                 <div className="mb-24 mt-auto">
                   <h1 className="text-4xl uppercase font-black font-apple">
                     Fast <br />
@@ -77,7 +77,7 @@ export const VerticalScroll = () => {
               </div>
             ) : null}
             {idx === 8 ? (
-              <div className="absolute top-0 bottom-0 left-0 right-0 flex flex-col content-end bg-gradient-to-b from-transparent to-black px-4">
+              <div className="absolute top-0 bottom-0 left-0 right-0 flex flex-col content-end bg-gradient-to-b from-transparent to-black px-4 select-none">
                 <div className="mb-24 mt-auto">
                   <h1 className="text-4xl uppercase font-black font-apple">
                     Easy Organization

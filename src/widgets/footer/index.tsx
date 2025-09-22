@@ -1,15 +1,22 @@
+import { FC } from "react";
 import Image from "next/image";
 import Link from "next/link";
 import { useTranslations } from "next-intl";
+import cn from "classnames";
 // import tiktok from "/public/assets/img/social/tiktok.svg";
 // import instagram from "/public/assets/img/social/instagram.svg";
 import monclips from "/public/assets/img/monclips-icon.svg";
 
-export const Footer = () => {
+export const Footer: FC<{ deskOnly?: boolean }> = ({ deskOnly }) => {
   const t = useTranslations("footer");
 
   return (
-    <footer className="relative md:overflow-hidden pt-12 pb-12 font-secondary text-light">
+    <footer
+      className={cn(
+        "relative md:overflow-hidden pt-12 pb-12 font-secondary text-light",
+        { "sm:block hidden": deskOnly }
+      )}
+    >
       <div className="container mx-auto px-4">
         <div className="flex flex-wrap sm:justify-between justify-center -mx-2">
           <div className="px-2 basis-full md:basis-1/3">

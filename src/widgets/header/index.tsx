@@ -10,9 +10,14 @@ export const Header: FC<{
   isWider?: boolean;
   withLocale?: boolean;
   withDownload?: boolean;
-}> = ({ isWider, withLocale, withDownload }) => {
+  deskOnly?: boolean;
+}> = ({ isWider, withLocale, withDownload, deskOnly }) => {
   return (
-    <header className="md:pt-12 pt-[30px] absolute w-full top-0 left-0 z-50">
+    <header
+      className={cn("md:pt-12 pt-[30px] absolute w-full top-0 left-0 z-50", {
+        "sm:block hidden": deskOnly,
+      })}
+    >
       <div
         className={twMerge(
           cn("mx-auto px-4", { container: !isWider, "max-w-[1270px]": isWider })
