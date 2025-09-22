@@ -69,7 +69,7 @@ export const VerticalScroll = () => {
                 <p className="font-black text-lg font-apple mb-6">{subtitle}</p>
                 <AppOpener
                   buttonText="Download now"
-                  className="block text-center w-full rounded-full"
+                  className="block text-center w-full rounded-full normal-case"
                 />
               </div>
             </div>
