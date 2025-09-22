@@ -1,5 +1,4 @@
 import { FC, ReactNode } from "react";
-import { Footer } from "../footer";
 import { Header } from "../header";
 import { PhoneWrapper } from "./phone-wrapper";
 
@@ -16,7 +15,6 @@ export const Wrapper: FC<Props> = ({ children }) => {
       >
         <Header />
         <div className="h-full">{children}</div>
-        <Footer />
       </section>
     </PhoneWrapper>
   );

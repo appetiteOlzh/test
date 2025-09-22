@@ -1,5 +1,5 @@
 import Image from "next/image";
-import { headers } from "next/headers";
+import { cookies } from "next/headers";
 import { FC } from "react";
 import { useTranslations } from "next-intl";
 import cn from "classnames";
@@ -12,7 +12,7 @@ type Props = {
 
 export const OpenInAppHeader: FC<Props> = ({ style = "dark" }) => {
   const t = useTranslations("app");
-  const userAgent = headers().get("user-agent");
+  const userAgent = cookies().get("deviceOs")?.value;
   if (matchDevice(userAgent).isWeb) return null;
 
   const link = matchDevice(userAgent).isIos

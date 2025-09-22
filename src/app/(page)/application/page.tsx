@@ -5,7 +5,7 @@ import { Footer } from "@/widgets/footer";
 
 export default function ApplicationPage() {
   return (
-    <main className="min-h-full flex flex-col h-[100dvh] sm:h-auto">
+    <div className="sm:min-h-screen flex flex-col h-[100dvh] sm:h-auto">
       <Header withDownload deskOnly />
       <div className="flex-1 flex items-center sm:py-20 min-h-0">
         <Wrapper>
@@ -13,6 +13,6 @@ export default function ApplicationPage() {
         </Wrapper>
       </div>
       <Footer deskOnly />
-    </main>
+    </div>
   );
 }

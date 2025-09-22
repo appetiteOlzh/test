@@ -6,15 +6,31 @@ import "swiper/css";
 import { AppOpener } from "@/features/app-opener";
 
 const images = [
-  "/assets/img/application/post-1.png",
-  "/assets/img/application/post-2.png",
-  "/assets/img/application/post-3.png",
-  "/assets/img/application/post-4.png",
-  "/assets/img/application/post-5.png",
-  "/assets/img/application/post-6.png",
-  "/assets/img/application/post-7.png",
-  "/assets/img/application/post-8.png",
-  "/assets/img/application/post-9.png",
+  {
+    img: "/assets/img/application/post-1.png",
+    title: "Scroll your camera roll like a TikTok",
+    subtitle: "Every swipe is a surprise",
+  },
+  {
+    img: "/assets/img/application/post-2.png",
+    title: "Find favorite and forgotten moments",
+    subtitle: "Feel them again",
+  },
+  {
+    img: "/assets/img/application/post-3.png",
+    title: "Share emotions with friends and family",
+    subtitle: "Relive it together",
+  },
+  {
+    img: "/assets/img/application/post-4.png",
+    title: "Organize memories into albums",
+    subtitle: "Upload instantly",
+  },
+  {
+    img: "/assets/img/application/post-5.png",
+    title: "Delete unwanted shots",
+    subtitle: "Free up your phone",
+  },
 ];
 
 export const VerticalScroll = () => {
@@ -35,63 +51,21 @@ export const VerticalScroll = () => {
         className="h-full overflow-hidden"
         wrapperClass="h-full"
       >
-        <SwiperSlide className="h-full flex content-end pb-18 select-none">
-          <h1 className="text-4xl uppercase font-black font-apple mb-24 px-4">
-            Scroll your gallery like tiktok
-          </h1>
-        </SwiperSlide>
-        {images.map((img, idx) => (
-          <SwiperSlide className="h-full" key={img}>
+        {images.map(({ img, title, subtitle }) => (
+          <SwiperSlide className="h-full select-none" key={img}>
             <Post img={img} />
-            {idx === 2 ? (
-              <div className="absolute top-0 bottom-0 left-0 right-0 flex flex-col content-end bg-gradient-to-b from-transparent to-black px-4 select-none">
-                <div className="mb-24 mt-auto">
-                  <h1 className="text-4xl uppercase font-black font-apple">
-                    Local and private
-                  </h1>
-                  <p className="font-black text-lg font-apple mb-6">
-                    Stays on device
-                  </p>
-                  <AppOpener
-                    buttonText="Download now"
-                    className="block text-center w-full rounded-full"
-                  />
-                </div>
+            <div className="absolute top-0 bottom-0 left-0 right-0 flex flex-col content-end bg-gradient-to-b from-transparent to-black px-4 select-none">
+              <div className="mb-16 mt-auto">
+                <h1 className="text-4xl sm:text-3xl uppercase font-black font-apple text-balance">
+                  {title}
+                </h1>
+                <p className="font-black text-lg font-apple mb-6">{subtitle}</p>
+                <AppOpener
+                  buttonText="Download now"
+                  className="block text-center w-full rounded-full"
+                />
               </div>
-            ) : null}
-            {idx === 5 ? (
-              <div className="absolute top-0 bottom-0 left-0 right-0 flex flex-col content-end bg-gradient-to-b from-transparent to-black px-4 select-none">
-                <div className="mb-24 mt-auto">
-                  <h1 className="text-4xl uppercase font-black font-apple">
-                    Fast <br />
-                    Sorting
-                  </h1>
-                  <p className="font-black text-lg font-apple mb-6">
-                    Done in a couple of taps
-                  </p>
-                  <AppOpener
-                    buttonText="Download now"
-                    className="block text-center w-full rounded-full"
-                  />
-                </div>
-              </div>
-            ) : null}
-            {idx === 8 ? (
-              <div className="absolute top-0 bottom-0 left-0 right-0 flex flex-col content-end bg-gradient-to-b from-transparent to-black px-4 select-none">
-                <div className="mb-24 mt-auto">
-                  <h1 className="text-3xl uppercase font-black font-apple">
-                    Easy Organization
-                  </h1>
-                  <p className="font-black text-lg font-apple mb-6">
-                    Photos and videos in place
-                  </p>
-                  <AppOpener
-                    buttonText="Download now"
-                    className="block text-center w-full rounded-full"
-                  />
-                </div>
-              </div>
-            ) : null}
+            </div>
           </SwiperSlide>
         ))}
       </Swiper>
