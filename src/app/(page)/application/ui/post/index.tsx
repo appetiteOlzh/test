@@ -8,7 +8,7 @@ type Props = {
 
 export const Post: FC<Props> = ({ img }) => {
   return (
-    <div className="relative select-none">
+    <div className="relative select-none h-full">
       <Image
         src={img}
         width={375}
