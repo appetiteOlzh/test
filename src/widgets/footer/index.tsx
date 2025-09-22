@@ -3,8 +3,8 @@ import Image from "next/image";
 import Link from "next/link";
 import { useTranslations } from "next-intl";
 import cn from "classnames";
-// import tiktok from "/public/assets/img/social/tiktok.svg";
-// import instagram from "/public/assets/img/social/instagram.svg";
+import tiktok from "/public/assets/img/social/tiktok.svg";
+import instagram from "/public/assets/img/social/instagram.svg";
 import monclips from "/public/assets/img/monclips-icon.svg";
 
 export const Footer: FC<{ deskOnly?: boolean }> = ({ deskOnly }) => {
@@ -29,22 +29,22 @@ export const Footer: FC<{ deskOnly?: boolean }> = ({ deskOnly }) => {
               <li className="mb-3">
                 <div className="flex flex-wrap items-center md:justify-end justify-center -mx-2">
                   <div className="flex-none px-2">
-                    {/* <a
-                      href="https://www.tiktok.com/@monclips.app?_t=8qud0MxXOY1&_r=1"
+                    <a
+                      href="https://www.tiktok.com/@monclipsapp"
                       target="_blank"
                       rel="noopener noreferrer"
                     >
                       <Image src={tiktok} alt="Tiktok" />
-                    </a> */}
+                    </a>
                   </div>
                   <div className="flex-none px-2">
-                    {/* <a
-                      href="https://www.instagram.com/monclips.app?igsh=MWRtZzM3M3lobTB2Mw=="
+                    <a
+                      href="https://www.instagram.com/monclipsapp"
                       target="_blank"
                       rel="noopener noreferrer"
                     >
                       <Image src={instagram} alt="Instagram" />
-                    </a> */}
+                    </a>
                   </div>
                 </div>
               </li>
