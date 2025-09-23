@@ -62,11 +62,11 @@ export const VerticalScroll = () => {
           <SwiperSlide className="h-full select-none" key={img}>
             <Post img={img} />
             <div className="absolute top-0 bottom-0 left-0 right-0 flex flex-col content-end px-4 select-none">
-              <div className="mb-16 mt-auto">
-                <h1 className="text-4xl sm:text-3xl uppercase font-black font-apple text-balance">
+              <div className="mb-14 mt-auto">
+                <h1 className="text-4xl sm:text-3xl uppercase font-black font-apple text-balance !leading-none mb-0.5 max-w-72">
                   {title}
                 </h1>
-                <p className="font-bold text-lg mb-6">{subtitle}</p>
+                <p className="font-bold text-sm mb-6">{subtitle}</p>
                 <AppOpener
                   buttonText="Download now"
                   className="block text-center w-full rounded-full normal-case"
