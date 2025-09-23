@@ -61,7 +61,7 @@ export const VerticalScroll = () => {
         {images.map(({ img, title, subtitle }) => (
           <SwiperSlide className="h-full select-none" key={img}>
             <Post img={img} />
-            <div className="absolute top-0 bottom-0 left-0 right-0 flex flex-col content-end bg-gradient-to-b from-transparent to-black px-4 select-none">
+            <div className="absolute top-0 bottom-0 left-0 right-0 flex flex-col content-end px-4 select-none">
               <div className="mb-16 mt-auto">
                 <h1 className="text-4xl sm:text-3xl uppercase font-black font-apple text-balance">
                   {title}
@@ -77,7 +77,7 @@ export const VerticalScroll = () => {
         ))}
         <SwiperSlide className="h-full select-none">
           <Post img="/assets/img/application/post-6.png" />
-          <div className="absolute top-0 bottom-0 left-0 right-0 flex flex-col content-end bg-gradient-to-b from-transparent to-black px-4 select-none">
+          <div className="absolute top-0 bottom-0 left-0 right-0 flex flex-col content-end px-4 select-none">
             <div className="mt-auto mb-9">
               <div className="text-center">
                 <div className="mb-10">
