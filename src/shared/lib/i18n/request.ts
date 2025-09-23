@@ -13,11 +13,11 @@ export default getRequestConfig(async () => {
   // Provide a static locale, fetch a user setting,
   // read from `cookies()`, `headers()`, etc.
   const pathname = headers().get("next-url");
-  const isMain = isRu(pathname);
+  const isRuOnly = isRu(pathname);
   const isEnOnly = isEn(pathname);
 
   const cookieStore = cookies();
-  const locale = isMain
+  const locale = isRuOnly
     ? "ru" // Default to Russian for the main page
     : isEnOnly
     ? "en"
