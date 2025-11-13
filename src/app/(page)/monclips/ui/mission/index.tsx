@@ -42,7 +42,7 @@ export const Mission: FC = () => {
               style={{
                 backgroundImage: "url(/assets/img/monclips/mission.png)",
               }}
-              className="h-[400px] w-full bg-cover"
+              className="h-[400px] w-full bg-cover xs:bg-center bg-[40%_50%]"
             ></div>
           </div>
           <div

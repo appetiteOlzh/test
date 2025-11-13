@@ -5,4 +5,5 @@
     rgba(82, 82, 82, 0.25) 81.45%
   );
   filter: blur(141.75px);
+  pointer-events: none;
 }

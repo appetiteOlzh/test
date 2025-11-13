@@ -27,7 +27,7 @@ const reviewList = [
 
 export const Review: FC = () => {
   return (
-    <section id="review" className="overflow-hidden">
+    <section id="review" className="overflow-hidden pt-15">
       <div className="container">
         <div className="p-6 md:p-10">
           <Tag href="#goal" className="mb-6 z-20">

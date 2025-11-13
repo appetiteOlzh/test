@@ -8,26 +8,8 @@ export const HowItWorks: FC = () => {
     <section id="how-it-works" className="pt-15">
       <div className="container">
         <div className="p-6 md:p-10 rounded-[36px] relative overflow-hidden">
-          <div className="flex flex-wrap -mx-2">
-            <div className="basis-4/12 px-2">
-              <div className="md:pr-10">
-                <div className="hidden md:block">
-                  <Tag href="#how-it-works" className="mb-6">
-                    Как работает MonClips
-                  </Tag>
-                </div>
-                <div className="w-full xs:w-[260xp] max-w-full after:pb-[176.46%] after:block relative rounded-3xl overflow-hidden">
-                  <video
-                    src="/assets/img/monclips/how-it-works.mp4"
-                    muted
-                    autoPlay
-                    loop
-                    className="absolute left-0 top-1/2 -translate-y-1/2"
-                  ></video>
-                </div>
-              </div>
-            </div>
-            <div className="basis-8/12 px-2">
+          <div className="flex flex-wrap -mx-2 flex-row-reverse">
+            <div className="basis-full md:basis-8/12 px-2 pb-2 md:pb-0">
               <div className="md:hidden block">
                 <Tag href="#how-it-works">Как работает MonClips</Tag>
               </div>
@@ -74,6 +56,24 @@ export const HowItWorks: FC = () => {
                   укол ностальгии и радости
                 </p>
               </Tag>
+            </div>
+            <div className="basis-full md:basis-4/12 px-2">
+              <div className="md:pr-10">
+                <div className="hidden md:block">
+                  <Tag href="#how-it-works" className="mb-6">
+                    Как работает MonClips
+                  </Tag>
+                </div>
+                <div className="w-full xs:w-[260xp] max-w-full after:pb-[176.46%] after:block relative rounded-3xl overflow-hidden">
+                  <video
+                    src="/assets/img/monclips/how-it-works.mp4"
+                    muted
+                    autoPlay
+                    loop
+                    className="absolute left-0 top-1/2 -translate-y-1/2"
+                  ></video>
+                </div>
+              </div>
             </div>
           </div>
           <div

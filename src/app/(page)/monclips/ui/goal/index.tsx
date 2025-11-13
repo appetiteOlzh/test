@@ -10,7 +10,7 @@ export const Goal: FC = () => {
       <div className="container">
         <div className="p-6 md:p-10 rounded-[36px] relative overflow-hidden">
           <Tag href="#goal" className="mb-6">
-            Как работает MonClips
+            Наша цель
           </Tag>
           <h2 className="text-h2-mon uppercase text-yellow-darker font-black font-apple max-w-[805px] text-balance mb-4">
             Мы хотим, чтобы миллионы людей по всему миру вспоминали хорошее
@@ -20,7 +20,7 @@ export const Goal: FC = () => {
             Это анти-депрессивное приложение без фильтров и лайков.
           </p>
           <div className="flex flex-wrap -mx-2.5 -mb-4">
-            <div className="basis-1/3 mb-4 px-2.5">
+            <div className="basis-full md:basis-1/3 mb-4 px-2.5">
               <Tag
                 href="#goal"
                 className="mb-0 h-full"
@@ -32,13 +32,14 @@ export const Goal: FC = () => {
                   height={64}
                   alt="confetti"
                   className="mb-6"
+                  unoptimized
                 />
                 <h4 className="text-lg xl:text-xl font-black font-apple uppercase">
                   вернуть людям чувство радости от собственной жизни
                 </h4>
               </Tag>
             </div>
-            <div className="basis-1/3 mb-4 px-2.5">
+            <div className="basis-full md:basis-1/3 mb-4 px-2.5">
               <Tag
                 href="#goal"
                 className="mb-0 h-full"
@@ -50,13 +51,14 @@ export const Goal: FC = () => {
                   height={64}
                   alt="confetti"
                   className="mb-6"
+                  unoptimized
                 />
                 <h4 className="text-lg xl:text-xl font-black font-apple uppercase">
                   снизить тревогу сравнения
                 </h4>
               </Tag>
             </div>
-            <div className="basis-1/3 mb-4 px-2.5">
+            <div className="basis-full md:basis-1/3 mb-4 px-2.5">
               <Tag
                 href="#goal"
                 className="mb-0 h-full"
@@ -68,6 +70,7 @@ export const Goal: FC = () => {
                   height={64}
                   alt="confetti"
                   className="mb-6"
+                  unoptimized
                 />
                 <h4 className="text-lg xl:text-xl font-black font-apple uppercase">
                   создать новое ежедневное действие — “вспомнить хорошее”
@@ -81,7 +84,7 @@ export const Goal: FC = () => {
                 Если каждый человек хотя бы раз в день посмотрит на свои фото и
                 подумает:
               </p>
-              <h4 className="text-h4-clamp font-apple font-black uppercase mb-4">
+              <h4 className="text-h4-clamp font-apple font-black uppercase mb-4 text-balance">
                 “у меня ведь всё не так уж плохо”
               </h4>
               <p className="md:text-lg">мир станет чуть теплее.</p>

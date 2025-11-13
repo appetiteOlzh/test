@@ -11,12 +11,12 @@ export const Summary: FC = () => {
           делаем хайп.
         </h2>
         <p className="max-w-[620px] mb-9 mx-auto">
-          Мы просто хотим, чтобы люди снова замечали свою жизнь.  MonClips — это
+          Мы просто хотим, чтобы люди снова замечали свою жизнь. MonClips — это
           напоминание, что всё, что ты ищешь, у тебя уже есть.
         </p>
         <AppOpener
           buttonText="Скачать MonClips и вспомнить хорошее"
-          className="rounded-full"
+          className="rounded-full text-center inline-flex"
         />
       </div>
     </section>

@@ -3,13 +3,13 @@ import { AppOpener } from "@/features/app-opener";
 import { AutoCarousel } from "@/widgets/auto-carousel";
 
 const firstArr = Array.from(Array(22)).map(
-  (_, index) => `/assets/img/limitless/hero/img(${index + 1}).png`
+  (_, index) => `/assets/img/monclips/hero/img(${index + 1}).png`
 );
 const secondArr = Array.from(Array(22)).map(
-  (_, index) => `/assets/img/limitless/hero/img(${(index % 11) + 11}).png`
+  (_, index) => `/assets/img/monclips/hero/img(${(index % 11) + 11}).png`
 );
 const thirdArr = Array.from(Array(22)).map(
-  (_, index) => `/assets/img/limitless/hero/img(${(index % 11) + 21}).png`
+  (_, index) => `/assets/img/monclips/hero/img(${(index % 11) + 21}).png`
 );
 
 export const Hero: FC = () => {

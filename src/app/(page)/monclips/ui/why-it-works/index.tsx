@@ -8,7 +8,7 @@ export const WhyItWorks: FC = () => {
     <section id="why-it-works" className="pt-15">
       <div className="container">
         <div className="flex flex-wrap items-end">
-          <div className="basis-full xl:basis-7/12 md:basis-8/12">
+          <div className="basis-full xl:basis-7/12 md:basis-8/12 mb-7 md:mb-0">
             <div className="p-6 md:p-10 rounded-[36px] relative overflow-hidden">
               <Tag href="#why-it-works" className="mb-6">
                 Почему это работает
