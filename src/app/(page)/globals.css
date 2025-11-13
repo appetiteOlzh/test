@@ -89,3 +89,7 @@ body {
 .full-page > footer {
   @apply mt-auto;
 }
+
+.container {
+  max-width: 1240px;
+}

@@ -8,7 +8,8 @@ export const Tag: FC<{
   href: string;
   style?: "silver" | "gold" | "silver-nocontent" | "gold-nocontent";
   className?: string;
-}> = ({ children, href, style = "silver", className }) => {
+  contentClassName?: string;
+}> = ({ children, href, style = "silver", className, contentClassName }) => {
   return (
     <a
       href={href}
@@ -28,7 +29,8 @@ export const Tag: FC<{
               ? s.contentGold
               : style.endsWith("nocontent")
               ? "bg-background relative z-10 rounded-2xl"
-              : s.content
+              : s.content,
+            contentClassName
           )
         )}
       >

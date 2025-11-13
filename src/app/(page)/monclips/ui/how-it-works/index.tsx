@@ -13,7 +13,12 @@ export const HowItWorks: FC = () => {
               <div className="md:hidden block">
                 <Tag href="#how-it-works">Как работает MonClips</Tag>
               </div>
-              <Tag href="#how-it-works" className="block mb-4">
+              <Tag
+                href="#how-it-works"
+                className="block mb-4"
+                style="silver-nocontent"
+                contentClassName="p-6"
+              >
                 <h3 className="text-lg md:text-xl font-black font-apple mb-2.5 uppercase">
                   1. Подключить галерею
                 </h3>
@@ -21,7 +26,12 @@ export const HowItWorks: FC = () => {
                   Как Instagram или камера — всё просто
                 </p>
               </Tag>
-              <Tag href="#how-it-works" className="block mb-4">
+              <Tag
+                href="#how-it-works"
+                className="block mb-4"
+                style="silver-nocontent"
+                contentClassName="p-6"
+              >
                 <h3 className="text-lg md:text-xl font-black font-apple mb-2.5 uppercase">
                   2. Свайпаешь фото
                 </h3>
@@ -30,7 +40,12 @@ export const HowItWorks: FC = () => {
                   видел(а)
                 </p>
               </Tag>
-              <Tag href="#how-it-works" className="block mb-4">
+              <Tag
+                href="#how-it-works"
+                className="block mb-4"
+                style="silver-nocontent"
+                contentClassName="p-6"
+              >
                 <h3 className="text-lg md:text-xl font-black font-apple mb-2.5 uppercase">
                   3. Без интернета, без регистрации
                 </h3>
@@ -38,7 +53,12 @@ export const HowItWorks: FC = () => {
                   MonClips работает офлайн — даже в самолёте или где нет сети
                 </p>
               </Tag>
-              <Tag href="#how-it-works" className="block mb-4">
+              <Tag
+                href="#how-it-works"
+                className="block mb-4"
+                style="silver-nocontent"
+                contentClassName="p-6"
+              >
                 <h3 className="text-lg md:text-xl font-black font-apple mb-2.5 uppercase">
                   4. 100% приватность
                 </h3>
@@ -47,7 +67,12 @@ export const HowItWorks: FC = () => {
                   их не видит.
                 </p>
               </Tag>
-              <Tag href="#how-it-works" className="block mb-4" style="gold">
+              <Tag
+                href="#how-it-works"
+                className="block mb-4"
+                style="gold"
+                contentClassName="p-6"
+              >
                 <h3 className="text-lg md:text-xl font-black font-apple mb-2.5 uppercase">
                   6. Вспоминаешь и улыбаешься
                 </h3>
@@ -57,8 +82,8 @@ export const HowItWorks: FC = () => {
                 </p>
               </Tag>
             </div>
-            <div className="basis-full md:basis-4/12 px-2">
-              <div className="md:pr-10">
+            <div className="basis-full md:basis-4/12 px-2 min-w-0">
+              <div className="md:pr-10 xl:pr-[54px]">
                 <div className="hidden md:block">
                   <Tag href="#how-it-works" className="mb-6">
                     Как работает MonClips
