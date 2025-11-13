@@ -5,7 +5,7 @@ export const Idea: FC = () => {
   return (
     <section id="idea" className="pt-15">
       <div className="container">
-        <div className="p-6 md:p-10">
+        <div className="p-6 md:p-10 rounded-[36px] overflow-hidden">
           <h2 className="text-h2-mon uppercase font-black font-apple text-balance mb-6">
             Так родилась идея{" "}
             <span className="text-yellow-darker">
@@ -19,17 +19,17 @@ export const Idea: FC = () => {
           </p>
           <div className="flex flex-wrap -mx-3 mb-4">
             <div className="md:basis-[30%] basis-full mb-4 min-w-0 px-3">
-              <Tag className="mb-0" style="gold" href="#">
+              <Tag className="mb-0" style="gold" href="#idea">
                 Я впервые за долгое время почувствовала благодарность
               </Tag>
             </div>
             <div className="md:basis-[30%] basis-full mb-4 min-w-0 px-3">
-              <Tag className="mb-0" style="gold" href="#">
+              <Tag className="mb-0" style="gold" href="#idea">
                 Я вспомнил моменты, которые уже стёрлись из памяти
               </Tag>
             </div>
             <div className="md:basis-[40%] basis-full mb-4 min-w-0 px-3">
-              <Tag className="mb-0" style="gold" href="#">
+              <Tag className="mb-0" style="gold" href="#idea">
                 Я понял, что у меня нормальная, счастливая жизнь — просто я её
                 не замечал
               </Tag>

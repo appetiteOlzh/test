@@ -2,7 +2,7 @@ import { FC } from "react";
 import cn from "classnames";
 import { Tag } from "../tag";
 
-import s from "./style.module.css";
+import s from "../style.module.css";
 import Image from "next/image";
 
 export const History: FC = () => {

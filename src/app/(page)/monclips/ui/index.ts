@@ -3,3 +3,8 @@ export { About } from "./about";
 export { Mission } from "./mission";
 export { History } from "./history";
 export { Idea } from "./idea";
+export { HowItWorks } from "./how-it-works";
+export { Goal } from "./goal";
+export { Review } from "./review";
+export { WhyItWorks } from "./why-it-works";
+export { Summary } from "./summary";

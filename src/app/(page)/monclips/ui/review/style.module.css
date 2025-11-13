@@ -1,0 +1,23 @@
+.slider::before,
+.slider::after {
+  content: "";
+  display: block;
+  position: absolute;
+  top: 50%;
+  background: linear-gradient(90deg, #181818 0%, #181818 100%);
+  filter: blur(30px);
+  width: 144px;
+  height: 288px;
+  pointer-events: none;
+  z-index: 10;
+}
+
+.slider::before {
+  left: 0;
+  transform: translate3d(-50%, -50%, 0);
+}
+
+.slider::after {
+  right: 0;
+  transform: translate3d(50%, -50%, 0);
+}

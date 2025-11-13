@@ -35,7 +35,7 @@ export const Hero: FC = () => {
             Ты пролистываешь ленты чужих людей каждый день. А свою — почти
             никогда.
           </p>
-          <AppOpener buttonText="Скачать MonClips" />
+          <AppOpener buttonText="Скачать MonClips" className="rounded-full" />
         </div>
       </div>
     </section>
