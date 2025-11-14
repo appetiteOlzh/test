@@ -5,7 +5,7 @@ import { useTranslations } from "next-intl";
 import cn from "classnames";
 import tiktok from "/public/assets/img/social/tiktok.svg";
 import instagram from "/public/assets/img/social/instagram.svg";
-import monclips from "/public/assets/img/monclips-icon.svg";
+import monclips from "/public/assets/img/monclips.svg";
 
 export const Footer: FC<{ deskOnly?: boolean }> = ({ deskOnly }) => {
   const t = useTranslations("footer");
@@ -75,7 +75,7 @@ export const Footer: FC<{ deskOnly?: boolean }> = ({ deskOnly }) => {
           }}
         ></div>
         <p className="text-center">
-          MONCLIPS, INC. 2024 <br />
+          MONCLIPS, INC. 2025 <br />
           {/* DOVER, DELAWARE */}
         </p>
       </div>
