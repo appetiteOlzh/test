@@ -27,11 +27,11 @@ const images = [
     title: "Share emotions with friends and family",
     subtitle: "Relive it together",
   },
-  {
-    img: "/assets/img/application/post-4.png",
-    title: "Organize memories into albums",
-    subtitle: "Upload instantly",
-  },
+  // {
+  //   img: "/assets/img/application/post-4.png",
+  //   title: "Organize memories into albums",
+  //   subtitle: "Upload instantly",
+  // },
   {
     img: "/assets/img/application/post-5.png",
     title: "Delete unwanted shots",
