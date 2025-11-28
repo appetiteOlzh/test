@@ -83,7 +83,7 @@ export default async function RootLayout({
         <Suspense fallback={<></>}>
           <YandexMetrika />
         </Suspense>
-        <GoogleAnalytics />
+        <GoogleAnalytics strategy="beforeInteractive" />
         <Suspense fallback={<></>}>
           <FacebookPixelEvents />
         </Suspense>
