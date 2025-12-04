@@ -19,7 +19,7 @@ export const FooterNew: FC<{ deskOnly?: boolean }> = ({ deskOnly }) => {
       )}
     >
       <div className="container mx-auto px-4">
-        <div className="flex md:flex-row-reverse flex-wrap sm:justify-between justify-center -mx-2">
+        <div className="flex md:flex-row-reverse flex-col flex-wrap sm:justify-between justify-center -mx-2">
           <div className="basis-auto">
             <ul className="mb-0 md:text-right text-center flex flex-col md:flex-row flex-wrap md:space-x-[30px] items-center">
               <li className="mb-3">
