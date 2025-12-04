@@ -36,7 +36,7 @@ const config: Config = {
         "h3-clamp": ["clamp(1.25rem, 7vw, 2.25rem)", { lineHeight: "1.2" }],
         "h2-clamp": ["clamp(1.5rem, 6.4vw, 2.625rem)", { lineHeight: "1.2" }],
         "h1-clamp": ["clamp(1.75rem, 7vw, 3rem)", { lineHeight: "1.2" }],
-        "h1-mon": ["clamp(1.5rem, 6.4vw, 3rem)", { lineHeight: "1.2" }],
+        "h1-mon": ["clamp(2rem, 6.4vw, 3.5rem)", { lineHeight: "1.2" }],
         "h2-mon": ["clamp(1.75rem, 7.5vw, 2.25rem)", { lineHeight: "1.2" }],
         "desc-mon": ["clamp(1.125rem, 4.8vw, 1.5rem)", { lineHeight: "1.2" }],
       },

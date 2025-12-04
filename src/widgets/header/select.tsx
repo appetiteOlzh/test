@@ -11,7 +11,7 @@ export const Select: FC<{ onChange?: () => void }> = ({ onChange }) => {
     <select
       name="lng"
       id={id}
-      className="select foont-secondary text-standart text-white ml-auto bg-transparent border-none outline-none cursor-pointer"
+      className="select foont-secondary text-initial text-inherit ml-auto bg-transparent border-none outline-none cursor-pointer"
       value={locale}
       onChange={(e) => {
         changeLanguage(e.target.value);

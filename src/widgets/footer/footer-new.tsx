@@ -3,30 +3,29 @@ import Image from "next/image";
 import Link from "next/link";
 import { useTranslations } from "next-intl";
 import cn from "classnames";
+import { Select } from "../header/select";
+// import monclips from "/public/assets/img/monclips.svg";
 import tiktok from "/public/assets/img/social/tiktok.svg";
 import instagram from "/public/assets/img/social/instagram.svg";
-import monclips from "/public/assets/img/monclips.svg";
 
-export const Footer: FC<{ deskOnly?: boolean }> = ({ deskOnly }) => {
+export const FooterNew: FC<{ deskOnly?: boolean }> = ({ deskOnly }) => {
   const t = useTranslations("footer");
 
   return (
     <footer
       className={cn(
-        "relative md:overflow-hidden pt-12 pb-12 font-secondary text-light",
+        "relative md:overflow-hidden pt-9 md:pb-9 pb-24 font-secondary text-light",
         { "sm:block hidden": deskOnly }
       )}
     >
       <div className="container mx-auto px-4">
-        <div className="flex flex-wrap sm:justify-between justify-center -mx-2">
-          <div className="px-2 basis-full md:basis-1/3">
-            <div className="mb-4">
-              <Image src={monclips} alt="Monslips" className="mx-auto" />
-            </div>
-          </div>
-          <div className="px-2 basis-full md:basis-1/3">
-            <ul className="mb-0 md:text-right text-center">
+        <div className="flex md:flex-row-reverse flex-wrap sm:justify-between justify-center -mx-2">
+          <div className="basis-auto">
+            <ul className="mb-0 md:text-right text-center flex flex-col md:flex-row flex-wrap md:space-x-[30px] items-center">
               <li className="mb-3">
+                <Select />
+              </li>
+              <li className="mb-3 md:hidden order-1 md:order-none">
                 <div className="flex flex-wrap items-center md:justify-end justify-center -mx-2">
                   <div className="flex-none px-2">
                     <a
@@ -51,10 +50,6 @@ export const Footer: FC<{ deskOnly?: boolean }> = ({ deskOnly }) => {
               <li className="mb-3">
                 <a href="mailto:support@monclips.com">support@monclips.com</a>
               </li>
-            </ul>
-          </div>
-          <div className="px-2 basis-full md:basis-1/3 md:order-first">
-            <ul className="mb-0 text-center md:text-left">
               <li className="mb-3">
                 <Link href="/privacy-policy">{t("policy")}</Link>
               </li>
@@ -66,20 +61,19 @@ export const Footer: FC<{ deskOnly?: boolean }> = ({ deskOnly }) => {
               </li>
             </ul>
           </div>
+          <div className="basis-auto">
+            <div
+              style={{
+                margin: "18px 0px 30px",
+                height: "1px",
+                backgroundColor: "#B9B9B9",
+              }}
+              className="md:hidden"
+            ></div>
+            <p className="text-center">MONCLIPS, INC. 2025</p>
+          </div>
         </div>
-        <div
-          style={{
-            margin: "18px 0px 30px",
-            height: "1px",
-            backgroundColor: "#466765",
-          }}
-        ></div>
-        <p className="text-center">
-          MONCLIPS, INC. 2025 <br />
-        </p>
       </div>
     </footer>
   );
 };
-
-export { FooterNew } from "./footer-new";

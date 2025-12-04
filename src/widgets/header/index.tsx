@@ -44,7 +44,7 @@ export const Header: FC<{
             </div>
           )}
           {withLocale ? (
-            <div className="basis-auto ml-auto">
+            <div className="basis-auto ml-auto text-standart">
               <Select />
             </div>
           ) : null}
@@ -53,3 +53,5 @@ export const Header: FC<{
     </header>
   );
 };
+
+export { HeaderNew } from "./header-new";

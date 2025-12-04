@@ -18,10 +18,33 @@ const ruCountries = [
   "uz",
 ];
 
+const GA_URL = "https://www.google-analytics.com/mp/collect";
+const MEASUREMENT_ID = "G-ZMWY92F4Z8";
+
+function sendGAEvent(clientId: string, redirectUrl: string) {
+  const apiSecret = process.env.GA_API_SECRET;
+  if (!apiSecret) return; // важно: редирект не ломается
+
+  fetch(`${GA_URL}?measurement_id=${MEASUREMENT_ID}&api_secret=${apiSecret}`, {
+    method: "POST",
+    headers: { "Content-Type": "application/json" },
+    body: JSON.stringify({
+      client_id: clientId,
+      events: [
+        {
+          name: "redirect",
+          params: { path: redirectUrl },
+        },
+      ],
+    }),
+  }).catch(() => {});
+  // Не await → не блокируем middleware
+}
+
 acceptLanguage.languages(locales as unknown as string[]);
 const PUBLIC_FILE = /\.(.*)$/;
 // This function can be marked `async` if using `await` inside
-export const middleware: NextMiddleware = (req) => {
+export const middleware: NextMiddleware = async (req) => {
   const pathname = req.nextUrl.pathname;
   const {
     os: { name: deviceOS },
@@ -44,16 +67,18 @@ export const middleware: NextMiddleware = (req) => {
   ) {
     return;
   }
-
   if (pathname.startsWith("/join")) {
-    if (deviceOS === "Android")
-      return NextResponse.redirect(
-        "https://play.google.com/store/apps/details?id=com.monclips"
-      );
-    if (deviceOS === "iOS")
-      return NextResponse.redirect(
-        "https://apps.apple.com/app/monclips-moodboard/id6502268873"
-      );
+    if (deviceOS === "Android") {
+      const url = "https://play.google.com/store/apps/details?id=com.monclips";
+      sendGAEvent("autogoogleplay", url);
+
+      return NextResponse.redirect(url);
+    }
+    if (deviceOS === "iOS") {
+      const url = "https://apps.apple.com/app/monclips-moodboard/id6502268873";
+      sendGAEvent("autoappstore", url);
+      return NextResponse.redirect(url);
+    }
   }
 
   let lng;

@@ -160,5 +160,16 @@
       "title": "Founded in Dubai for the world",
       "description": "MonClips Gallery was created in Dubai — a place where ambition, beauty and innovation meet. We made it because we were tired of paying to remember. Now we share that freedom with you."
     }
+  },
+  "Space": {
+    "title": "Your daily space for your real life",
+    "list": {
+      "camera": "See your life, not someone else's",
+      "smile": "Reconnect with yourself",
+      "moments": "Notice warm moments"
+    },
+    "button": "Get the App",
+    "meta_title": "MonClips - Your daily space for your real life",
+    "meta_description": "MonClips helps you see your own life, rediscover warm moments, and reconnect with yourself. A quiet, personal space where your story becomes clear."
   }
 }
