@@ -22,7 +22,11 @@ const GA_URL = "https://www.google-analytics.com/mp/collect";
 const MEASUREMENT_ID = "G-ZMWY92F4Z8";
 const apiSecret = process.env.GA_API_SECRET;
 
-function sendGAEvent(clientId: string, redirectUrl: string) {
+function sendGAEvent(
+  clientId: string,
+  redirectUrl: string,
+  debug_mode?: boolean
+) {
   if (!apiSecret) return; // важно: редирект не ломается
 
   fetch(`${GA_URL}?measurement_id=${MEASUREMENT_ID}&api_secret=${apiSecret}`, {
@@ -30,6 +34,7 @@ function sendGAEvent(clientId: string, redirectUrl: string) {
     headers: { "Content-Type": "application/json" },
     body: JSON.stringify({
       client_id: clientId,
+      debug_mode: debug_mode ?? false,
       events: [
         {
           name: "redirect",
