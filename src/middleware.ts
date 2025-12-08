@@ -22,39 +22,25 @@ const GA_URL = "https://www.google-analytics.com/mp/collect";
 const MEASUREMENT_ID = "G-ZMWY92F4Z8";
 const apiSecret = process.env.GA_API_SECRET;
 
-function sendGAEvent(
-  clientId: string,
-  redirectUrl: string,
-  response: NextResponse,
-  debug_mode?: boolean
-) {
+function sendGAEvent(clientId: string, redirectUrl: string) {
   if (!apiSecret) return; // важно: редирект не ломается
 
-  fetch(`${GA_URL}?measurement_id=${MEASUREMENT_ID}&api_secret=${apiSecret}`, {
-    method: "POST",
-    headers: { "Content-Type": "application/json" },
-    body: JSON.stringify({
-      client_id: clientId,
-      debug_mode: debug_mode ?? false,
-      events: [
-        {
-          name: "redirect",
-          params: { path: redirectUrl },
-        },
-      ],
-    }),
-  })
-    .then((r) => {
-      response.cookies.set("then", "then");
-      return r;
-    })
-    .catch((e) => {
-      response.cookies.set("err", e ?? "error");
-    })
-    .finally(() => {
-      response.cookies.set("finally", "finally");
-    });
-  // Не await → не блокируем middleware
+  fetch(
+    `${GA_URL}?measurement_id=${MEASUREMENT_ID}&api_secret=${apiSecret}&debug_mode=1`,
+    {
+      method: "POST",
+      headers: { "Content-Type": "application/json" },
+      body: JSON.stringify({
+        client_id: clientId,
+        events: [
+          {
+            name: clientId,
+            params: { path: redirectUrl },
+          },
+        ],
+      }),
+    }
+  ).catch(() => ({}));
 }
 
 acceptLanguage.languages(locales as unknown as string[]);
@@ -86,21 +72,15 @@ export const middleware: NextMiddleware = async (req) => {
   if (pathname.startsWith("/join")) {
     if (deviceOS === "Android") {
       const url = "https://play.google.com/store/apps/details?id=com.monclips";
-      sendGAEvent("autogoogleplay", url, response, false);
+      sendGAEvent("autogoogleplay", url);
 
       return NextResponse.redirect(url);
     }
     if (deviceOS === "iOS") {
       const url = "https://apps.apple.com/app/monclips-moodboard/id6502268873";
-      sendGAEvent("autoappstore", url, response, false);
+      sendGAEvent("autoappstore", url);
       return NextResponse.redirect(url);
     }
-    sendGAEvent(
-      "autogoogleplayTEST",
-      "https://play.google.com/store/apps/details?id=com.monclips",
-      response,
-      true
-    );
   }
 
   let lng;
