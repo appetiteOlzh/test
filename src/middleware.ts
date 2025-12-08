@@ -20,27 +20,42 @@ const ruCountries = [
 
 const GA_URL = "https://www.google-analytics.com/mp/collect";
 const MEASUREMENT_ID = "G-ZMWY92F4Z8";
-const apiSecret = process.env.GA_API_SECRET;
+const API_SECRET = process.env.GA_API_SECRET;
 
-function sendGAEvent(clientId: string, redirectUrl: string) {
-  if (!apiSecret) return; // важно: редирект не ломается
+function generateClientId(): string {
+  // Генерация случайного client_id в формате "randomNumber.randomNumber"
+  const part1 = Math.floor(Math.random() * 1e10);
+  const part2 = Math.floor(Math.random() * 1e10);
+  return `${part1}.${part2}`;
+}
 
-  fetch(
-    `${GA_URL}?measurement_id=${MEASUREMENT_ID}&api_secret=${apiSecret}&debug_mode=1`,
-    {
-      method: "POST",
-      headers: { "Content-Type": "application/json" },
-      body: JSON.stringify({
-        client_id: clientId,
-        events: [
-          {
-            name: clientId,
-            params: { path: redirectUrl },
-          },
-        ],
-      }),
-    }
-  ).catch(() => ({}));
+async function sendGAEvent(
+  event: string,
+  redirectUrl: string,
+  clientId: string
+) {
+  if (!API_SECRET) return;
+
+  try {
+    await fetch(
+      `${GA_URL}?measurement_id=${MEASUREMENT_ID}&api_secret=${API_SECRET}&debug_mode=1`,
+      {
+        method: "POST",
+        headers: { "Content-Type": "application/json" },
+        body: JSON.stringify({
+          client_id: clientId,
+          events: [
+            {
+              name: event,
+              params: { path: redirectUrl },
+            },
+          ],
+        }),
+      }
+    );
+  } catch (err) {
+    console.error("GA event error:", err);
+  }
 }
 
 acceptLanguage.languages(locales as unknown as string[]);
@@ -70,16 +85,41 @@ export const middleware: NextMiddleware = async (req) => {
     return;
   }
   if (pathname.startsWith("/join")) {
-    if (deviceOS === "Android") {
-      const url = "https://play.google.com/store/apps/details?id=com.monclips";
-      sendGAEvent("autogoogleplay", url);
+    const gaCookie = req.cookies.get("_ga")?.value ?? "";
+    let clientId = "";
 
-      return NextResponse.redirect(url);
+    if (gaCookie) {
+      const parts = gaCookie.split(".");
+      if (parts.length === 4) {
+        clientId = `${parts[2]}.${parts[3]}`;
+      } else {
+        clientId = generateClientId();
+      }
+    } else {
+      clientId = generateClientId();
     }
-    if (deviceOS === "iOS") {
-      const url = "https://apps.apple.com/app/monclips-moodboard/id6502268873";
-      sendGAEvent("autoappstore", url);
-      return NextResponse.redirect(url);
+
+    let redirectUrl = "";
+    let eventName = "";
+    if (deviceOS === "Android") {
+      redirectUrl =
+        "https://play.google.com/store/apps/details?id=com.monclips";
+      eventName = "autogoogleplay";
+    } else if (deviceOS === "iOS") {
+      redirectUrl =
+        "https://apps.apple.com/app/monclips-moodboard/id6502268873";
+      eventName = "autoappstore";
+    }
+
+    if (redirectUrl && eventName) {
+      await sendGAEvent(eventName, redirectUrl, clientId);
+
+      // Если куки _ga нет, можно установить временную куку на 1 день
+      const response = NextResponse.redirect(redirectUrl);
+      if (!gaCookie) {
+        response.cookies.set("_ga", clientId, { maxAge: 60 * 60 * 24 });
+      }
+      return response;
     }
   }
 
