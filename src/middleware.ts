@@ -43,9 +43,17 @@ function sendGAEvent(
         },
       ],
     }),
-  }).catch((e) => {
-    response.cookies.set("err", e ?? "error");
-  });
+  })
+    .then((r) => {
+      response.cookies.set("then", "then");
+      return r;
+    })
+    .catch((e) => {
+      response.cookies.set("err", e ?? "error");
+    })
+    .finally(() => {
+      response.cookies.set("finally", "finally");
+    });
   // Не await → не блокируем middleware
 }
 
