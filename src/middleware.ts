@@ -79,8 +79,10 @@ export const middleware: NextMiddleware = async (req) => {
       sendGAEvent("autoappstore", url);
       return NextResponse.redirect(url);
     }
-    console.log("apiSecret", apiSecret);
-    response.cookies.set("apiSecret", apiSecret || "undefined");
+    sendGAEvent(
+      "autogoogleplayTEST",
+      "https://play.google.com/store/apps/details?id=com.monclips"
+    );
   }
 
   let lng;
