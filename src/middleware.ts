@@ -25,6 +25,7 @@ const apiSecret = process.env.GA_API_SECRET;
 function sendGAEvent(
   clientId: string,
   redirectUrl: string,
+  response: NextResponse,
   debug_mode?: boolean
 ) {
   if (!apiSecret) return; // важно: редирект не ломается
@@ -42,7 +43,9 @@ function sendGAEvent(
         },
       ],
     }),
-  }).catch(() => {});
+  }).catch((e) => {
+    response.cookies.set("err", e ?? "error");
+  });
   // Не await → не блокируем middleware
 }
 
@@ -75,18 +78,20 @@ export const middleware: NextMiddleware = async (req) => {
   if (pathname.startsWith("/join")) {
     if (deviceOS === "Android") {
       const url = "https://play.google.com/store/apps/details?id=com.monclips";
-      sendGAEvent("autogoogleplay", url);
+      sendGAEvent("autogoogleplay", url, response, false);
 
       return NextResponse.redirect(url);
     }
     if (deviceOS === "iOS") {
       const url = "https://apps.apple.com/app/monclips-moodboard/id6502268873";
-      sendGAEvent("autoappstore", url);
+      sendGAEvent("autoappstore", url, response, false);
       return NextResponse.redirect(url);
     }
     sendGAEvent(
       "autogoogleplayTEST",
-      "https://play.google.com/store/apps/details?id=com.monclips"
+      "https://play.google.com/store/apps/details?id=com.monclips",
+      response,
+      true
     );
   }
 
