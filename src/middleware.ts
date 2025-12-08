@@ -20,9 +20,9 @@ const ruCountries = [
 
 const GA_URL = "https://www.google-analytics.com/mp/collect";
 const MEASUREMENT_ID = "G-ZMWY92F4Z8";
+const apiSecret = process.env.GA_API_SECRET;
 
 function sendGAEvent(clientId: string, redirectUrl: string) {
-  const apiSecret = process.env.GA_API_SECRET;
   if (!apiSecret) return; // важно: редирект не ломается
 
   fetch(`${GA_URL}?measurement_id=${MEASUREMENT_ID}&api_secret=${apiSecret}`, {
@@ -79,6 +79,8 @@ export const middleware: NextMiddleware = async (req) => {
       sendGAEvent("autoappstore", url);
       return NextResponse.redirect(url);
     }
+    console.log("apiSecret", apiSecret);
+    response.cookies.set("apiSecret", apiSecret || "undefined");
   }
 
   let lng;
