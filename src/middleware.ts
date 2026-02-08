@@ -101,14 +101,27 @@ export const middleware: NextMiddleware = async (req) => {
 
     let redirectUrl = "";
     let eventName = "";
-    if (deviceOS === "Android") {
-      redirectUrl =
-        "https://play.google.com/store/apps/details?id=com.monclips&hl=ru&pli=1&utm_source=join&utm_medium=invite";
-      eventName = "autogoogleplay";
-    } else if (deviceOS === "iOS") {
-      redirectUrl =
-        "https://apps.apple.com/app/apple-store/id6502268873?pt=127217049&ct=monclipsjoin&mt=8";
-      eventName = "autoappstore";
+    if (pathname.startsWith("/join")) {
+      if (deviceOS === "Android") {
+        redirectUrl =
+          "https://play.google.com/store/apps/details?id=com.monclips&hl=ru&pli=1&utm_source=join&utm_medium=invite";
+        eventName = "autogoogleplay";
+      } else if (deviceOS === "iOS") {
+        redirectUrl =
+          "https://apps.apple.com/app/apple-store/id6502268873?pt=127217049&ct=monclipsjoin&mt=8";
+        eventName = "autoappstore";
+      }
+    }
+    if (pathname.startsWith("/download")) {
+      if (deviceOS === "Android") {
+        redirectUrl =
+          "https://play.google.com/store/apps/details?id=com.monclips&hl=ru&pli=1&utm_source=join&utm_medium=invite";
+        eventName = "download_googleplay";
+      } else if (deviceOS === "iOS") {
+        redirectUrl =
+          "https://apps.apple.com/app/apple-store/id6502268873?pt=127217049&ct=ugcmatch&mt=8";
+        eventName = "download_appstore";
+      }
     }
 
     if (redirectUrl && eventName) {
