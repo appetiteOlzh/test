@@ -6,7 +6,8 @@ import { Metadata } from "next";
 export const metadata: Metadata = {
   metadataBase: new URL("https://monclips.com"),
   title: "Scroll your camera roll like a TTok",
-  description: "Delete what you don't need. Gallery cleanup - easy and simple",
+  description:
+    "Every swipe is a surprise. Find favorite and forgotten moments.",
   openGraph: {
     type: "website",
     siteName: "Monclips",
@@ -16,7 +17,7 @@ export const metadata: Metadata = {
       },
     ],
     description:
-      "Delete what you don't need. Gallery cleanup - easy and simple",
+      "Every swipe is a surprise. Find favorite and forgotten moments.",
   },
   twitter: {
     card: "summary_large_image",
@@ -24,7 +25,7 @@ export const metadata: Metadata = {
     creator: "@monclips",
     images: "/public/assets/img/og-bg.png",
     description:
-      "Delete what you don't need. Gallery cleanup - easy and simple",
+      "Every swipe is a surprise. Find favorite and forgotten moments.",
   },
   icons: {
     icon: "/favicon.ico",
@@ -37,7 +38,7 @@ export default function Open() {
       <Header />
       <Hero
         title="Scroll your camera roll like a TTok"
-        description="Delete what you don't need. <br/>Gallery cleanup - easy and simple"
+        description="Every swipe is a surprise. <br/>Find favorite and forgotten moments."
       />
       <Footer />
     </>
