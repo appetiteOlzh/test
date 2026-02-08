@@ -84,7 +84,7 @@ export const middleware: NextMiddleware = async (req) => {
   ) {
     return;
   }
-  if (pathname.startsWith("/join")) {
+  if (pathname.startsWith("/join") || pathname.startsWith("/download")) {
     const gaCookie = req.cookies.get("_ga")?.value ?? "";
     let clientId = "";
 
