@@ -115,7 +115,7 @@ export const middleware: NextMiddleware = async (req) => {
     if (pathname.startsWith("/download")) {
       if (deviceOS === "Android") {
         redirectUrl =
-          "https://play.google.com/store/apps/details?id=com.monclips&hl=ru&pli=1&utm_source=join&utm_medium=invite";
+          "https://play.google.com/store/apps/details?id=com.monclips&utm_source=ugcmatch&utm_medium=social&utm_campaign=ugc";
         eventName = "download_googleplay";
       } else if (deviceOS === "iOS") {
         redirectUrl =
