@@ -84,7 +84,11 @@ export const middleware: NextMiddleware = async (req) => {
   ) {
     return;
   }
-  if (pathname.startsWith("/join") || pathname.startsWith("/download")) {
+  if (
+    pathname.startsWith("/join") ||
+    pathname.startsWith("/download") ||
+    pathname.startsWith("/trynow")
+  ) {
     const gaCookie = req.cookies.get("_ga")?.value ?? "";
     let clientId = "";
 
@@ -121,6 +125,17 @@ export const middleware: NextMiddleware = async (req) => {
         redirectUrl =
           "https://apps.apple.com/app/apple-store/id6502268873?pt=127217049&ct=ugcmatch&mt=8";
         eventName = "download_appstore";
+      }
+    }
+    if (pathname.startsWith("/trynow")) {
+      if (deviceOS === "Android") {
+        redirectUrl =
+          "https://play.google.com/store/apps/details?id=com.monclips&utm_source=smm&utm_medium=social&utm_campaign=biolink";
+        eventName = "trynow_googleplay";
+      } else if (deviceOS === "iOS") {
+        redirectUrl =
+          "https://apps.apple.com/app/apple-store/id6502268873?pt=127217049&ct=biolink&mt=8";
+        eventName = "trynow_appstore";
       }
     }
 
