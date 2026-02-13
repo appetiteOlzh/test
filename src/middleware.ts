@@ -87,7 +87,8 @@ export const middleware: NextMiddleware = async (req) => {
   if (
     pathname.startsWith("/join") ||
     pathname.startsWith("/download") ||
-    pathname.startsWith("/trynow")
+    pathname.startsWith("/trynow") ||
+    pathname.startsWith("/shumskiy")
   ) {
     const gaCookie = req.cookies.get("_ga")?.value ?? "";
     let clientId = "";
@@ -136,6 +137,17 @@ export const middleware: NextMiddleware = async (req) => {
         redirectUrl =
           "https://apps.apple.com/app/apple-store/id6502268873?pt=127217049&ct=biolink&mt=8";
         eventName = "trynow_appstore";
+      }
+    }
+    if (pathname.startsWith("/shumskiy")) {
+      if (deviceOS === "Android") {
+        redirectUrl =
+          "https://play.google.com/store/apps/details?id=com.monclips&utm_source=shumskiy&utm_medium=cpa&utm_campaign=shumskiy";
+        eventName = "shumskiy_googleplay";
+      } else if (deviceOS === "iOS") {
+        redirectUrl =
+          "https://apps.apple.com/app/apple-store/id6502268873?pt=127217049&ct=shumskiy&mt=8";
+        eventName = "shumskiy_appstore";
       }
     }
 
