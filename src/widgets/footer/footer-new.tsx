@@ -70,7 +70,7 @@ export const FooterNew: FC<{ deskOnly?: boolean }> = ({ deskOnly }) => {
               }}
               className="md:hidden"
             ></div>
-            <p className="text-center">MONCLIPS, INC. 2025</p>
+            <p className="text-center">MONCLIPS, INC. 2026</p>
           </div>
         </div>
       </div>

@@ -75,7 +75,7 @@ export const Footer: FC<{ deskOnly?: boolean }> = ({ deskOnly }) => {
           }}
         ></div>
         <p className="text-center">
-          MONCLIPS, INC. 2025 <br />
+          MONCLIPS, INC. 2026 <br />
         </p>
       </div>
     </footer>
