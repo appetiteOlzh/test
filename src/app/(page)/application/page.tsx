@@ -6,7 +6,7 @@ import { Metadata } from "next";
 
 export const metadata: Metadata = {
   metadataBase: new URL("https://monclips.com"),
-  title: "MonClips Gallery — Your camera roll, but like TTok.",
+  title: "MonClips Gallery — your vertical gallery",
   description:
     "Every time you scroll, MonClips shows you a random photo or video from your gallery. It’s your life — surprising, emotional, unforgettable.",
   openGraph: {
