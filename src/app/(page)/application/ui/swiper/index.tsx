@@ -14,28 +14,43 @@ import monclips from "/public/assets/img/monclips-icon.svg";
 const images = [
   {
     img: "/assets/img/application/post-1.png",
-    title: "Scroll your camera roll like a TikTok",
-    subtitle: "Every swipe is a surprise",
+    title: "MonClips Gallery — your vertical gallery",
   },
   {
     img: "/assets/img/application/post-2.png",
-    title: "Find favorite and forgotten moments",
-    subtitle: "Feel them again",
+    title: "Watch your photos and videos like TikTok",
   },
   {
     img: "/assets/img/application/post-3.png",
-    title: "Share emotions with friends and family",
-    subtitle: "Relive it together",
+    title: "Switch between different viewing modes",
   },
-  // {
-  //   img: "/assets/img/application/post-4.png",
-  //   title: "Organize memories into albums",
-  //   subtitle: "Upload instantly",
-  // },
+  {
+    img: "/assets/img/application/post-4.png",
+    title: "Find and delete unwanted files",
+  },
   {
     img: "/assets/img/application/post-5.png",
-    title: "Delete unwanted shots",
-    subtitle: "Free up your phone",
+    title: "Share moments on social media and in messengers",
+  },
+  {
+    img: "/assets/img/application/post-6.png",
+    title: (
+      <>
+        Works offline <br />— in the subway, <br />
+        on a plane, <br />
+        anywhere
+      </>
+    ),
+  },
+  {
+    img: "/assets/img/application/post-7.png",
+    title: (
+      <>
+        100% secure. <br />
+        No registration required. <br />
+        Start for free.
+      </>
+    ),
   },
 ];
 
@@ -58,15 +73,14 @@ export const VerticalScroll = () => {
         wrapperClass="h-full"
         loop
       >
-        {images.map(({ img, title, subtitle }) => (
+        {images.map(({ img, title }) => (
           <SwiperSlide className="h-full select-none" key={img}>
             <Post img={img} />
             <div className="absolute top-0 bottom-0 left-0 right-0 flex flex-col content-end px-4 select-none">
               <div className="mb-14 mt-auto">
-                <h1 className="text-4xl sm:text-3xl uppercase font-black font-apple !leading-none mb-0.5 max-w-80">
+                <h1 className="text-4xl sm:text-2xl uppercase font-black font-apple mb-6 max-w-80 sm:max-w-64">
                   {title}
                 </h1>
-                <p className="font-bold text-sm mb-6">{subtitle}</p>
                 <AppOpener
                   buttonText="Download now"
                   className="block text-center w-full rounded-full normal-case"
@@ -76,7 +90,7 @@ export const VerticalScroll = () => {
           </SwiperSlide>
         ))}
         <SwiperSlide className="h-full select-none">
-          <Post img="/assets/img/application/post-6.png" />
+          <Post img="/assets/img/application/post-2.png" />
           <div className="absolute top-0 bottom-0 left-0 right-0 flex flex-col content-end px-4 select-none">
             <div className="mt-auto mb-9">
               <div className="text-center">
