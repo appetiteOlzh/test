@@ -7,6 +7,7 @@ import { Modal } from "@/shared/ui/modal";
 import { AppStoreButton, GoogleplayButton } from "@/shared/ui";
 import { useTranslations } from "next-intl";
 import { twMerge } from "tailwind-merge";
+import { sendGAEvent } from "@/shared/lib/sendGa";
 // media
 
 export const AppOpenerButton: FC<{
@@ -19,7 +20,12 @@ export const AppOpenerButton: FC<{
   const pathname = usePathname();
 
   const onClick = () => {
-    globalThis.gtag("event", "desktop_popup");
+    if (typeof window !== "undefined" && typeof window.gtag === "function") {
+      globalThis.gtag("event", "desktop_popup");
+    } else {
+      sendGAEvent("desktop_popup");
+    }
+    // globalThis.gtag("event", "desktop_popup");
     setOpen(true);
   };
 

@@ -1,3 +1,4 @@
+"use server";
 import { cookies } from "next/headers";
 
 const GA_URL = "https://www.google-analytics.com/mp/collect";
