@@ -9,7 +9,8 @@ import { AppOpener } from "@/features/app-opener";
 
 import tiktok from "/public/assets/img/social/tiktok.svg";
 import instagram from "/public/assets/img/social/instagram.svg";
-import monclips from "/public/assets/img/monclips-icon.svg";
+import monclips from "/public/assets/img/monclips.svg";
+import { useState } from "react";
 
 const images = [
   {
@@ -55,6 +56,8 @@ const images = [
 ];
 
 export const VerticalScroll = () => {
+  const [isGifVisible, setGifVisible] = useState(true);
+
   return (
     <>
       <Swiper
@@ -72,7 +75,19 @@ export const VerticalScroll = () => {
         className="h-full overflow-hidden"
         wrapperClass="h-full"
         loop
+        onTransitionStart={() => setGifVisible(false)}
       >
+        {isGifVisible ? (
+          <div className="absolute top-[90px] left-1/2 -translate-x-1/2 w-[100px] h-[100px] z-50 rotate-180 pointer-events-none">
+            <Image
+              src={"/assets/img/application/chevron.gif"}
+              alt="gif"
+              unoptimized
+              width={100}
+              height={100}
+            />
+          </div>
+        ) : null}
         {images.map(({ img, title }) => (
           <SwiperSlide className="h-full select-none" key={img}>
             <Post img={img} />
@@ -95,7 +110,12 @@ export const VerticalScroll = () => {
             <div className="mt-auto mb-9">
               <div className="text-center">
                 <div className="mb-10">
-                  <Image src={monclips} alt="Monslips" className="mx-auto" />
+                  <Image
+                    src={monclips}
+                    alt="Monslips"
+                    className="mx-auto"
+                    unoptimized
+                  />
                 </div>
                 <ul className="text-center pb-2">
                   <li className="mb-3">
@@ -145,7 +165,7 @@ export const VerticalScroll = () => {
                   backgroundColor: "#B9B9B9",
                 }}
               ></div>
-              <p className="text-center">MONCLIPS, INC. 2024</p>
+              <p className="text-center">MONCLIPS, INC. 2026</p>
             </div>
           </div>
         </SwiperSlide>

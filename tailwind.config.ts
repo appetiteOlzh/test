@@ -44,6 +44,26 @@ const config: Config = {
         "5xl": "3.75rem",
         "4xl": "3rem",
       },
+      keyframes: {
+        chevron1: {
+          "0%": { transform: "translateY(-30px)", opacity: "0" },
+          "25%": { opacity: "1" },
+          "50%": { transform: "translateY(0px)", opacity: "1" },
+          "75%": { opacity: "1" },
+          "100%": { transform: "translateY(30px)", opacity: "0" },
+        },
+        chevron2: {
+          "0%": { transform: "translateY(0px)", opacity: "0" },
+          "25%": { opacity: "0" },
+          "50%": { transform: "translateY(30px)", opacity: "1" },
+          "75%": { opacity: "0.5" },
+          "100%": { transform: "translateY(60px)", opacity: "0" },
+        },
+      },
+      animation: {
+        chevron1: "chevron1 2.4s ease-in-out infinite",
+        chevron2: "chevron2 2.4s ease-in-out infinite",
+      },
     },
   },
   plugins: [],
