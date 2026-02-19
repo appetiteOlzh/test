@@ -113,7 +113,7 @@ export const VerticalScroll = () => {
                   <Image
                     src={monclips}
                     alt="Monslips"
-                    className="mx-auto"
+                    className="mx-auto pointer-events-none select-none"
                     unoptimized
                   />
                 </div>

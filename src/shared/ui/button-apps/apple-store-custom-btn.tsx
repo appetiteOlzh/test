@@ -1,13 +1,18 @@
 "use client";
 import { FC } from "react";
 import classNames from "classnames";
+import { sendGAEvent } from "@/shared/lib/sendGa";
 
 export const AppStoreCustomButton: FC<{
   className?: string;
   buttonText: string;
 }> = ({ className, buttonText }) => {
   const onClick = () => {
-    globalThis.gtag("event", "button_appstore");
+    if (typeof window !== "undefined" && typeof window.gtag === "function") {
+      globalThis.gtag("event", "button_appstore");
+    } else {
+      sendGAEvent("button_appstore");
+    }
   };
 
   return (

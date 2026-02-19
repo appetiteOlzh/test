@@ -38,7 +38,7 @@ async function sendGAEvent(
 
   try {
     await fetch(
-      `${GA_URL}?measurement_id=${MEASUREMENT_ID}&api_secret=${API_SECRET}&debug_mode=1`,
+      `${GA_URL}?measurement_id=${MEASUREMENT_ID}&api_secret=${API_SECRET}`,
       {
         method: "POST",
         headers: { "Content-Type": "application/json" },

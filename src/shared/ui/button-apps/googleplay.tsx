@@ -2,10 +2,15 @@
 import Image from "next/image";
 import googleplay from "/public/assets/img/googleplay.svg";
 import googleplayDark from "/public/assets/img/googleplay-dark.svg";
+import { sendGAEvent } from "@/shared/lib/sendGa";
 
 export const GoogleplayButton = ({ isDark }: { isDark?: boolean }) => {
   const onClick = () => {
-    globalThis.gtag("event", "button_googleplay");
+    if (typeof window !== "undefined" && typeof window.gtag === "function") {
+      globalThis.gtag("event", "button_googleplay");
+    } else {
+      sendGAEvent("button_googleplay");
+    }
   };
 
   return (

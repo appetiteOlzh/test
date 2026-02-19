@@ -1,4 +1,5 @@
 "use client";
+import { sendGAEvent } from "@/shared/lib/sendGa";
 import classNames from "classnames";
 import Link from "next/link";
 import { FC } from "react";
@@ -9,7 +10,11 @@ export const GoogleplayCustomButton: FC<{
   buttonText: string;
 }> = ({ className, buttonText }) => {
   const onClick = () => {
-    globalThis.gtag("event", "button_googleplay");
+    if (typeof window !== "undefined" && typeof window.gtag === "function") {
+      globalThis.gtag("event", "button_googleplay");
+    } else {
+      sendGAEvent("button_googleplay");
+    }
   };
 
   return (
