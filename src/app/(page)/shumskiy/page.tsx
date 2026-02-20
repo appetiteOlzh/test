@@ -15,8 +15,7 @@ export const metadata: Metadata = {
         url: "/public/assets/img/og-bg.png", // Must be an absolute url
       },
     ],
-    description:
-      "Delete what you don't need. Gallery cleanup - easy and simple",
+    description: "MonClips Gallery — your vertical gallery",
   },
   twitter: {
     card: "summary_large_image",

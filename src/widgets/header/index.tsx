@@ -32,6 +32,7 @@ export const Header: FC<{
                 width={150}
                 height={117}
                 className="w-[120px] h-auto md:w-[150px]"
+                unoptimized
               />
             </Link>
           </div>

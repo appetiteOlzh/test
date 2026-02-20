@@ -1,33 +1,16 @@
 import { NextResponse, userAgent, type NextMiddleware } from "next/server";
 import acceptLanguage from "accept-language";
 import { localeCookie, routing } from "@/shared/lib/i18n/routing";
+import { generateClientId } from "./shared/lib/generate-client-id";
+import {
+  GA_URL,
+  MEASUREMENT_ID,
+  REDIRECT_CONFIG,
+  ruCountries,
+} from "./shared/data";
 
 const locales = routing.locales;
-
-const ruCountries = [
-  "ru",
-  "kz",
-  "am",
-  "az",
-  "kg",
-  "md",
-  "pl",
-  "tj",
-  "tm",
-  "ua",
-  "uz",
-];
-
-const GA_URL = "https://www.google-analytics.com/mp/collect";
-const MEASUREMENT_ID = "G-ZMWY92F4Z8";
 const API_SECRET = process.env.GA_API_SECRET;
-
-function generateClientId(): string {
-  // Генерация случайного client_id в формате "randomNumber.randomNumber"
-  const part1 = Math.floor(Math.random() * 1e10);
-  const part2 = Math.floor(Math.random() * 1e10);
-  return `${part1}.${part2}`;
-}
 
 async function sendGAEvent(
   event: string,
@@ -59,8 +42,6 @@ async function sendGAEvent(
 }
 
 acceptLanguage.languages(locales as unknown as string[]);
-const PUBLIC_FILE = /\.(.*)$/;
-// This function can be marked `async` if using `await` inside
 export const middleware: NextMiddleware = async (req) => {
   const pathname = req.nextUrl.pathname;
   const {
@@ -68,8 +49,6 @@ export const middleware: NextMiddleware = async (req) => {
   } = userAgent({ headers: req.headers });
   const requestHeaders = new Headers(req.headers);
   requestHeaders.set("next-url", req.url);
-  // requestHeaders.c
-
   const response = NextResponse.next({
     request: {
       headers: requestHeaders,
@@ -77,88 +56,32 @@ export const middleware: NextMiddleware = async (req) => {
   });
   response.cookies.set("deviceOs", deviceOS ?? "Other");
 
-  if (
-    req.nextUrl.pathname.startsWith("/_next") ||
-    req.nextUrl.pathname.includes("/api/") ||
-    PUBLIC_FILE.test(req.nextUrl.pathname)
-  ) {
-    return;
-  }
-  if (
-    pathname.startsWith("/join") ||
-    pathname.startsWith("/download") ||
-    pathname.startsWith("/trynow") ||
-    pathname.startsWith("/shumskiy")
-  ) {
-    const gaCookie = req.cookies.get("_ga")?.value ?? "";
-    let clientId = "";
+  const matchedEntry = Object.entries(REDIRECT_CONFIG).find(([path]) =>
+    pathname.startsWith(path)
+  );
 
-    if (gaCookie) {
-      const parts = gaCookie.split(".");
-      if (parts.length === 4) {
-        clientId = `${parts[2]}.${parts[3]}`;
-      } else {
-        clientId = generateClientId();
-      }
-    } else {
-      clientId = generateClientId();
-    }
+  const gaCookie = req.cookies.get("_ga")?.value;
+  const clientId = (() => {
+    if (!gaCookie) return generateClientId();
 
-    let redirectUrl = "";
-    let eventName = "";
-    if (pathname.startsWith("/join")) {
-      if (deviceOS === "Android") {
-        redirectUrl =
-          "https://play.google.com/store/apps/details?id=com.monclips&hl=ru&pli=1&utm_source=join&utm_medium=invite";
-        eventName = "autogoogleplay";
-      } else if (deviceOS === "iOS") {
-        redirectUrl =
-          "https://apps.apple.com/app/apple-store/id6502268873?pt=127217049&ct=monclipsjoin&mt=8";
-        eventName = "autoappstore";
-      }
-    }
-    if (pathname.startsWith("/download")) {
-      if (deviceOS === "Android") {
-        redirectUrl =
-          "https://play.google.com/store/apps/details?id=com.monclips&utm_source=ugcmatch&utm_medium=social&utm_campaign=ugc";
-        eventName = "download_googleplay";
-      } else if (deviceOS === "iOS") {
-        redirectUrl =
-          "https://apps.apple.com/app/apple-store/id6502268873?pt=127217049&ct=ugcmatch&mt=8";
-        eventName = "download_appstore";
-      }
-    }
-    if (pathname.startsWith("/trynow")) {
-      if (deviceOS === "Android") {
-        redirectUrl =
-          "https://play.google.com/store/apps/details?id=com.monclips&utm_source=smm&utm_medium=social&utm_campaign=biolink";
-        eventName = "trynow_googleplay";
-      } else if (deviceOS === "iOS") {
-        redirectUrl =
-          "https://apps.apple.com/app/apple-store/id6502268873?pt=127217049&ct=biolink&mt=8";
-        eventName = "trynow_appstore";
-      }
-    }
-    if (pathname.startsWith("/shumskiy")) {
-      if (deviceOS === "Android") {
-        redirectUrl =
-          "https://play.google.com/store/apps/details?id=com.monclips&utm_source=shumskiy&utm_medium=cpa&utm_campaign=shumskiy";
-        eventName = "shumskiy_googleplay";
-      } else if (deviceOS === "iOS") {
-        redirectUrl =
-          "https://apps.apple.com/app/apple-store/id6502268873?pt=127217049&ct=shumskiy&mt=8";
-        eventName = "shumskiy_appstore";
-      }
-    }
+    const parts = gaCookie.split(".");
+    return parts.length === 4 ? `${parts[2]}.${parts[3]}` : generateClientId();
+  })();
 
-    if (redirectUrl && eventName) {
-      await sendGAEvent(eventName, redirectUrl, clientId);
+  if (matchedEntry && deviceOS) {
+    const [, config] = matchedEntry;
+    const osConfig = config[deviceOS as "Android" | "iOS"];
 
-      // Если куки _ga нет, можно установить временную куку на 1 день
-      const response = NextResponse.redirect(redirectUrl);
+    if (osConfig) {
+      sendGAEvent(osConfig.event, osConfig.url, clientId);
+      const response = NextResponse.redirect(osConfig.url);
+
       if (!gaCookie) {
-        response.cookies.set("_ga", clientId, { maxAge: 60 * 60 * 24 });
+        response.cookies.set("_ga", `GA1.1.${clientId}`, {
+          maxAge: 60 * 60 * 24 * 365,
+        });
       }
+
       return response;
     }
   }

@@ -3,6 +3,7 @@ import { FC, useState } from "react";
 import { twMerge } from "tailwind-merge";
 import cn from "classnames";
 import { Modal } from "@/shared/ui/modal";
+import { getClickGa } from "@/shared/lib/sendGa/get-client-on-click";
 import { Form } from "./form";
 
 export const SendApplicationButton: FC<{
@@ -11,10 +12,10 @@ export const SendApplicationButton: FC<{
 }> = ({ buttonText, buttonClassName = "" }) => {
   const [isOpen, setOpen] = useState(false);
 
-  const onClick = () => {
-    globalThis.gtag("event", "desktop_popup");
-    setOpen(true);
-  };
+  const onClick = getClickGa({
+    eventName: "desktop_popup",
+    callback: () => setOpen(true),
+  });
 
   return (
     <>

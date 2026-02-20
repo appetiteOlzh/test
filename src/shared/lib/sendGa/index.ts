@@ -1,18 +1,30 @@
 "use server";
+import { GA_URL, MEASUREMENT_ID } from "@/shared/data";
 import { cookies } from "next/headers";
+import { generateClientId } from "../generate-client-id";
 
-const GA_URL = "https://www.google-analytics.com/mp/collect";
-const MEASUREMENT_ID = "G-ZMWY92F4Z8";
 const API_SECRET = process.env.GA_API_SECRET;
 
 export async function sendGAEvent(event: string) {
   if (!API_SECRET) return;
   const cookieStore = cookies();
-  let clientId = cookieStore.get("_ga")?.value;
+  const gaCookie = cookieStore.get("_ga")?.value;
+  const clientId = (() => {
+    if (!gaCookie) return generateClientId();
 
-  if (!clientId) {
-    clientId = generateClientId();
-  }
+    const parts = gaCookie.split(".");
+
+    if (parts.length === 4) return `${parts[2]}.${parts[3]}`;
+
+    const clientId = generateClientId();
+    cookieStore.set("_ga", `GA1.1.${clientId}`, {
+      maxAge: 60 * 60 * 24 * 365,
+      httpOnly: false,
+      path: "/",
+    });
+
+    return clientId;
+  })();
 
   try {
     await fetch(
@@ -33,11 +45,4 @@ export async function sendGAEvent(event: string) {
   } catch (err) {
     console.error("GA event error:", err);
   }
-}
-
-function generateClientId(): string {
-  // Генерация случайного client_id в формате "randomNumber.randomNumber"
-  const part1 = Math.floor(Math.random() * 1e10);
-  const part2 = Math.floor(Math.random() * 1e10);
-  return `${part1}.${part2}`;
 }

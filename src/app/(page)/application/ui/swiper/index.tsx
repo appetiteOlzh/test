@@ -15,31 +15,40 @@ import { useState } from "react";
 const images = [
   {
     img: "/assets/img/application/post-1.png",
-    title: "MonClips Gallery — your vertical gallery",
+    title: "MonClips — your gallery, but vertical",
   },
   {
     img: "/assets/img/application/post-2.png",
-    title: "Watch your photos and videos like TikTok",
+    title: "Swipe through your photos and videos — just like TikTok",
   },
   {
     img: "/assets/img/application/post-3.png",
-    title: "Switch between different viewing modes",
+    title: (
+      <>
+        Switch between viewing modes. <br />
+        Browse your memories, your way
+      </>
+    ),
   },
   {
     img: "/assets/img/application/post-4.png",
-    title: "Find and delete unwanted files",
+    title: "Find and delete unnecessary screenshots",
   },
   {
     img: "/assets/img/application/post-5.png",
-    title: "Share moments on social media and in messengers",
+    title: (
+      <>
+        Find and share <br />
+        the best moments of your life
+      </>
+    ),
   },
   {
     img: "/assets/img/application/post-6.png",
     title: (
       <>
-        Works offline <br />— in the subway, <br />
-        on a plane, <br />
-        anywhere
+        Works offline. <br />
+        Subway. Plane. Anywhere.
       </>
     ),
   },
@@ -47,9 +56,9 @@ const images = [
     img: "/assets/img/application/post-7.png",
     title: (
       <>
-        100% secure. <br />
-        No registration required. <br />
-        Start for free.
+        Completely private. <br />
+        No registration. <br />
+        Free to use.
       </>
     ),
   },
@@ -93,7 +102,7 @@ export const VerticalScroll = () => {
             <Post img={img} />
             <div className="absolute top-0 bottom-0 left-0 right-0 flex flex-col content-end px-4 select-none">
               <div className="mb-14 mt-auto">
-                <h1 className="text-4xl sm:text-2xl uppercase font-black font-apple mb-6 max-w-80 sm:max-w-64">
+                <h1 className="text-2xl uppercase font-black font-apple mb-6 max-w-80">
                   {title}
                 </h1>
                 <AppOpener

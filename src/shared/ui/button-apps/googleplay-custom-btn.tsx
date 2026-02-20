@@ -1,5 +1,5 @@
 "use client";
-import { sendGAEvent } from "@/shared/lib/sendGa";
+import { getClickGa } from "@/shared/lib/sendGa/get-client-on-click";
 import classNames from "classnames";
 import Link from "next/link";
 import { FC } from "react";
@@ -9,13 +9,9 @@ export const GoogleplayCustomButton: FC<{
   isPremium?: boolean;
   buttonText: string;
 }> = ({ className, buttonText }) => {
-  const onClick = () => {
-    if (typeof window !== "undefined" && typeof window.gtag === "function") {
-      globalThis.gtag("event", "button_googleplay");
-    } else {
-      sendGAEvent("button_googleplay");
-    }
-  };
+  const onClick = getClickGa({
+    eventName: "button_googleplay",
+  });
 
   return (
     <Link

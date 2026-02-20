@@ -1,17 +1,13 @@
 "use client";
 import Image from "next/image";
+import { getClickGa } from "@/shared/lib/sendGa/get-client-on-click";
 import googleplay from "/public/assets/img/googleplay.svg";
 import googleplayDark from "/public/assets/img/googleplay-dark.svg";
-import { sendGAEvent } from "@/shared/lib/sendGa";
 
 export const GoogleplayButton = ({ isDark }: { isDark?: boolean }) => {
-  const onClick = () => {
-    if (typeof window !== "undefined" && typeof window.gtag === "function") {
-      globalThis.gtag("event", "button_googleplay");
-    } else {
-      sendGAEvent("button_googleplay");
-    }
-  };
+  const onClick = getClickGa({
+    eventName: "button_googleplay",
+  });
 
   return (
     <a

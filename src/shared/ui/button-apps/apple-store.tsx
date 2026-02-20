@@ -1,17 +1,13 @@
 "use client";
 import Image from "next/image";
+import { getClickGa } from "@/shared/lib/sendGa/get-client-on-click";
 import appstore from "/public/assets/img/appstore.svg";
 import appstoreDark from "/public/assets/img/appstore-dark.svg";
-import { sendGAEvent } from "@/shared/lib/sendGa";
 
 export const AppStoreButton = ({ isDark }: { isDark?: boolean }) => {
-  const onClick = () => {
-    if (typeof window !== "undefined" && typeof window.gtag === "function") {
-      globalThis.gtag("event", "button_appstore");
-    } else {
-      sendGAEvent("button_appstore");
-    }
-  };
+  const onClick = getClickGa({
+    eventName: "button_appstore",
+  });
 
   return (
     <a href={String(process.env.iosAppUrl)} rel="noopener noreferrer">
