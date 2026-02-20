@@ -13,7 +13,7 @@ export const Post: FC<Props> = ({ img }) => {
         width={375}
         height={742}
         alt=""
-        className="w-full h-full object-cover pointer-events-none select-none object-bottom"
+        className="w-full h-full object-cover pointer-events-none select-none object-top"
         draggable={false}
         quality={100}
       />
