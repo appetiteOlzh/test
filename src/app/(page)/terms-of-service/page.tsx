@@ -30,8 +30,12 @@ export default function TermsOfService() {
             <b>&quot;Services&quot;</b>). <br />
             <br /> MonClips is a cloud-based storage platform for photos and
             videos that allows users to organize their media files into folders,
-            share content, create collaborative albums, and enjoy unlimited
-            storage capacity. <br />
+            share content, create collaborative albums, and manage their media
+            storage through a free tier or paid subscription plans. The free
+            tier includes storage for up to 500 photos and 50 videos. Paid plans
+            offer expanded storage: up to 2,000 photos and 200 videos for
+            $0.99/month or $9.99/year, and up to 5,000 photos and 500 videos for
+            $2.99/month or $24.99/year. <br />
             <br />
             You can contact us by phone at +13022898971, email at
             support@monclips.com, or by mail to 8 The Green, Dover, DE 19901,
@@ -265,9 +269,9 @@ export default function TermsOfService() {
             including email address, payment method, and payment card expiration
             date, so that we can complete your transactions and contact you as
             needed. Sales tax will be added to the price of purchases as deemed
-            required by us. We may change prices at any time. All payments shall
-            be in Determined by the user’s app store region (Apple App Store or
-            Google Play Store).
+            required by us. We may change prices at any time. All payments are
+            processed in the currency determined by the user&apos;s App Store or
+            Google Play region.
             <br />
             <br />
             You agree to pay all charges at the prices then in effect for your

@@ -141,8 +141,10 @@ export default function PrivacyPolicy() {
             piece of software created to MonClips Gallery is a cloud-based photo
             gallery that allows users to upload, organize, and share photos in
             collaborative folders — and customized for iOS and Android mobile
-            devices (<b>&quot;Devices&quot;</b>). It is used to cloud-based
-            photo gallery. <br />
+            devices (<b>&quot;Devices&quot;</b>). It is used to store, organize,
+            and share photos and videos in the cloud, with free and paid storage
+            tiers available.
+            <br />
             <br />
             The Licensed Application is not tailored to comply with
             industry-specific regulations (Health Insurance Portability and
@@ -221,9 +223,11 @@ export default function PrivacyPolicy() {
             <Link href="#requirements">3. TECHNICAL REQUIREMENTS</Link>
           </h2>
           <p>
-            3.1 The Licensed Application requires a firmware version 1.6.5 or
-            higher. Licensor recommends using the latest version of the
-            firmware.
+            3.1 The Licensed Application requires iOS 16.0 or later for Apple
+            devices, and Android 9.0 (API level 28) or later for Android
+            devices. Licensor recommends using the latest available version of
+            the operating system. Licensor recommends using the latest version
+            of the firmware.
             <br />
             <br />
             3.2 Licensor attempts to keep the Licensed Application updated so
@@ -635,6 +639,20 @@ export default function PrivacyPolicy() {
             17.2 Collateral agreements, changes and amendments are only valid if
             laid down in writing. The preceding clause can only be waived in
             writing.
+          </p>
+        </div>
+        <br />
+        <div>
+          <p>
+            Subscription terms, billing, and cancellation are governed by the
+            Terms of Use available at{" "}
+            <Link
+              href="/terms-of-service"
+              style={{ color: "rgb(36, 93, 193)" }}
+            >
+              https://monclips.com/terms-of-service
+            </Link>
+            .
           </p>
         </div>
       </div>

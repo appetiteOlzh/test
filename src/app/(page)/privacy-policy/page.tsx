@@ -46,8 +46,9 @@ export default function PrivacyPolicy() {
             <li>
               <b>
                 Use MonClips Gallery. MonClips Gallery is a cloud-based photo
-                gallery that allows users to upload, organize, and share photos
-                in collaborative folders.
+                and video gallery that allows users to upload, organize, and
+                share media in collaborative folders. The Service is available
+                under a free tier and paid subscription plans.
               </b>
             </li>
             <li>
@@ -577,6 +578,11 @@ export default function PrivacyPolicy() {
               To save or protect an individual&apos;s vital interest. We may
               process your information when necessary to save or protect an
               individual’s vital interest, such as to prevent harm.
+            </li>
+            <li>
+              To manage subscriptions and process payments. We may process your
+              information to activate, renew, or cancel your subscription plan
+              and to fulfill related payment obligations.
             </li>
           </ul>
         </section>
