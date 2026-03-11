@@ -8,6 +8,16 @@ export const REDIRECT_CONFIG = {
       url: "https://apps.apple.com/app/apple-store/id6502268873?pt=127217049&ct=monclipsjoin&mt=8",
       event: "autoappstore",
     },
+    content: {
+      title: "Scroll your camera roll like a TTok",
+      description:
+        "Every swipe is a surprise. <br/>Find favorite and forgotten moments.",
+    },
+    meta: {
+      title: "Scroll your camera roll like a TTok",
+      description:
+        "Every swipe is a surprise. Find favorite and forgotten moments.",
+    },
   },
   "/download": {
     Android: {
@@ -17,6 +27,16 @@ export const REDIRECT_CONFIG = {
     iOS: {
       url: "https://apps.apple.com/app/apple-store/id6502268873?pt=127217049&ct=ugcmatch&mt=8",
       event: "download_appstore",
+    },
+    content: {
+      title: "Scroll your camera roll like a TTok",
+      description:
+        "Delete what you don't need. <br/>Gallery cleanup - easy and simple",
+    },
+    meta: {
+      title: "Scroll your camera roll like a TTok",
+      description:
+        "Delete what you don't need. Gallery cleanup - easy and simple",
     },
   },
   "/trynow": {
@@ -28,6 +48,16 @@ export const REDIRECT_CONFIG = {
       url: "https://apps.apple.com/app/apple-store/id6502268873?pt=127217049&ct=biolink&mt=8",
       event: "trynow_appstore",
     },
+    content: {
+      title: "Scroll your camera roll like a TTok",
+      description:
+        "Delete what you don't need. <br/>Gallery cleanup - easy and simple",
+    },
+    meta: {
+      title: "Scroll your camera roll like a TTok",
+      description:
+        "Delete what you don't need. Gallery cleanup - easy and simple",
+    },
   },
   "/shumskiy": {
     Android: {
@@ -37,6 +67,36 @@ export const REDIRECT_CONFIG = {
     iOS: {
       url: "https://apps.apple.com/app/apple-store/id6502268873?pt=127217049&ct=shumskiy&mt=8",
       event: "shumskiy_appstore",
+    },
+    content: {
+      title: "Scroll your camera roll like a TTok",
+      description:
+        "Delete what you don't need. <br/>Gallery cleanup - easy and simple",
+    },
+    meta: {
+      title: "Scroll your camera roll like a TTok",
+      description:
+        "Delete what you don't need. Gallery cleanup - easy and simple",
+    },
+  },
+  "/test": {
+    Android: {
+      url: "https://play.google.com/store/apps/details?id=com.monclips&utm_source=test&utm_medium=cpa&utm_campaign=test",
+      event: "test_googleplay",
+    },
+    iOS: {
+      url: "https://apps.apple.com/app/apple-store/id6502268873?pt=127217049&ct=test&mt=8",
+      event: "test_appstore",
+    },
+    content: {
+      title: "Scroll your camera roll like a TTok",
+      description:
+        "Delete what you don't need. <br/>Gallery cleanup - easy and simple",
+    },
+    meta: {
+      title: "Scroll your camera roll like a TTok",
+      description:
+        "Delete what you don't need. Gallery cleanup - easy and simple",
     },
   },
 } as const;
