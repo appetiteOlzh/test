@@ -6,7 +6,7 @@ const isRu = (pathname: string | null | undefined) => {
   return pathname?.endsWith("/cooking") || pathname?.endsWith("/monclips");
 };
 const isEn = (pathname: string | null | undefined) => {
-  return pathname?.endsWith("/applicaion");
+  return pathname?.endsWith("/applicaion") || pathname?.endsWith("/");
 };
 
 export default getRequestConfig(async () => {
@@ -20,8 +20,8 @@ export default getRequestConfig(async () => {
   const locale = isRuOnly
     ? "ru" // Default to Russian for the main page
     : isEnOnly
-    ? "en"
-    : (cookieStore.get("NEXT_LOCALE")?.value as Locale | undefined) || "en";
+      ? "en"
+      : (cookieStore.get("NEXT_LOCALE")?.value as Locale | undefined) || "en";
 
   const filePath = await import(`./locale/${locale}.json`);
 

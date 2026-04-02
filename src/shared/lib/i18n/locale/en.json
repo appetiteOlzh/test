@@ -55,9 +55,9 @@
   },
   "Sharing": {
     "folder": "Albom",
-    "you_were_shared": "An albom has been shared with you in MonClips Gallery",
+    "you_were_shared": "An albom has been shared with you in MonClips",
     "author": "Author",
-    "qr": "Scan the QR code to download </br>the MonClips Gallery app",
+    "qr": "Scan the QR code to download </br>the MonClips app",
     "download_from_stores": "Download from app stores",
     "download_from_stores_extended_text": "Download the mobile app for an easy way to view and upload photos",
     "no_qr": "Take advantage of all the features of the application"
@@ -80,9 +80,9 @@
   },
   "app": {
     "button_action": "Download",
-    "open_in_app": "Open in the app <br/>“MonClips Gallery”",
-    "monclips_gallery": "MonClips Gallery",
-    "scan_qr": "Scan the QR code to download the MonClips Gallery app",
+    "open_in_app": "Open in the app <br/>“MonClips",
+    "monclips_gallery": "MonClips",
+    "scan_qr": "Scan the QR code to download the MonClips app",
     "app_stores": "Download from app stores"
   },
   "Unlimited": {

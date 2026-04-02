@@ -55,9 +55,9 @@
   },
   "Sharing": {
     "folder": "Альбом",
-    "you_were_shared": "С вами поделились альбомом в MonClips Gallery",
+    "you_were_shared": "С вами поделились альбомом в MonClips",
     "author": "Автор",
-    "qr": "Отсканируйте QR-код для загрузки приложения </br>MonClips Gallery",
+    "qr": "Отсканируйте QR-код для загрузки приложения </br>MonClips",
     "download_from_stores": "Загрузка из магазинов приложений",
     "download_from_stores_extended_text": "Скачайте мобильное приложение, <br/>чтобы удобно просматривать <br/>и загружать фото",
     "no_qr": "Воспользуйтесь всеми функциями приложения"
@@ -81,8 +81,8 @@
   "app": {
     "button_action": "Скачать",
     "open_in_app": "Открыть в приложении <br/>“MonClips”",
-    "monclips_gallery": "MonClips Gallery",
-    "scan_qr": "Отсканируйте QR-код для загрузки приложения MonClips Gallery",
+    "monclips_gallery": "MonClips",
+    "scan_qr": "Отсканируйте QR-код для загрузки приложения MonClips",
     "app_stores": "Загрузка из магазинов приложений"
   },
   "Unlimited": {

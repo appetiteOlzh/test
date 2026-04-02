@@ -21,7 +21,12 @@ export const Hero: FC = () => {
                 style={{ backgroundSize: "100% 100%" }}
               ></div>
               <div className="w-full px-2.5 overflow-hidden mb-12 md:mb-0">
-                <Image src={main} alt="main" className="h-full rounded-4xl" />
+                <Image
+                  src={main}
+                  alt="main"
+                  className="h-full rounded-4xl"
+                  unoptimized
+                />
               </div>
             </div>
           </div>
