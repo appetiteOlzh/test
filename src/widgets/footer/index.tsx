@@ -14,14 +14,19 @@ export const Footer: FC<{ deskOnly?: boolean }> = ({ deskOnly }) => {
     <footer
       className={cn(
         "relative md:overflow-hidden pt-12 pb-12 font-secondary text-light",
-        { "sm:block hidden": deskOnly }
+        { "sm:block hidden": deskOnly },
       )}
     >
       <div className="container mx-auto px-4">
         <div className="flex flex-wrap sm:justify-between justify-center -mx-2">
           <div className="px-2 basis-full md:basis-1/3">
             <div className="mb-4">
-              <Image src={monclips} alt="Monslips" className="mx-auto" />
+              <Image
+                src={monclips}
+                alt="Monslips"
+                className="mx-auto"
+                unoptimized
+              />
             </div>
           </div>
           <div className="px-2 basis-full md:basis-1/3">
@@ -34,7 +39,7 @@ export const Footer: FC<{ deskOnly?: boolean }> = ({ deskOnly }) => {
                       target="_blank"
                       rel="noopener noreferrer"
                     >
-                      <Image src={tiktok} alt="Tiktok" />
+                      <Image src={tiktok} alt="Tiktok" unoptimized />
                     </a>
                   </div>
                   <div className="flex-none px-2">
@@ -43,7 +48,7 @@ export const Footer: FC<{ deskOnly?: boolean }> = ({ deskOnly }) => {
                       target="_blank"
                       rel="noopener noreferrer"
                     >
-                      <Image src={instagram} alt="Instagram" />
+                      <Image src={instagram} alt="Instagram" unoptimized />
                     </a>
                   </div>
                 </div>

@@ -14,51 +14,31 @@ import { useState } from "react";
 
 const images = [
   {
-    img: "/assets/img/application/post-1.png",
-    title: "MonClips — your gallery, but vertical",
+    img: "/assets/img/application/post-1.png?v=no-cache",
+    title: "Your space for everything you love",
   },
   {
-    img: "/assets/img/application/post-2.png",
-    title: "Swipe through your photos and videos — just like TikTok",
+    img: "/assets/img/application/post-2.png?v=no-cache",
+    title: "Add from camera roll or any chat",
   },
   {
-    img: "/assets/img/application/post-3.png",
+    img: "/assets/img/application/post-3.png?v=no-cache",
     title: (
       <>
-        Switch between viewing modes. <br />
-        Browse your memories, your way
+        Never miss <br />a practice session
       </>
     ),
   },
   {
-    img: "/assets/img/application/post-4.png",
-    title: "Find and delete unnecessary screenshots",
+    img: "/assets/img/application/post-4.png?v=no-cache",
+    title: "Rewatch. Take notes. Go deeper.",
   },
   {
-    img: "/assets/img/application/post-5.png",
+    img: "/assets/img/application/post-5.png?v=no-cache",
     title: (
       <>
-        Find and share <br />
-        the best moments of your life
-      </>
-    ),
-  },
-  {
-    img: "/assets/img/application/post-6.png",
-    title: (
-      <>
-        Works offline. <br />
-        Subway. Plane. Anywhere.
-      </>
-    ),
-  },
-  {
-    img: "/assets/img/application/post-7.png",
-    title: (
-      <>
-        Completely private. <br />
-        No registration. <br />
-        Free to use.
+        Mark as done. <br />
+        Be proud of yourself.
       </>
     ),
   },
@@ -102,7 +82,7 @@ export const VerticalScroll = () => {
             <Post img={img} />
             <div className="absolute top-0 bottom-0 left-0 right-0 flex flex-col content-end px-4 select-none">
               <div className="mb-14 mt-auto">
-                <h1 className="text-2xl uppercase font-black font-apple mb-6 max-w-80">
+                <h1 className="text-2xl uppercase font-black mb-6 max-w-80 -mr-2">
                   {title}
                 </h1>
                 <AppOpener
@@ -114,7 +94,7 @@ export const VerticalScroll = () => {
           </SwiperSlide>
         ))}
         <SwiperSlide className="h-full select-none">
-          <Post img="/assets/img/application/post-2.png" />
+          <Post img="/assets/img/application/footer.png" />
           <div className="absolute top-0 bottom-0 left-0 right-0 flex flex-col content-end px-4 select-none">
             <div className="mt-auto mb-9">
               <div className="text-center">
