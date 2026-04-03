@@ -1,48 +1,18 @@
 "use client";
 import Image from "next/image";
 import Link from "next/link";
+import { useState } from "react";
 import { Swiper, SwiperSlide } from "swiper/react";
 import { Mousewheel } from "swiper/modules";
-import { Post } from "../post";
-import "swiper/css";
 import { AppOpener } from "@/features/app-opener";
+import { Post } from "../post";
+import { swiperData } from "../../data";
 
 import tiktok from "/public/assets/img/social/tiktok.svg";
 import instagram from "/public/assets/img/social/instagram.svg";
 import monclips from "/public/assets/img/monclips.svg";
-import { useState } from "react";
 
-const images = [
-  {
-    img: "/assets/img/application/post-1.png?v=no-cache",
-    title: "Your space for everything you love",
-  },
-  {
-    img: "/assets/img/application/post-2.png?v=no-cache",
-    title: "Add from camera roll or any chat",
-  },
-  {
-    img: "/assets/img/application/post-3.png?v=no-cache",
-    title: (
-      <>
-        Never miss <br />a practice session
-      </>
-    ),
-  },
-  {
-    img: "/assets/img/application/post-4.png?v=no-cache",
-    title: "Rewatch. Take notes. Go deeper.",
-  },
-  {
-    img: "/assets/img/application/post-5.png?v=no-cache",
-    title: (
-      <>
-        Mark as done. <br />
-        Be proud of yourself.
-      </>
-    ),
-  },
-];
+import "swiper/css";
 
 export const VerticalScroll = () => {
   const [isGifVisible, setGifVisible] = useState(true);
@@ -77,7 +47,7 @@ export const VerticalScroll = () => {
             />
           </div>
         ) : null}
-        {images.map(({ img, title }) => (
+        {swiperData.map(({ img, title }) => (
           <SwiperSlide className="h-full select-none" key={img}>
             <Post img={img} />
             <div className="absolute top-0 bottom-0 left-0 right-0 flex flex-col content-end px-4 select-none">
