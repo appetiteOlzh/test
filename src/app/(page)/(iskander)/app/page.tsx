@@ -249,7 +249,7 @@ export default function AppLanding() {
           src="/assets/img/memories/logo-vert.svg"
           alt="MonClips"
           className="h-14 md:h-20"
-          width={56}
+          width={117}
           height={80}
           unoptimized
         />
