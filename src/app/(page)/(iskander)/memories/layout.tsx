@@ -23,7 +23,7 @@ export const metadata: Metadata = {
   publisher: "MonClips",
   metadataBase: new URL("https://monclips.com"),
   alternates: {
-    canonical: "/new",
+    canonical: "/memories",
   },
   openGraph: {
     title: "MonClips — Built for real memories, Trusted by thousands",
@@ -33,7 +33,7 @@ export const metadata: Metadata = {
     siteName: "MonClips",
     images: [
       {
-        url: "/og-image.png",
+        url: "https://monclips.com/og-image.png",
         width: 1200,
         height: 630,
         alt: "MonClips — Your memories, organized",
@@ -47,7 +47,7 @@ export const metadata: Metadata = {
     title: "MonClips — Built for real memories",
     description:
       "Save photos and videos from anywhere. Organize them your way. Find any moment instantly.",
-    images: ["/og-image.png"],
+    images: ["https://monclips.com/og-image.png"],
   },
   robots: {
     index: true,

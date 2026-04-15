@@ -34,7 +34,7 @@ export const metadata: Metadata = {
     siteName: "MonClips",
     images: [
       {
-        url: "/og_img_app.png",
+        url: "https://monclips.com/og_img_app.png",
         width: 1200,
         height: 630,
         alt: "MonClips — Cloud storage for photos and videos",
@@ -48,7 +48,7 @@ export const metadata: Metadata = {
     title: "MonClips — Cloud storage for photos and videos",
     description:
       "Save photos and videos from camera roll or any chat. Organize into albums. Find any moment in seconds.",
-    images: ["/og_img_app.png"],
+    images: ["https://monclips.com/og_img_app.png"],
   },
   robots: {
     index: true,
