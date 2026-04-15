@@ -29,7 +29,7 @@ export const metadata: Metadata = {
     title: "MonClips — Built for real memories, Trusted by thousands",
     description:
       "Save photos and videos from anywhere. Organize them your way. Find any moment instantly.",
-    url: "https://monclips.com",
+    url: "https://monclips.com/memories",
     siteName: "MonClips",
     images: [
       {
