@@ -898,7 +898,7 @@ export default function NewLanding() {
               ".testimonial-track-top",
             ) as HTMLElement;
             track?.getAnimations().forEach((a) => {
-              (a as unknown as { playbackRate: number }).playbackRate = 0.2;
+              a.playbackRate = 0.2;
             });
           }}
           onMouseLeave={(e) => {
@@ -906,7 +906,7 @@ export default function NewLanding() {
               ".testimonial-track-top",
             ) as HTMLElement;
             track?.getAnimations().forEach((a) => {
-              (a as unknown as { playbackRate: number }).playbackRate = 1;
+              a.playbackRate = 1;
             });
           }}
         >
@@ -982,7 +982,7 @@ export default function NewLanding() {
               ".testimonial-track-bottom",
             ) as HTMLElement;
             track?.getAnimations().forEach((a) => {
-              (a as unknown as { playbackRate: number }).playbackRate = 0.2;
+              a.playbackRate = 0.2;
             });
           }}
           onMouseLeave={(e) => {
@@ -990,7 +990,7 @@ export default function NewLanding() {
               ".testimonial-track-bottom",
             ) as HTMLElement;
             track?.getAnimations().forEach((a) => {
-              (a as unknown as { playbackRate: number }).playbackRate = 1;
+              a.playbackRate = 1;
             });
           }}
         >
@@ -1066,7 +1066,7 @@ export default function NewLanding() {
               ".testimonial-track-third",
             ) as HTMLElement;
             track?.getAnimations().forEach((a) => {
-              (a as unknown as { playbackRate: number }).playbackRate = 0.2;
+              a.playbackRate = 0.2;
             });
           }}
           onMouseLeave={(e) => {
@@ -1074,7 +1074,7 @@ export default function NewLanding() {
               ".testimonial-track-third",
             ) as HTMLElement;
             track?.getAnimations().forEach((a) => {
-              (a as unknown as { playbackRate: number }).playbackRate = 1;
+              a.playbackRate = 1;
             });
           }}
         >

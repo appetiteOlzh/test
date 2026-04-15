@@ -3,7 +3,7 @@
 import { useState } from "react";
 import { Menu, X } from "lucide-react";
 import { Logo } from "./logo";
-import { Button } from "@/components/ui/button";
+import { Button } from "../ui/button";
 
 export function Navbar({
   links = [],
@@ -18,10 +18,14 @@ export function Navbar({
 }) {
   const [open, setOpen] = useState(false);
 
-  const bg = theme === "dark"
-    ? "bg-neutral-950/80 border-white/10"
-    : "bg-white/80 border-neutral-200";
-  const textColor = theme === "dark" ? "text-white/70 hover:text-white" : "text-neutral-600 hover:text-neutral-900";
+  const bg =
+    theme === "dark"
+      ? "bg-neutral-950/80 border-white/10"
+      : "bg-white/80 border-neutral-200";
+  const textColor =
+    theme === "dark"
+      ? "text-white/70 hover:text-white"
+      : "text-neutral-600 hover:text-neutral-900";
 
   return (
     <nav
