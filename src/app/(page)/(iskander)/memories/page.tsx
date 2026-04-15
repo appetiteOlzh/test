@@ -1,14 +1,16 @@
 "use client";
+
 import Image from "next/image";
+import { useEffect, useRef, useState } from "react";
 import { Star } from "lucide-react";
-import { Logo } from "./components/shared/logo";
+
+import { Logo } from "@/shared/iskander/components/shared/logo";
 import {
   BlurRevealWords,
   FadeUpWords,
   BlurScaleBlock,
-} from "./components/shared/animations";
-import { QrGlowButton } from "./components/shared/qr-button";
-import { useEffect, useRef, useState } from "react";
+} from "@/shared/iskander/components/shared/animations";
+import { QrGlowButton } from "@/shared/iskander/components/shared/qr-button";
 
 // Pricing section
 function PricingSection() {
@@ -1341,7 +1343,7 @@ export default function NewLanding() {
             </a>
           </div>
           <p className="text-xs text-white/20">
-            © 2025 MonClips. All rights reserved.
+            © 2026 MonClips. All rights reserved.
           </p>
         </div>
       </footer>

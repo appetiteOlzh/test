@@ -1,5 +1,5 @@
 import type { Metadata } from "next";
-import "@/app/(page)/memories.css";
+import "@/app/(page)/iskander.css";
 
 export const metadata: Metadata = {
   title: "MonClips — Built for real memories, Trusted by thousands",
