@@ -1,5 +1,5 @@
 "use client";
-
+import Image from "next/image";
 import { Star } from "lucide-react";
 import { Logo } from "./components/shared/logo";
 import {
@@ -345,10 +345,12 @@ function FeatureAccordion() {
               style={{ background: features[0].gradient }}
             >
               <div className="absolute inset-0 flex justify-center px-6 items-end">
-                <img
+                <Image
                   src={features[0].mockup}
                   alt=""
                   className="w-[85%] object-contain"
+                  width={595}
+                  height={600}
                 />
               </div>
             </div>
@@ -370,10 +372,12 @@ function FeatureAccordion() {
               style={{ background: features[1].gradient }}
             >
               <div className="absolute inset-0 flex justify-center px-6 items-start">
-                <img
+                <Image
                   src={features[1].mockup}
                   alt=""
                   className="w-[85%] object-contain"
+                  width={595}
+                  height={600}
                 />
               </div>
             </div>
@@ -395,10 +399,12 @@ function FeatureAccordion() {
               style={{ background: features[2].gradient }}
             >
               <div className="absolute inset-0 flex justify-center px-6 items-center">
-                <img
+                <Image
                   src={features[2].mockup}
                   alt=""
                   className="w-[85%] object-contain"
+                  width={595}
+                  height={600}
                 />
               </div>
             </div>
@@ -480,7 +486,7 @@ function FeatureAccordion() {
                     }`}
                     style={{ opacity: active === i ? 1 : 0 }}
                   >
-                    <img
+                    <Image
                       src={f.mockup}
                       alt=""
                       className={`object-contain ${
@@ -490,6 +496,8 @@ function FeatureAccordion() {
                             ? "w-[85%]"
                             : "max-w-full max-h-full"
                       }`}
+                      width={595}
+                      height={600}
                     />
                   </div>
                 ))}
@@ -631,10 +639,13 @@ export default function NewLanding() {
       />
       {/* ═══ ЛОГО — по центру, скроллится с контентом ═══ */}
       <div className="flex justify-center pt-6">
-        <img
+        <Image
           src="/assets/img/memories/logo-vert.svg"
           alt="MonClips"
           className="h-14 md:h-20"
+          unoptimized
+          width={456}
+          height={312}
         />
       </div>
 
@@ -685,11 +696,13 @@ export default function NewLanding() {
           >
             <div className="flex -space-x-2">
               {[111, 112, 113, 114, 115].map((id) => (
-                <img
+                <Image
                   key={id}
                   src={`/assets/img/memories/avatars/Ellipse${id}.png`}
                   alt=""
                   className="size-8 rounded-full border-2 border-white object-cover"
+                  width={32}
+                  height={32}
                 />
               ))}
             </div>
@@ -774,10 +787,12 @@ export default function NewLanding() {
                       key={`${setIdx}-${i}`}
                       className="carousel-card w-[180px] md:w-[264px] aspect-[4/5] rounded-2xl overflow-hidden shadow-xl shadow-black/30 border border-white/10 shrink-0 bg-neutral-900"
                     >
-                      <img
+                      <Image
                         src={`/assets/img/memories/albums/${file}`}
                         alt=""
                         className="w-full h-full object-cover"
+                        width={334}
+                        height={445}
                       />
                     </div>
                   ))}
@@ -852,10 +867,12 @@ export default function NewLanding() {
             />
           </div>
           <div className="relative flex items-center justify-center w-fit mx-auto">
-            <img
+            <Image
               src="/assets/img/memories/laurel.svg"
               alt=""
               className="h-[72px]"
+              width={144}
+              height={72}
             />
             <span
               className="absolute text-6xl font-medium"
@@ -881,7 +898,7 @@ export default function NewLanding() {
               ".testimonial-track-top",
             ) as HTMLElement;
             track?.getAnimations().forEach((a) => {
-              (a as any).playbackRate = 0.2;
+              (a as unknown as { playbackRate: number }).playbackRate = 0.2;
             });
           }}
           onMouseLeave={(e) => {
@@ -889,7 +906,7 @@ export default function NewLanding() {
               ".testimonial-track-top",
             ) as HTMLElement;
             track?.getAnimations().forEach((a) => {
-              (a as any).playbackRate = 1;
+              (a as unknown as { playbackRate: number }).playbackRate = 1;
             });
           }}
         >
@@ -965,7 +982,7 @@ export default function NewLanding() {
               ".testimonial-track-bottom",
             ) as HTMLElement;
             track?.getAnimations().forEach((a) => {
-              (a as any).playbackRate = 0.2;
+              (a as unknown as { playbackRate: number }).playbackRate = 0.2;
             });
           }}
           onMouseLeave={(e) => {
@@ -973,7 +990,7 @@ export default function NewLanding() {
               ".testimonial-track-bottom",
             ) as HTMLElement;
             track?.getAnimations().forEach((a) => {
-              (a as any).playbackRate = 1;
+              (a as unknown as { playbackRate: number }).playbackRate = 1;
             });
           }}
         >
@@ -1049,7 +1066,7 @@ export default function NewLanding() {
               ".testimonial-track-third",
             ) as HTMLElement;
             track?.getAnimations().forEach((a) => {
-              (a as any).playbackRate = 0.2;
+              (a as unknown as { playbackRate: number }).playbackRate = 0.2;
             });
           }}
           onMouseLeave={(e) => {
@@ -1057,7 +1074,7 @@ export default function NewLanding() {
               ".testimonial-track-third",
             ) as HTMLElement;
             track?.getAnimations().forEach((a) => {
-              (a as any).playbackRate = 1;
+              (a as unknown as { playbackRate: number }).playbackRate = 1;
             });
           }}
         >
@@ -1131,10 +1148,13 @@ export default function NewLanding() {
           {/* Глаз с замком внутри */}
           <BlurScaleBlock delay={0}>
             <div className="relative w-fit mx-auto mb-10">
-              <img
+              <Image
                 src="/assets/img/memories/privacy-eye.svg"
                 alt=""
                 className="w-[126px]"
+                width={327}
+                height={123}
+                unoptimized
               />
               <div className="absolute inset-0 flex items-center justify-center">
                 <svg
@@ -1270,10 +1290,13 @@ export default function NewLanding() {
       {/* ═══ FOOTER ═══ */}
       <footer className="border-t border-white/[0.06] py-10 px-6">
         <div className="max-w-6xl mx-auto flex flex-col items-center gap-8">
-          <img
+          <Image
             src="/assets/img/memories/logo-vert.svg"
             alt="MonClips"
             className="h-16"
+            width={456}
+            height={312}
+            unoptimized
           />
         </div>
         <div className="max-w-6xl mx-auto mt-8 pt-6 border-t border-white/[0.04] flex flex-col md:flex-row items-center justify-between gap-4">
