@@ -12,7 +12,16 @@ import YandexMetrika from "@/shared/lib/yandex-metrika";
 import GoogleAnalytics from "@/shared/lib/google-analytics";
 import { FacebookPixelEvents } from "@/shared/lib/pixel-events";
 
-import { cormorant, cera, gilroy, sfpro } from "../fonts";
+import {
+  cormorant,
+  cera,
+  gilroy,
+  sfpro,
+  inter,
+  syne,
+  spaceGrotesk,
+  dmSans,
+} from "../fonts";
 
 import "./globals.css";
 import "./animate.css";
@@ -62,7 +71,11 @@ export default async function RootLayout({
           cormorant.variable,
           gilroy.variable,
           cera.variable,
-          sfpro.variable
+          sfpro.variable,
+          inter.variable,
+          syne.variable,
+          spaceGrotesk.variable,
+          dmSans.variable,
         )}
       >
         <Script id="metrika-counter" strategy="afterInteractive">

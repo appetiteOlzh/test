@@ -1,5 +1,6 @@
 import localFont from "next/font/local";
 import { Cormorant_Garamond } from "next/font/google";
+import { Inter, Syne, Space_Grotesk, DM_Sans } from "next/font/google";
 
 export const gilroy = localFont({
   src: [
@@ -60,4 +61,24 @@ export const cormorant = Cormorant_Garamond({
   style: "normal",
   variable: "--font-cormorant",
   display: "swap",
+});
+
+export const inter = Inter({
+  variable: "--font-inter",
+  subsets: ["latin"],
+});
+
+export const syne = Syne({
+  variable: "--font-syne",
+  subsets: ["latin"],
+});
+
+export const spaceGrotesk = Space_Grotesk({
+  variable: "--font-space",
+  subsets: ["latin"],
+});
+
+export const dmSans = DM_Sans({
+  variable: "--font-dm",
+  subsets: ["latin"],
 });
