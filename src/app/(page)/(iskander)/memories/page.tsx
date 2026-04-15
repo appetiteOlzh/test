@@ -645,9 +645,9 @@ export default function NewLanding() {
           src="/assets/img/memories/logo-vert.svg"
           alt="MonClips"
           className="h-14 md:h-20"
-          unoptimized
           width={456}
           height={312}
+          unoptimized
         />
       </div>
 

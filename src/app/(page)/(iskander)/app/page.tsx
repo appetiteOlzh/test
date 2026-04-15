@@ -249,8 +249,8 @@ export default function AppLanding() {
           src="/assets/img/memories/logo-vert.svg"
           alt="MonClips"
           className="h-14 md:h-20"
-          width={117}
-          height={80}
+          width={456}
+          height={312}
           unoptimized
         />
       </div>
@@ -635,8 +635,8 @@ export default function AppLanding() {
             src="/assets/img/memories/logo-vert.svg"
             alt="MonClips"
             className="h-16"
-            width={327}
-            height={123}
+            width={456}
+            height={312}
             unoptimized
           />
         </div>
