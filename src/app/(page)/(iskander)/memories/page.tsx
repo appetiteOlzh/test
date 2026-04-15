@@ -682,7 +682,10 @@ export default function NewLanding() {
               Download
             </a>
           </div>
-          <QrGlowButton className="btn-glow rounded-full h-10 px-5 text-sm font-medium text-neutral-900 transition-all hover:scale-[1.03] cursor-pointer">
+          <QrGlowButton
+            className="btn-glow rounded-full h-10 px-5 text-sm font-medium text-neutral-900 transition-all hover:scale-[1.03] cursor-pointer"
+            url="https://monclips.com/download_memories"
+          >
             Explore MonClips Free
           </QrGlowButton>
         </div>
@@ -1414,7 +1417,9 @@ export default function NewLanding() {
           </dl>
 
           <p>
-            <a href="https://monclips.com/download">Download MonClips Free</a>
+            <a href="https://monclips.com/download_memories">
+              Download MonClips Free
+            </a>
           </p>
           <p>
             <a href="https://monclips.com/privacy-policy">Privacy Policy</a> |{" "}

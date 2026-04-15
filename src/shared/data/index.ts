@@ -79,24 +79,44 @@ export const REDIRECT_CONFIG = {
         "Delete what you don't need. Gallery cleanup - easy and simple",
     },
   },
-  "/test": {
+  "/download_app": {
     Android: {
-      url: "https://play.google.com/store/apps/details?id=com.monclips&utm_source=test&utm_medium=cpa&utm_campaign=test",
-      event: "test_googleplay",
+      url: "https://play.google.com/store/apps/details?id=com.monclips&utm_source=app&utm_medium=social&utm_campaign=app",
+      event: "download_app_googleplay",
     },
     iOS: {
-      url: "https://apps.apple.com/app/apple-store/id6502268873?pt=127217049&ct=test&mt=8",
-      event: "test_appstore",
+      url: "https://apps.apple.com/app/apple-store/id6502268873?pt=127217049&ct=app&mt=8",
+      event: "download_app_appstore",
     },
     content: {
-      title: "Scroll your camera roll like a TTok",
+      title: "Cloud storage for photos and videos",
       description:
-        "Delete what you don't need. <br/>Gallery cleanup - easy and simple",
+        "Save from camera roll or any chat. Organize into albums. Find any moment in seconds.",
     },
     meta: {
-      title: "Scroll your camera roll like a TTok",
+      title: "Cloud storage for photos and videos",
       description:
-        "Delete what you don't need. Gallery cleanup - easy and simple",
+        "Save from camera roll or any chat. Organize into albums. Find any moment in seconds.",
+    },
+  },
+  "/download_memories": {
+    Android: {
+      url: "https://play.google.com/store/apps/details?id=com.monclips&utm_source=memories&utm_medium=social&utm_campaign=memories",
+      event: "download_memories_googleplay",
+    },
+    iOS: {
+      url: "https://apps.apple.com/app/apple-store/id6502268873?pt=127217049&ct=memories&mt=8",
+      event: "download_memories_appstore",
+    },
+    content: {
+      title: "Built for real memories",
+      description:
+        "Save photos and videos from anywhere. Organize them your way. Find any moment instantly.",
+    },
+    meta: {
+      title: "Built for real memories",
+      description:
+        "Save photos and videos from anywhere. Organize them your way. Find any moment instantly.",
     },
   },
 } as const;

@@ -286,7 +286,10 @@ export default function AppLanding() {
               Download
             </a>
           </div>
-          <QrGlowButton className="btn-glow rounded-full h-10 px-5 text-sm font-medium text-neutral-900 transition-all hover:scale-[1.03] cursor-pointer">
+          <QrGlowButton
+            className="btn-glow rounded-full h-10 px-5 text-sm font-medium text-neutral-900 transition-all hover:scale-[1.03] cursor-pointer"
+            url="https://monclips.com/download_app"
+          >
             Download Free
           </QrGlowButton>
         </div>
@@ -319,7 +322,10 @@ export default function AppLanding() {
           </BlurScaleBlock>
 
           <BlurScaleBlock delay={400} className="relative z-10">
-            <QrGlowButton className="btn-glow rounded-full h-13 px-10 text-base font-semibold text-neutral-900 transition-all hover:scale-[1.03] active:scale-100 cursor-pointer">
+            <QrGlowButton
+              className="btn-glow rounded-full h-13 px-10 text-base font-semibold text-neutral-900 transition-all hover:scale-[1.03] active:scale-100 cursor-pointer"
+              url="https://monclips.com/download_app"
+            >
               Download Free
             </QrGlowButton>
           </BlurScaleBlock>
@@ -620,7 +626,10 @@ export default function AppLanding() {
               />
             </BlurScaleBlock>
             <BlurScaleBlock delay={400}>
-              <QrGlowButton className="btn-glow rounded-full h-13 px-10 text-base font-semibold text-neutral-900 cursor-pointer hover:scale-[1.03] transition-transform">
+              <QrGlowButton
+                className="btn-glow rounded-full h-13 px-10 text-base font-semibold text-neutral-900 cursor-pointer hover:scale-[1.03] transition-transform"
+                url="https://monclips.com/download_app"
+              >
                 Download Free
               </QrGlowButton>
             </BlurScaleBlock>
@@ -735,7 +744,9 @@ export default function AppLanding() {
           </ul>
 
           <p>
-            <a href="https://monclips.com/download">Download MonClips Free</a>
+            <a href="https://monclips.com/download_app">
+              Download MonClips Free
+            </a>
           </p>
           <p>
             <a href="https://monclips.com/privacy-policy">Privacy Policy</a> |{" "}

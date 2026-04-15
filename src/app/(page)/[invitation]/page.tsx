@@ -4,6 +4,7 @@ import { Metadata } from "next";
 import { Footer } from "@/widgets/footer";
 import { Header } from "@/widgets/header";
 import { Hero } from "@/widgets/hero";
+import { notFound } from "next/navigation";
 
 type Props = {
   params: { invitation: string };
@@ -59,6 +60,8 @@ export function generateStaticParams() {
 export default function InvitationPage({ params }: Props) {
   const configKey = `/${params.invitation}` as keyof typeof REDIRECT_CONFIG;
   const config = REDIRECT_CONFIG[configKey];
+
+  if (!config) notFound();
 
   return (
     <>
