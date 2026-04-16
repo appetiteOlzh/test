@@ -15,7 +15,7 @@ const API_SECRET = process.env.GA_API_SECRET;
 async function sendGAEvent(
   event: string,
   redirectUrl: string,
-  clientId: string
+  clientId: string,
 ) {
   if (!API_SECRET) return;
 
@@ -34,7 +34,7 @@ async function sendGAEvent(
             },
           ],
         }),
-      }
+      },
     );
   } catch (err) {
     console.error("GA event error:", err);
@@ -56,9 +56,8 @@ export const middleware: NextMiddleware = async (req) => {
   });
   response.cookies.set("deviceOs", deviceOS ?? "Other");
 
-  const matchedEntry = Object.entries(REDIRECT_CONFIG).find(([path]) =>
-    pathname.startsWith(path)
-  );
+  const pathKey = `/${pathname.split("/")[1]}` as keyof typeof REDIRECT_CONFIG;
+  const config = REDIRECT_CONFIG[pathKey];
 
   const gaCookie = req.cookies.get("_ga")?.value;
   const clientId = (() => {
@@ -68,8 +67,7 @@ export const middleware: NextMiddleware = async (req) => {
     return parts.length === 4 ? `${parts[2]}.${parts[3]}` : generateClientId();
   })();
 
-  if (matchedEntry && deviceOS) {
-    const [, config] = matchedEntry;
+  if (config && deviceOS) {
     const osConfig = config[deviceOS as "Android" | "iOS"];
 
     if (osConfig) {

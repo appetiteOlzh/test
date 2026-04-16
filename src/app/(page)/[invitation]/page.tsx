@@ -10,8 +10,6 @@ type Props = {
   params: { invitation: string };
 };
 
-export const dynamicParams = false;
-
 export async function generateMetadata({ params }: Props): Promise<Metadata> {
   const configKey = `/${params.invitation}` as keyof typeof REDIRECT_CONFIG;
   const config = REDIRECT_CONFIG[configKey];
@@ -33,7 +31,7 @@ export async function generateMetadata({ params }: Props): Promise<Metadata> {
       siteName: "Monclips",
       images: [
         {
-          url: "/public/assets/img/og-bg.png",
+          url: "https://monclips.com/assets/img/og-bg.png",
         },
       ],
       description,
@@ -42,7 +40,7 @@ export async function generateMetadata({ params }: Props): Promise<Metadata> {
       card: "summary_large_image",
       site: "@monclips",
       creator: "@monclips",
-      images: "/public/assets/img/og-bg.png",
+      images: "https://monclips.com/assets/img/og-bg.png",
       description,
     },
     icons: {
