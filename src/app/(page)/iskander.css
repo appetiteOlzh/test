@@ -245,3 +245,111 @@
   ) !important;
   background-size: 100% 100%;
 }
+
+/* ═══ Hero анимации для /easyapp ═══
+   В Tailwind v4 custom classes на верхнем уровне вычищаются —
+   оборачиваем в @layer utilities чтобы они сохранились. */
+
+@keyframes float-y {
+  0%,
+  100% {
+    transform: translateY(0);
+  }
+  50% {
+    transform: translateY(-10px);
+  }
+}
+
+@keyframes float-y-delayed {
+  0%,
+  100% {
+    transform: translateY(0);
+  }
+  50% {
+    transform: translateY(-14px);
+  }
+}
+
+@keyframes breathe {
+  0%,
+  100% {
+    transform: scale(1);
+  }
+  50% {
+    transform: scale(1.04);
+  }
+}
+
+@keyframes sway {
+  0%,
+  100% {
+    transform: translateY(0) rotate(0deg);
+  }
+  50% {
+    transform: translateY(-6px) rotate(0.5deg);
+  }
+}
+
+/* Для мокапов с уже заданным rotate — качание с сохранённым наклоном */
+@keyframes sway-left {
+  0%,
+  100% {
+    transform: translateY(0) rotate(-6deg);
+  }
+  50% {
+    transform: translateY(-8px) rotate(-5deg);
+  }
+}
+
+@keyframes sway-right {
+  0%,
+  100% {
+    transform: translateY(0) rotate(6deg);
+  }
+  50% {
+    transform: translateY(-10px) rotate(7deg);
+  }
+}
+
+@layer utilities {
+  /* Парящая плашка — мягкое движение вверх-вниз */
+  .animate-float {
+    animation: float-y 4s ease-in-out infinite;
+  }
+
+  /* Вторая плашка — сдвинутая по фазе, чтобы не двигались в унисон */
+  .animate-float-delayed {
+    animation: float-y-delayed 5s ease-in-out infinite;
+    animation-delay: 1s;
+  }
+
+  /* Круг "дышит" — мягко пульсирует размер */
+  .animate-breathe {
+    animation: breathe 6s ease-in-out infinite;
+  }
+
+  /* Мокап — лёгкое покачивание */
+  .animate-sway {
+    animation: sway 7s ease-in-out infinite;
+  }
+
+  /* Наклонённые мокапы (с rotate уже внутри keyframes) — используются
+     в Features где два телефона под углом. Разные периоды, чтобы
+     мокапы не двигались синхронно. */
+  .animate-sway-left {
+    animation: sway-left 5s ease-in-out infinite;
+  }
+
+  .animate-sway-right {
+    animation: sway-right 6s ease-in-out infinite;
+    animation-delay: 0.8s;
+  }
+
+  /* Очень лёгкая мягкая тень "парения" — для движущихся мокапов,
+     чтобы создать ощущение объёма без жёсткого контраста.
+     drop-shadow применяется к alpha-каналу картинки, а не к bounding box —
+     поэтому тень повторяет контур телефона. */
+  .shadow-float {
+    filter: drop-shadow(0 20px 30px rgba(0, 0, 0, 0.12));
+  }
+}
