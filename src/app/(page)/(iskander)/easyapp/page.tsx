@@ -2,7 +2,7 @@
 
 import Image from "next/image";
 import { useState } from "react";
-import { BlurScaleBlock } from "@/shared/iskander/components/shared/animations";
+
 import { PhoneOnCircle } from "@/shared/iskander/components/shared/phone-on-circle";
 import { StoreBadge } from "@/shared/iskander/components/shared/store-badge";
 import { NumberedStep } from "@/shared/iskander/components/shared/numbered-step";
@@ -83,7 +83,7 @@ function Hero() {
       <div className="max-w-6xl mx-auto grid md:grid-cols-2 gap-12 items-center">
         {/* Текст */}
         <div>
-          <BlurScaleBlock delay={0}>
+          <div>
             <h1 className="text-[2.5rem] md:text-[4rem] font-extrabold tracking-[-0.03em] leading-[1.05] mb-6 text-neutral-900">
               Save photos,
               <br />
@@ -91,25 +91,25 @@ function Hero() {
               <br />
               Find any moment!
             </h1>
-          </BlurScaleBlock>
+          </div>
 
-          <BlurScaleBlock delay={200}>
+          <div>
             <p className="text-base md:text-lg text-neutral-500 leading-relaxed mb-8 max-w-md">
               Save from camera roll or any chat. Organize into albums. Find any
               moment in seconds.
             </p>
-          </BlurScaleBlock>
+          </div>
 
-          <BlurScaleBlock delay={400}>
+          <div>
             <div className="flex flex-wrap gap-3">
               <StoreBadge store="google" href={GOOGLE_PLAY_URL} />
               <StoreBadge store="apple" href={APP_STORE_URL} />
             </div>
-          </BlurScaleBlock>
+          </div>
         </div>
 
         {/* Мокап + круг + плашки */}
-        <BlurScaleBlock delay={600}>
+        <div>
           <PhoneOnCircle
             src="/assets/img/easyapp/main-mockup.webp"
             className="max-w-[500px]"
@@ -162,7 +162,7 @@ function Hero() {
               </span>
             </div>
           </PhoneOnCircle>
-        </BlurScaleBlock>
+        </div>
       </div>
     </section>
   );
@@ -202,37 +202,37 @@ function HowItWorks() {
             мокап, который крупнее контейнера, не задевал подзаголовок сверху.
             На мобилке мокап внизу секции, большой отступ не нужен. */}
         <div className="text-center mb-12 md:mb-40">
-          <BlurScaleBlock>
+          <div>
             <h2 className="text-3xl md:text-5xl font-extrabold tracking-tight text-neutral-900 mb-4">
               How MonClips Works
             </h2>
-          </BlurScaleBlock>
-          <BlurScaleBlock delay={150}>
+          </div>
+          <div>
             <p className="text-neutral-500 max-w-xl mx-auto">
               Download the MonClips app from App Store or Google Play. Save your
               photos and videos — organize them, find any moment.
             </p>
-          </BlurScaleBlock>
+          </div>
         </div>
 
         {/* Mobile: шаги 1-4 подряд, потом мокап. Явный вертикальный порядок
             вместо колонок — легче читать на узком экране.
             mt-16 у мокапа — чтобы его высокая часть не перекрывала 4-й шаг. */}
         <div className="md:hidden flex flex-col gap-10">
-          <BlurScaleBlock delay={100}>
+          <div>
             <NumberedStep {...steps[0]} align="left" accent={GOLD} />
-          </BlurScaleBlock>
-          <BlurScaleBlock delay={200}>
+          </div>
+          <div>
             <NumberedStep {...steps[1]} align="left" accent={GOLD} />
-          </BlurScaleBlock>
-          <BlurScaleBlock delay={300}>
+          </div>
+          <div>
             <NumberedStep {...steps[2]} align="left" accent={GOLD} />
-          </BlurScaleBlock>
-          <BlurScaleBlock delay={400}>
+          </div>
+          <div>
             <NumberedStep {...steps[3]} align="left" accent={GOLD} />
-          </BlurScaleBlock>
+          </div>
 
-          <BlurScaleBlock className="mt-24">
+          <div className="mt-24">
             <PhoneOnCircle
               src="/assets/img/easyapp/mockup-front.png"
               className="w-[220px] mx-auto"
@@ -243,21 +243,21 @@ function HowItWorks() {
               circleClassName="animate-breathe"
               imageClassName="animate-sway"
             />
-          </BlurScaleBlock>
+          </div>
         </div>
 
         {/* Desktop: сетка крест-накрест — 2 шага слева, мокап по центру, 2 справа */}
         <div className="hidden md:grid grid-cols-[1fr_280px_1fr] gap-14 items-center">
           <div className="flex flex-col gap-16">
-            <BlurScaleBlock delay={100}>
+            <div>
               <NumberedStep {...steps[0]} align="right" accent={GOLD} />
-            </BlurScaleBlock>
-            <BlurScaleBlock delay={300}>
+            </div>
+            <div>
               <NumberedStep {...steps[2]} align="right" accent={GOLD} />
-            </BlurScaleBlock>
+            </div>
           </div>
 
-          <BlurScaleBlock>
+          <div>
             <PhoneOnCircle
               src="/assets/img/easyapp/mockup-front.png"
               className="w-[220px] mx-auto"
@@ -268,15 +268,15 @@ function HowItWorks() {
               circleClassName="animate-breathe"
               imageClassName="animate-sway"
             />
-          </BlurScaleBlock>
+          </div>
 
           <div className="flex flex-col gap-16">
-            <BlurScaleBlock delay={200}>
+            <div>
               <NumberedStep {...steps[1]} align="left" accent={GOLD} />
-            </BlurScaleBlock>
-            <BlurScaleBlock delay={400}>
+            </div>
+            <div>
               <NumberedStep {...steps[3]} align="left" accent={GOLD} />
-            </BlurScaleBlock>
+            </div>
           </div>
         </div>
       </div>
@@ -410,15 +410,15 @@ function Features() {
       <div className="max-w-6xl mx-auto">
         {/* Заголовок + таб-переключатель */}
         <div className="text-center mb-10">
-          <BlurScaleBlock>
+          <div>
             <h2 className="text-3xl md:text-5xl font-extrabold tracking-tight text-neutral-900 mb-6">
               What you can do
               <br />
               with MonClips
             </h2>
-          </BlurScaleBlock>
+          </div>
 
-          <BlurScaleBlock delay={150}>
+          <div>
             <div className="inline-flex bg-neutral-100 rounded-full p-1">
               <button
                 onClick={() => setTab("free")}
@@ -443,14 +443,14 @@ function Features() {
                 Premium
               </button>
             </div>
-          </BlurScaleBlock>
+          </div>
         </div>
 
         {/* Контент: на десктопе мокап слева + 3 пункта справа.
             На мобилке меняем порядок через order — сначала пункты, потом мокап. */}
         <div className="grid md:grid-cols-2 gap-12 items-center">
           {/* Мокапы на круге — order-2 на мобилке (вторым), первый на десктопе */}
-          <BlurScaleBlock className="order-2 md:order-1">
+          <div className="order-2 md:order-1">
             <PhoneOnCircle
               className="max-w-[500px]"
               accentFrom={GOLD}
@@ -472,18 +472,18 @@ function Features() {
                 height={489}
               />
             </PhoneOnCircle>
-          </BlurScaleBlock>
+          </div>
 
           {/* 3 пункта — order-1 на мобилке (первым), второй на десктопе */}
           <div className="flex flex-col gap-8 order-1 md:order-2">
             {items[tab].map((item, i) => (
-              <BlurScaleBlock key={item.title} delay={i * 100}>
+              <div key={item.title}>
                 <FeatureItem
                   icon={item.icon}
                   title={item.title}
                   text={item.text}
                 />
-              </BlurScaleBlock>
+              </div>
             ))}
           </div>
         </div>
@@ -511,33 +511,33 @@ function GoldCTA() {
           {/* max-w-[55%] ограничивает левый блок — иначе текст растянется
               во всю ширину фона и наложится на абсолютно позиционированный мокап */}
           <div className="md:max-w-[55%]">
-            <BlurScaleBlock>
+            <div>
               <h2 className="text-3xl md:text-5xl font-extrabold tracking-tight text-neutral-900 mb-5">
                 Download
                 <br />
                 MonClips App
               </h2>
-            </BlurScaleBlock>
+            </div>
 
-            <BlurScaleBlock delay={150}>
+            <div>
               <p className="text-neutral-900/70 text-base md:text-lg leading-relaxed mb-8 max-w-md">
                 MonClips is cloud storage built for families and memory keepers.
                 Save photos and videos from your camera roll or any chat —
                 organize them, find any moment in seconds. Privacy-first,
                 encrypted, never used for ads.
               </p>
-            </BlurScaleBlock>
+            </div>
 
-            <BlurScaleBlock delay={300}>
+            <div>
               <div className="flex flex-wrap gap-3">
                 <StoreBadge store="google" href={GOOGLE_PLAY_URL} />
                 <StoreBadge store="apple" href={APP_STORE_URL} />
               </div>
-            </BlurScaleBlock>
+            </div>
           </div>
 
           <div className="hidden md:block absolute top-1/2 right-[-40px] -translate-y-1/2">
-            <BlurScaleBlock delay={400}>
+            <div>
               <Image
                 src="/assets/img/app/44.webp"
                 alt="MonClips feed"
@@ -545,7 +545,7 @@ function GoldCTA() {
                 width={560}
                 height={609}
               />
-            </BlurScaleBlock>
+            </div>
           </div>
         </div>
       </div>
