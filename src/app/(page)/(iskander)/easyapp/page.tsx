@@ -136,7 +136,7 @@ function Hero() {
                 <polyline points="20 6 9 17 4 12" />
               </svg>
               <span className="text-sm font-semibold whitespace-nowrap">
-                500 photos free forever
+                Organize photos and videos
               </span>
             </div>
 
@@ -158,7 +158,7 @@ function Hero() {
                 <rect x="1" y="5" width="15" height="14" rx="2" ry="2" />
               </svg>
               <span className="text-sm font-semibold whitespace-nowrap">
-                2000 videos on Premium
+                Keep memories safe
               </span>
             </div>
           </PhoneOnCircle>
