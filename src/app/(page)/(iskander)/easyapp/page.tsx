@@ -476,7 +476,7 @@ function Features() {
 
           {/* 3 пункта — order-1 на мобилке (первым), второй на десктопе */}
           <div className="flex flex-col gap-8 order-1 md:order-2">
-            {items[tab].map((item, i) => (
+            {items[tab].map((item) => (
               <div key={item.title}>
                 <FeatureItem
                   icon={item.icon}
