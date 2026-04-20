@@ -382,7 +382,7 @@ function Features() {
             <rect x="1" y="5" width="15" height="14" rx="2" ry="2" />
           </svg>
         ),
-        title: "2,000 videos",
+        title: "500 videos",
         text: "Full-length memories — birthdays, trips, first steps of your kids.",
       },
       {
@@ -675,14 +675,14 @@ export default function EasyAppLanding() {
         name: "Premium",
         price: "0.99",
         priceCurrency: "USD",
-        description: "20,000 photos, 2,000 videos",
+        description: "20,000 photos, 500 videos",
       },
       {
         "@type": "Offer",
         name: "Premium+",
         price: "2.99",
         priceCurrency: "USD",
-        description: "50,000 photos, 5,000 videos",
+        description: "50,000 photos, 2,000 videos",
       },
     ],
   };
@@ -741,8 +741,8 @@ export default function EasyAppLanding() {
           <h2>Pricing</h2>
           <ul>
             <li>Free — 500 photos, 50 videos, all features.</li>
-            <li>Premium — $0.99/mo: 20,000 photos, 2,000 videos.</li>
-            <li>Premium+ — $2.99/mo: 50,000 photos, 5,000 videos.</li>
+            <li>Premium — $0.99/mo: 20,000 photos, 500 videos.</li>
+            <li>Premium+ — $2.99/mo: 50,000 photos, 2,000 videos.</li>
           </ul>
 
           <p>

@@ -37,7 +37,7 @@ function PricingSection() {
       badge: "Popular",
       features: [
         "20,000 photos",
-        "2,000 videos",
+        "500 videos",
         "Unlimited albums",
         "Vertical feed",
         "Notes on photos",
@@ -55,7 +55,7 @@ function PricingSection() {
       yearlyPeriod: "/year",
       features: [
         "50,000 photos",
-        "5,000 videos",
+        "2,000 videos",
         "Everything in Premium",
         "Priority support",
         "Early access to features",
@@ -618,7 +618,7 @@ export default function NewLanding() {
         name: "Premium",
         price: "0.99",
         priceCurrency: "USD",
-        description: "20,000 photos, 2,000 videos",
+        description: "20,000 photos, 500 videos",
         billingDuration: "P1M",
       },
       {
@@ -626,7 +626,7 @@ export default function NewLanding() {
         name: "Premium+",
         price: "2.99",
         priceCurrency: "USD",
-        description: "50,000 photos, 5,000 videos",
+        description: "50,000 photos, 2,000 videos",
         billingDuration: "P1M",
       },
     ],
@@ -1234,7 +1234,7 @@ export default function NewLanding() {
               },
               {
                 q: "Is the app free?",
-                a: "Yes, MonClips is free to use. The free plan includes 500 photos and 50 videos. If you need more, Premium starts at $0.99/mo for 20,000 photos and 2,000 videos.",
+                a: "Yes, MonClips is free to use. The free plan includes 500 photos and 50 videos. If you need more, Premium starts at $0.99/mo for 20,000 photos and 500 videos.",
               },
               {
                 q: "Do you sell my data?",
@@ -1250,7 +1250,7 @@ export default function NewLanding() {
               },
               {
                 q: "Is MonClips really cheaper than iCloud or Google Photos?",
-                a: "It depends on how you use cloud storage. iCloud and Google Photos charge for gigabytes — and most of that space goes to backups you never open. MonClips charges for the number of photos and videos you actually want to keep. Premium gives you 20,000 photos and 2,000 videos for just $0.99/mo.",
+                a: "It depends on how you use cloud storage. iCloud and Google Photos charge for gigabytes — and most of that space goes to backups you never open. MonClips charges for the number of photos and videos you actually want to keep. Premium gives you 20,000 photos and 500 videos for just $0.99/mo.",
               },
             ]}
           />
@@ -1385,11 +1385,11 @@ export default function NewLanding() {
               Free Plan: $0 — 500 photos, 50 videos, all features included.
             </li>
             <li>
-              Premium Plan: $0.99/month ($9.99/year) — 20,000 photos, 2,000
+              Premium Plan: $0.99/month ($9.99/year) — 20,000 photos, 500
               videos, unlimited albums, vertical feed, notes, reminders.
             </li>
             <li>
-              Premium+ Plan: $2.99/month ($29.99/year) — 50,000 photos, 5,000
+              Premium+ Plan: $2.99/month ($29.99/year) — 50,000 photos, 2,000
               videos, priority support, early access.
             </li>
           </ul>

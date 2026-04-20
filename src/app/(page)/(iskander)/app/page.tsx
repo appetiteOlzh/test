@@ -36,7 +36,7 @@ function PricingSection() {
       badge: "Popular",
       features: [
         "20,000 photos",
-        "2,000 videos",
+        "500 videos",
         "Unlimited albums",
         "Vertical feed",
         "Notes on photos",
@@ -54,7 +54,7 @@ function PricingSection() {
       yearlyPeriod: "/year",
       features: [
         "50,000 photos",
-        "5,000 videos",
+        "2,000 videos",
         "Everything in Premium",
         "Priority support",
         "Early access to features",
@@ -222,7 +222,7 @@ export default function AppLanding() {
         name: "Premium",
         price: "0.99",
         priceCurrency: "USD",
-        description: "20,000 photos, 2,000 videos",
+        description: "20,000 photos, 500 videos",
         billingDuration: "P1M",
       },
       {
@@ -230,7 +230,7 @@ export default function AppLanding() {
         name: "Premium+",
         price: "2.99",
         priceCurrency: "USD",
-        description: "50,000 photos, 5,000 videos",
+        description: "50,000 photos, 2,000 videos",
         billingDuration: "P1M",
       },
     ],
@@ -734,11 +734,11 @@ export default function AppLanding() {
               Free Plan: $0 — 500 photos, 50 videos, all features included.
             </li>
             <li>
-              Premium Plan: $0.99/month ($9.99/year) — 20,000 photos, 2,000
+              Premium Plan: $0.99/month ($9.99/year) — 20,000 photos, 500
               videos, unlimited albums, vertical feed, notes, reminders.
             </li>
             <li>
-              Premium+ Plan: $2.99/month ($29.99/year) — 50,000 photos, 5,000
+              Premium+ Plan: $2.99/month ($29.99/year) — 50,000 photos, 2,000
               videos, priority support, early access.
             </li>
           </ul>
