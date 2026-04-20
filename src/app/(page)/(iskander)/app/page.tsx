@@ -25,6 +25,7 @@ function PricingSection() {
       features: ["500 photos · 50 videos · All features"],
       cta: "Get Started Free",
       highlighted: false,
+      eventName: "app_download_app_popup_free",
     },
     {
       name: "Premium Plan",
@@ -44,6 +45,7 @@ function PricingSection() {
       ],
       cta: "Get Started Free",
       highlighted: true,
+      eventName: "app_download_app_popup_premium",
     },
     {
       name: "Premium+ Plan",
@@ -61,6 +63,7 @@ function PricingSection() {
       ],
       cta: "Get Started Free",
       highlighted: false,
+      eventName: "app_download_app_popup_premium_plus",
     },
   ];
 
@@ -176,6 +179,8 @@ function PricingSection() {
                   ? "btn-glow text-neutral-900"
                   : "border border-white/15 text-white/70 hover:border-amber-400/50 hover:shadow-[0_0_20px_rgba(242,207,64,0.15)] hover:text-white"
               }`}
+              url="https://monclips.com/download_app"
+              eventName={plan.eventName}
             >
               {plan.cta}
             </QrGlowButton>
@@ -289,6 +294,7 @@ export default function AppLanding() {
           <QrGlowButton
             className="btn-glow rounded-full h-10 px-5 text-sm font-medium text-neutral-900 transition-all hover:scale-[1.03] cursor-pointer"
             url="https://monclips.com/download_app"
+            eventName="app_download_app_popup_navbar"
           >
             Download Free
           </QrGlowButton>
@@ -325,6 +331,7 @@ export default function AppLanding() {
             <QrGlowButton
               className="btn-glow rounded-full h-13 px-10 text-base font-semibold text-neutral-900 transition-all hover:scale-[1.03] active:scale-100 cursor-pointer"
               url="https://monclips.com/download_app"
+              eventName="app_download_app_popup_hero"
             >
               Download Free
             </QrGlowButton>
@@ -629,6 +636,7 @@ export default function AppLanding() {
               <QrGlowButton
                 className="btn-glow rounded-full h-13 px-10 text-base font-semibold text-neutral-900 cursor-pointer hover:scale-[1.03] transition-transform"
                 url="https://monclips.com/download_app"
+                eventName="app_download_app_popup_download"
               >
                 Download Free
               </QrGlowButton>

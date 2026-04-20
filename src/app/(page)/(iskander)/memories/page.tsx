@@ -26,6 +26,7 @@ function PricingSection() {
       features: ["500 photos · 50 videos · All features"],
       cta: "Get Started Free",
       highlighted: false,
+      eventName: "memories_download_app_popup_free",
     },
     {
       name: "Premium Plan",
@@ -45,6 +46,7 @@ function PricingSection() {
       ],
       cta: "Get Started Free",
       highlighted: true,
+      eventName: "memories_download_app_popup_premium",
     },
     {
       name: "Premium+ Plan",
@@ -62,6 +64,7 @@ function PricingSection() {
       ],
       cta: "Get Started Free",
       highlighted: false,
+      eventName: "memories_download_app_popup_premium_plus",
     },
   ];
 
@@ -182,6 +185,8 @@ function PricingSection() {
                   ? "btn-glow text-neutral-900"
                   : "border border-white/15 text-white/70 hover:border-amber-400/50 hover:shadow-[0_0_20px_rgba(242,207,64,0.15)] hover:text-white"
               }`}
+              url="https://monclips.com/download_memories"
+              eventName={plan.eventName}
             >
               {plan.cta}
             </QrGlowButton>
@@ -685,6 +690,7 @@ export default function NewLanding() {
           <QrGlowButton
             className="btn-glow rounded-full h-10 px-5 text-sm font-medium text-neutral-900 transition-all hover:scale-[1.03] cursor-pointer"
             url="https://monclips.com/download_memories"
+            eventName="memories_download_app_popup_navbar"
           >
             Explore MonClips Free
           </QrGlowButton>
@@ -747,8 +753,12 @@ export default function NewLanding() {
           </BlurScaleBlock>
 
           {/* CTA */}
-          <BlurScaleBlock delay={600} className="relative z-[200]">
-            <QrGlowButton className="btn-glow rounded-full h-13 px-10 text-base font-semibold text-neutral-900 transition-all hover:scale-[1.03] active:scale-100 cursor-pointer">
+          <BlurScaleBlock delay={600} className="relative z-10">
+            <QrGlowButton
+              className="btn-glow rounded-full h-13 px-10 text-base font-semibold text-neutral-900 transition-all hover:scale-[1.03] active:scale-100 cursor-pointer"
+              url="https://monclips.com/download_memories"
+              eventName="memories_download_app_popup_hero"
+            >
               Explore MonClips Free
             </QrGlowButton>
           </BlurScaleBlock>
@@ -1285,7 +1295,11 @@ export default function NewLanding() {
             />
           </BlurScaleBlock>
           <BlurScaleBlock delay={400}>
-            <QrGlowButton className="btn-glow rounded-full h-13 px-10 text-base font-semibold text-neutral-900 cursor-pointer hover:scale-[1.03] transition-transform mb-6">
+            <QrGlowButton
+              className="btn-glow rounded-full h-13 px-10 text-base font-semibold text-neutral-900 cursor-pointer hover:scale-[1.03] transition-transform mb-6"
+              url="https://monclips.com/download_memories"
+              eventName="memories_download_app_popup_download"
+            >
               Get Started Free
             </QrGlowButton>
           </BlurScaleBlock>
