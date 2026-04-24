@@ -13,14 +13,23 @@ import { getClickGa } from "@/shared/lib/sendGa/get-client-on-click";
 export const AppOpenerButton: FC<{
   buttonText: string;
   className?: string;
-}> = ({ buttonText, className }) => {
+  eventName?: string;
+  eventNameGoogleplay?: string;
+  eventNameAppstore?: string;
+}> = ({
+  buttonText,
+  className,
+  eventName = "desktop_popup",
+  eventNameGoogleplay,
+  eventNameAppstore,
+}) => {
   const t = useTranslations("app");
   const [fullUrl, setFullUrl] = useState("");
   const [isOpen, setOpen] = useState(false);
   const pathname = usePathname();
 
   const onClick = getClickGa({
-    eventName: "desktop_popup",
+    eventName,
     callback: () => setOpen(true),
   });
 
@@ -36,8 +45,8 @@ export const AppOpenerButton: FC<{
         className={twMerge(
           cn(
             "bg-gradient-to-br from-[#018C6E] via-[#014F42] to-[#035846] py-4 px-7 rounded-2xl text-yellow uppercase font-bold",
-            className
-          )
+            className,
+          ),
         )}
         onClick={onClick}
       >
@@ -70,10 +79,16 @@ export const AppOpenerButton: FC<{
           </p>
           <div className="flex flex-wrap -mx-2 justify-center">
             <div className="basis-1/2 px-2">
-              <GoogleplayButton />
+              <GoogleplayButton
+                eventName={
+                  eventNameGoogleplay && eventNameGoogleplay + "_popup"
+                }
+              />
             </div>
             <div className="basis-1/2 px-2">
-              <AppStoreButton />
+              <AppStoreButton
+                eventName={eventNameAppstore && eventNameAppstore + "_popup"}
+              />
             </div>
           </div>
         </div>

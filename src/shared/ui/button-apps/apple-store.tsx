@@ -4,9 +4,15 @@ import { getClickGa } from "@/shared/lib/sendGa/get-client-on-click";
 import appstore from "/public/assets/img/appstore.svg";
 import appstoreDark from "/public/assets/img/appstore-dark.svg";
 
-export const AppStoreButton = ({ isDark }: { isDark?: boolean }) => {
+export const AppStoreButton = ({
+  isDark,
+  eventName = "button_appstore",
+}: {
+  isDark?: boolean;
+  eventName?: string;
+}) => {
   const onClick = getClickGa({
-    eventName: "button_appstore",
+    eventName,
   });
 
   return (

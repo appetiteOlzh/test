@@ -4,9 +4,15 @@ import { getClickGa } from "@/shared/lib/sendGa/get-client-on-click";
 import googleplay from "/public/assets/img/googleplay.svg";
 import googleplayDark from "/public/assets/img/googleplay-dark.svg";
 
-export const GoogleplayButton = ({ isDark }: { isDark?: boolean }) => {
+export const GoogleplayButton = ({
+  isDark,
+  eventName = "button_googleplay",
+}: {
+  isDark?: boolean;
+  eventName?: string;
+}) => {
   const onClick = getClickGa({
-    eventName: "button_googleplay",
+    eventName,
   });
 
   return (

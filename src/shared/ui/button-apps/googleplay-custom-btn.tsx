@@ -8,9 +8,10 @@ export const GoogleplayCustomButton: FC<{
   className?: string;
   isPremium?: boolean;
   buttonText: string;
-}> = ({ className, buttonText }) => {
+  eventName?: string;
+}> = ({ className, buttonText, eventName = "button_googleplay" }) => {
   const onClick = getClickGa({
-    eventName: "button_googleplay",
+    eventName,
   });
 
   return (
@@ -22,7 +23,7 @@ export const GoogleplayCustomButton: FC<{
       className={classNames(
         "bg-gradient-to-br from-[#018C6E] via-[#014F42] to-[#035846] py-4 px-7 rounded-2xl text-yellow uppercase font-bold",
 
-        className
+        className,
       )}
     >
       {buttonText}

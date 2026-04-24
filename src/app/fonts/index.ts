@@ -51,6 +51,11 @@ export const sfpro = localFont({
       weight: "900",
       style: "normal",
     },
+    {
+      path: "./SFProDisplay-LightItalic.woff2",
+      weight: "300",
+      style: "italic",
+    },
   ],
   variable: "--font-sf",
 });
