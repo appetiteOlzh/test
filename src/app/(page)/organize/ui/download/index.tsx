@@ -19,10 +19,10 @@ export const Download: FC = () => {
           </p>
           <div className="flex flex-wrap -mx-2.5 justify-center">
             <div className="basis-[168px] px-2.5">
-              <GoogleplayButton />
+              <GoogleplayButton eventName="organize_googleplay_download" />
             </div>
             <div className="basis-[168px] px-2.5">
-              <AppStoreButton />
+              <AppStoreButton eventName="organize_appstore_download" />
             </div>
           </div>
         </div>
