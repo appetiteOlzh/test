@@ -19,7 +19,7 @@ export const Hero: FC = () => {
             </p>
             <AppOpener
               buttonText="Скачать приложение"
-              className="rounded-full w-full md:w-[300px] py-[22px]"
+              className="rounded-full w-full md:w-[300px] py-[22px] text-center"
               eventName="organize_hero_popup"
               eventNameGoogleplay="organize_hero_googleplay"
               eventNameAppstore="organize_hero_appstore"
