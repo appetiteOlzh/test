@@ -34,6 +34,7 @@ export const Hero: FC = () => {
               alt="Александра Шумский - амбассадор MonClips"
               width={656}
               height={819}
+              quality={100}
             />
           </div>
         </div>
