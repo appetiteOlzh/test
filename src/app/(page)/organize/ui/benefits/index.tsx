@@ -30,13 +30,13 @@ export const Benefits: FC = () => {
     <section id="benefits" className="pt-[100px] md:pt-[130px]">
       <div className="container">
         <div className="flex flex-wrap">
-          <div className="basis-full md:basis-5/12">
-            <h2 className="text-h2-clamp text-yellow-darker uppercase font-black font-apple mb-4">
+          <div className="basis-full xl:basis-5/12 md:basis-6/12">
+            <h2 className="text-h2-clamp text-yellow-darker uppercase font-black font-apple mb-6">
               Ваш следующий заказ начинается <br />с Monclips
             </h2>
           </div>
-          <div className="basis-full md:basis-1/12"></div>
-          <div className="basis-full md:basis-6/12 space-y-2 md:space-y-2.5">
+          <div className="basis-full xl:basis-1/12 hidden xl:block"></div>
+          <div className="basis-full xl:basis-5/12 md:basis-6/12 space-y-2 md:space-y-2.5">
             {benefits.map((benefit, index) => (
               <BenefitItem key={index} {...benefit} />
             ))}
@@ -52,14 +52,15 @@ const BenefitItem: FC<{
   icon: string;
 }> = ({ title, icon }) => {
   return (
-    <div className="bg-[#101010] rounded-3xl md:rounded-[32px] p-10">
+    <div className="bg-[#101010] rounded-3xl md:rounded-[32px] p-6 xl:p-10">
       <div className="flex items-center">
         <Image
           src={icon}
           alt="Monclips"
           width={42}
           height={42}
-          className="mr-[30px]"
+          className="xl:mr-[30px] mr-3 w-8 h-8 xl:w-[42px] xl:h-[42px]"
+          unoptimized
         />
         <p className="text-base md:text-xl !leading-tight">{title}</p>
       </div>

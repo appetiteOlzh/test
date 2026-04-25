@@ -3,7 +3,11 @@ import { cookies, headers } from "next/headers";
 import { Locale } from "./routing";
 
 const isRu = (pathname: string | null | undefined) => {
-  return pathname?.endsWith("/cooking") || pathname?.endsWith("/monclips");
+  return (
+    pathname?.endsWith("/cooking") ||
+    pathname?.endsWith("/monclips") ||
+    pathname?.endsWith("/organize")
+  );
 };
 const isEn = (pathname: string | null | undefined) => {
   return pathname?.endsWith("/applicaion") || pathname?.endsWith("/");

@@ -5,12 +5,13 @@ import { AppOpener } from "@/features/app-opener";
 
 export const Hero: FC = () => {
   return (
-    <section className="relative pt-[180px]">
+    <section className="relative md:pt-[180px] pt-[130px] overflow-hidden">
       <div className="w-full container">
         <div className="flex flex-wrap">
-          <div className="basis-full md:basis-1/2 pb-16 flex flex-col flex-wrap">
+          <div className="basis-full lg:basis-1/2 lg:pb-16 flex flex-col flex-wrap relative z-10">
             <h1 className="text-h1-clamp text-yellow-darker uppercase font-black font-apple mb-4">
-              Новый инструмент для ведущих и организаторов
+              Новый инструмент <br />
+              для ведущих и организаторов
             </h1>
             <p className="text-lg md:text-2xl mb-8 font-bold">
               Альбом после мероприятия по одной ссылке - новый формат для тех,
@@ -23,11 +24,11 @@ export const Hero: FC = () => {
               eventNameGoogleplay="organize_hero_googleplay"
               eventNameAppstore="organize_hero_appstore"
             />
-            <Link href="#chaos" className="mt-auto md:block w-8 h-8 hidden">
+            <Link href="#chaos" className="mt-auto xl:block w-8 h-8 hidden">
               <ArrowDown />
             </Link>
           </div>
-          <div className="flex-1 mt-[-88px] ml-[-8px] mr-[-45px]">
+          <div className="lg:flex-1 lg:mt-[-88px] lg:ml-[-8px] lg:mr-[-45px] ml-auto">
             <Image
               src="/assets/img/organize/shum.png"
               alt="Александра Шумский - амбассадор MonClips"

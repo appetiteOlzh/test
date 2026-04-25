@@ -25,12 +25,12 @@ export const HowItWorks: FC = () => {
   return (
     <section id="how-it-works" className="pt-[100px] md:pt-[130px]">
       <div className="container">
-        <h2 className="text-h2-clamp text-yellow-darker uppercase font-black font-apple md:text-center max-w-[964px] mx-auto mb-4">
+        <h2 className="text-h2-clamp text-yellow-darker uppercase font-black font-apple xl:text-center max-w-[964px] xl:mx-auto mb-6 md:mb-8">
           Максимально просто. <br />
           Всего 3 шага:
         </h2>
 
-        <div className="grid grid-cols-1 md:grid-cols-3 gap-2 md:gap-5">
+        <div className="grid grid-cols-1 lg:grid-cols-3 gap-2 md:gap-5">
           {howItWorks.map((item, index) => (
             <HowItWorksItem key={index} {...item} />
           ))}
@@ -56,7 +56,7 @@ const HowItWorksItem: FC<{
           className="mx-auto"
         />
 
-        <figcaption className={twMerge("p-6 md:p-10 md:pt-8 text-center")}>
+        <figcaption className={twMerge("p-6 xl:p-10 xl:pt-8 text-center")}>
           <h3 className="text-lg md:text-xl font-black text-yellow-darker mb-2 !leading-tight">
             {title}
           </h3>

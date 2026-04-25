@@ -5,10 +5,10 @@ export const Download: FC = () => {
   return (
     <section
       id="download"
-      className="pt-10 md:pt-[60px] pb-20 overflow-hidden relative"
+      className="pt-10 md:pt-[60px] md:pb-20 pb-8 overflow-hidden relative"
     >
       <div className="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 w-[200%] h-[200%] bg-gradient-to-br from-[#101010] via-[#0C0C0C] to-[#0C0C0C]" />
-      <div className="container  py-[90px]">
+      <div className="container py-[90px]">
         <div className="max-w-[580px] mx-auto text-center relative z-10">
           <h2 className="text-h2-clamp text-yellow-darker font-black font-apple mb-3 uppercase">
             Пора использовать это в своей работе
