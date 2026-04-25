@@ -23,7 +23,7 @@ export default function Page() {
     >
       <HeaderNew
         noSocial
-        className="pt-8 pb-6 md:pt-6"
+        className="py-6 md:pt-6 fixed top-0 left-0 right-0 z-50 bg-[var(--background-color)]"
         eventName="organize_header_popup"
         eventNameGoogleplay="organize_header_googleplay"
         eventNameAppstore="organize_header_appstore"
