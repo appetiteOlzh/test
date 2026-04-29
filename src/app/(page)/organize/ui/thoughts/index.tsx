@@ -44,7 +44,6 @@ export const Thoughts: FC = () => {
               width={576}
               height={432}
               className="w-full h-[432px] object-cover object-center rounded-3xl"
-              unoptimized
             />
           </div>
         </div>
