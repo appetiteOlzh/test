@@ -5,10 +5,13 @@ import {
   Problems,
   Advantages,
   HowItWorks,
-  Benefits,
-  Comfort,
-  Blockquote,
+  Thoughts,
   Download,
+  Ambassador,
+  Pain,
+  Bastling,
+  Start,
+  Album,
 } from "./ui";
 
 export default function Page() {
@@ -29,12 +32,15 @@ export default function Page() {
         eventNameAppstore="organize_header_appstore"
       />
       <Hero />
+      <Ambassador />
+      <Pain />
       <Problems />
-      <Advantages />
+      <Bastling />
+      <Thoughts />
+      <Start />
       <HowItWorks />
-      <Benefits />
-      <Comfort />
-      <Blockquote />
+      <Album />
+      <Advantages />
       <Download />
       <Footer />
     </main>

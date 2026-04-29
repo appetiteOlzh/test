@@ -8,14 +8,13 @@ export const Hero: FC = () => {
     <section className="relative md:pt-[180px] pt-[130px] overflow-hidden">
       <div className="w-full container">
         <div className="flex flex-wrap">
-          <div className="basis-full lg:basis-1/2 lg:pb-16 flex flex-col flex-wrap relative z-10">
+          <div className="basis-full lg:basis-7/12 lg:pb-16 flex flex-col flex-wrap relative z-10">
             <h1 className="text-h1-clamp text-yellow-darker uppercase font-black font-apple mb-4">
-              Новый инструмент <br />
-              для ведущих и организаторов
+              Начните зарабатывать больше на 500$ на мероприятиях
             </h1>
             <p className="text-lg md:text-2xl mb-8 font-bold">
-              Альбом после мероприятия по одной ссылке - новый формат для тех,
-              кто хочет больше зарабатывать на своих мероприятиях
+              Продавайте клиенту услугу <br />
+              живого альбома
             </p>
             <AppOpener
               buttonText="Скачать приложение"
@@ -28,7 +27,7 @@ export const Hero: FC = () => {
               <ArrowDown />
             </Link>
           </div>
-          <div className="lg:flex-1 lg:mt-[-88px] lg:ml-[-8px] lg:mr-[-45px] ml-auto">
+          <div className="lg:flex-1 lg:mt-[-88px] lg:ml-[-187px] lg:mr-[-45px] ml-auto">
             <Image
               src="/assets/img/organize/shum.png"
               alt="Александра Шумский - амбассадор MonClips"

@@ -25,9 +25,8 @@ export const HowItWorks: FC = () => {
   return (
     <section id="how-it-works" className="pt-[100px] md:pt-[130px]">
       <div className="container">
-        <h2 className="text-h2-clamp text-yellow-darker uppercase font-black font-apple xl:text-center max-w-[964px] xl:mx-auto mb-6 md:mb-8">
-          Максимально просто. <br />
-          Всего 3 шага:
+        <h2 className="text-h2-clamp text-yellow-darker uppercase font-black font-apple text-center mb-4 md:mb-8">
+          Всего 3 шага
         </h2>
 
         <div className="grid grid-cols-1 lg:grid-cols-3 gap-2 md:gap-5">

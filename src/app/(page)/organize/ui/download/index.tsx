@@ -14,8 +14,7 @@ export const Download: FC = () => {
             Пора использовать это в своей работе
           </h2>
           <p className="mb-9 text-base md:text-lg">
-            Скачайте MonClips и попробуйте на ближайшем мероприятии. <br />
-            Ссылки на AppStore и Google Play Market
+            Скачайте MonClips и попробуйте
           </p>
           <div className="flex flex-wrap -mx-2.5 justify-center">
             <div className="basis-[168px] px-2.5">

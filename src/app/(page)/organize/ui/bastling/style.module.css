@@ -1,0 +1,7 @@
+.bastlingItem {
+  @apply relative lg:before:hidden before:block before:absolute before:left-1/2 before:-translate-x-1/2 before:top-full before:mt-2 before:w-4 before:h-4 before:bg-cover before:bg-no-repeat last:before:hidden;
+}
+
+.bastlingItem::before {
+  background-image: url("data:image/svg+xml,%3Csvg width='16' height='16' viewBox='0 0 16 16' fill='none' xmlns='http://www.w3.org/2000/svg'%3E%3Cg clip-path='url(%23clip0_4671_33427)'%3E%3Cpath d='M13 6L8 11L3 6' stroke='%23B9B9B9' stroke-width='1.5' stroke-linecap='round' stroke-linejoin='round'/%3E%3C/g%3E%3Cdefs%3E%3CclipPath id='clip0_4671_33427'%3E%3Crect width='16' height='16' fill='white'/%3E%3C/clipPath%3E%3C/defs%3E%3C/svg%3E%0A");
+}

@@ -3,57 +3,70 @@ import { FC } from "react";
 
 const painPoints = [
   {
-    title: "Фото и видео приходят разными частями",
-    description:
-      "Кто-то скинул в WhatsApp, кто-то в Telegram, а кто-то вообще забыл",
-    icon: "/assets/img/organize/p-1.svg",
+    description: (
+      <>
+        Кто-то из гостей подходит: “
+        <span className="text-yellow-darker">Скиньте фото</span>”
+      </>
+    ),
   },
   {
-    title: "Клиенту неудобно всё собирать",
-    description:
-      "После хорошего мероприятия финал выглядит скомканно: ссылки, архивы, пересылки, голосовые",
-    icon: "/assets/img/organize/p-2.svg",
+    description: (
+      <>
+        Кто-то пишет: <br />“
+        <span className="text-yellow-darker">А можно видео?</span>”
+      </>
+    ),
   },
   {
-    title: "На этом можно зарабатывать, но пока это просто лишняя возня",
-    description: "Вы и так тратите на это время, но не монетизируете",
-    icon: "/assets/img/organize/p-3.svg",
+    description: (
+      <>
+        Кто-то просит в <span className="text-yellow-darker">WhatsApp</span>,{" "}
+        <br />
+        кто-то хочет в <span className="text-yellow-darker">Telegram</span>
+      </>
+    ),
   },
   {
-    title: "Хочется отличаться от других ведущих?",
-    description:
-      "Не только провести хорошо, но и красиво напомнить о себе после события",
-    icon: "/assets/img/organize/p-4.svg",
+    description: (
+      <>
+        Кому-то надо{" "}
+        <span className="text-yellow-darker">
+          прямо <br />
+          сейчас
+        </span>
+        , кому-то <span className="text-yellow-darker">не дошло</span>
+      </>
+    ),
   },
 ];
 
 export const Problems: FC = () => {
   return (
-    <section className="pt-[100px] md:pt-[130px]" id="chaos">
+    <section className="pt-[100px] md:pt-[130px]" id="problems">
       <div className="container">
-        <h2 className="text-h2-clamp font-black font-apple text-yellow-darker uppercase mb-3 xl:text-center text-balance">
-          После мероприятия всё хорошее часто заканчивается хаосом
+        <h2 className="text-h2-clamp font-black font-apple text-yellow-darker uppercase text-balance md:mb-8 mb-5">
+          И в какой-то момент начинается то, что меня всегда раздражало…
         </h2>
-        <p className="text-xl mb-8 font-bold xl:text-center max-w-[584px] xl:mx-auto">
-          Фото и видео разлетаются по чатам, клиенту неудобно, а Вы тратите
-          время на то, что можно было превратить в услугу.
-        </p>
-        <div className="flex flex-wrap">
-          <div className="basis-full lg:basis-1/2 mb-2 lg:mb-0 lg:pr-5">
+
+        <div className="flex flex-wrap -mx-2.5">
+          <div className="basis-full lg:basis-1/2 lg:block hidden px-2.5">
             <div className="relative mx-auto xl:mx-0 ">
               <Image
-                src="/assets/img/organize/chaos-laptop.png"
+                src="/assets/img/organize/problem.png"
                 alt="Chaos after event"
                 width={580}
-                height={387}
-                className="rounded-3xl md:rounded-[36px] mx-auto md:w-full"
+                height={312}
+                className="rounded-3xl w-full h-[312px] object-cover object-top"
               />
             </div>
           </div>
-          <div className="basis-full lg:basis-1/2">
-            <div className="space-y-2">
-              {painPoints.map((point, index) => (
-                <ProblemItem key={index} {...point} />
+          <div className="basis-full lg:basis-1/2 px-2.5">
+            <div className="grid md:grid-cols-2 gap-5 h-full">
+              {painPoints.map(({ description }, index) => (
+                <div key={index}>
+                  <ProblemItem>{description}</ProblemItem>
+                </div>
               ))}
             </div>
           </div>
@@ -63,24 +76,20 @@ export const Problems: FC = () => {
   );
 };
 
-const ProblemItem: FC<{ title: string; description: string; icon: string }> = ({
-  title,
-  description,
-  icon,
-}) => {
+const ProblemItem: FC<{ children: React.ReactNode }> = ({ children }) => {
   return (
-    <div className="bg-[#101010] p-6 xl:p-10 rounded-3xl md:rounded-[32px]">
-      <div className="flex items-center">
-        <div className="lg:hidden mb-4">
-          <Image src={icon} alt={title} width={32} height={32} unoptimized />
-        </div>
+    <div className="bg-[#101010] p-6 rounded-3xl h-full">
+      <div className="mb-4">
+        <Image
+          src="/assets/img/organize/quote.svg"
+          alt=""
+          width={32}
+          height={32}
+          unoptimized
+        />
       </div>
-      <h3 className="text-lg md:text-xl font-black text-yellow-darker uppercase mb-2 basis-full min-w-0">
-        {title}
-      </h3>
-      <p className="text-sm md:text-base text-balance basis-full min-w-0">
-        {description}
-      </p>
+
+      <p className="md:text-lg text-base font-bold">{children}</p>
     </div>
   );
 };

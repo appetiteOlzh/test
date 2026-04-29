@@ -12,9 +12,8 @@ const advantages = [
     ),
     description: (
       <>
-        То, что Вы сейчас делаете бесплатно, можно превратить в отдельную услугу{" "}
-        <br />
-        Альбом после мероприятия - это удобно для клиента и даёт Вам понятный
+        То, что Вы и так сейчас делаете бесплатно, можно превратить в отдельную
+        услугу. Альбом после мероприятия - это удобно для клиента и даёт Вам
         дополнительный повод брать деньги.
       </>
     ),
@@ -29,7 +28,7 @@ const advantages = [
     ),
     description: (
       <>
-        Ищете, чем выделиться среди других ведущих? Добавьте в своё предложение
+        Ищите, чем выделиться среди других ведущих? Добавьте в своё предложение
         альбом после мероприятия по одной ссылке.
       </>
     ),
@@ -42,10 +41,7 @@ const advantages = [
       </>
     ),
     description: (
-      <>
-        Праздник закончился - впечатление <br />о Вас осталось. Отдайте клиенту{" "}
-        <br />и гостям фото и видео красиво, <br />а не через хаос в чатах.
-      </>
+      <>То, как Вы отдаёте материалы после мероприятия, тоже продаёт Вас.</>
     ),
     src: "/assets/img/organize/adv-3.png",
   },
@@ -55,13 +51,10 @@ export const Advantages: FC = () => {
   return (
     <section id="advantages" className="pt-[100px] md:pt-[130px]">
       <div className="container">
-        <h2 className="text-h2-clamp text-yellow-darker uppercase font-black font-apple xl:text-center max-w-[964px] xl:mx-auto mb-4">
-          Ссылка на альбом с мероприятия - именно здесь начинается Ваша
-          следующая продажа
-        </h2>
-        <p className="text-lg mb-8 font-bold xl:text-center max-w-[584px] xl:mx-auto">
+        <h2 className="text-h2-clamp text-yellow-darker uppercase font-black font-apple xl:text-center max-w-[706px] xl:mx-auto mb-8">
           Удобно для клиента. Выгодно для Вас.
-        </p>
+        </h2>
+
         <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-2 md:gap-5">
           {advantages.map((advantage, index) => (
             <AdvantageItem key={index} {...advantage} />
