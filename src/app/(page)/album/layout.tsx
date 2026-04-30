@@ -1,28 +1,26 @@
 import { Metadata } from "next";
 
 export const metadata: Metadata = {
-  title: "MonClips — Новый инструмент для ведущих и организаторов",
-  description:
-    "Альбом после мероприятия по одной ссылке - новый формат для тех, кто хочет больше зарабатывать на своих мероприятиях",
+  title: "MonClips — Начните зарабатывать больше на 500$ на мероприятиях",
+  description: "Продавайте клиенту услугу живого альбома",
   authors: [{ name: "MonClips" }],
   creator: "MonClips",
   publisher: "MonClips",
   metadataBase: new URL("https://monclips.com"),
   alternates: {
-    canonical: "/organize",
+    canonical: "/album",
   },
   openGraph: {
-    title: "MonClips — Новый инструмент для ведущих и организаторов",
-    description:
-      "Альбом после мероприятия по одной ссылке - новый формат для тех, кто хочет больше зарабатывать на своих мероприятиях",
-    url: "https://monclips.com/organize",
+    title: "MonClips — Начните зарабатывать больше на 500$ на мероприятиях",
+    description: "Продавайте клиенту услугу живого альбома",
+    url: "https://monclips.com/album",
     siteName: "MonClips",
     images: [
       {
-        url: "https://monclips.com/og_img_organize.png",
+        url: "https://monclips.com/og_img_album.png",
         width: 1200,
         height: 630,
-        alt: "MonClips — Новый инструмент для ведущих и организаторов",
+        alt: "MonClips — Начните зарабатывать больше на 500$ на мероприятиях",
       },
     ],
     locale: "ru_RU",
@@ -30,10 +28,9 @@ export const metadata: Metadata = {
   },
   twitter: {
     card: "summary_large_image",
-    title: "MonClips — Новый инструмент для ведущих и организаторов",
-    description:
-      "Альбом после мероприятия по одной ссылке - новый формат для тех, кто хочет больше зарабатывать на своих мероприятиях",
-    images: ["https://monclips.com/og_img_organize.png"],
+    title: "MonClips — Начните зарабатывать больше на 500$ на мероприятиях",
+    description: "Продавайте клиенту услугу живого альбома",
+    images: ["https://monclips.com/og_img_album.png"],
   },
   robots: {
     index: true,

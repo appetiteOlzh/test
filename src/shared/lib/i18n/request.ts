@@ -6,7 +6,8 @@ const isRu = (pathname: string | null | undefined) => {
   return (
     pathname?.endsWith("/cooking") ||
     pathname?.endsWith("/monclips") ||
-    pathname?.endsWith("/organize")
+    pathname?.endsWith("/organize") ||
+    pathname?.endsWith("/album")
   );
 };
 const isEn = (pathname: string | null | undefined) => {
