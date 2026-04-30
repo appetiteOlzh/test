@@ -5,7 +5,7 @@ const painPoints = [
   {
     description: (
       <>
-        Кто-то из гостей подходит: “
+        Кто-то из гостей подходит: <br />“
         <span className="text-yellow-darker">Скиньте фото</span>”
       </>
     ),
@@ -13,7 +13,7 @@ const painPoints = [
   {
     description: (
       <>
-        Кто-то пишет: <br />“
+        Кто-то пишет: <br className="hidden md:block" />“
         <span className="text-yellow-darker">А можно видео?</span>”
       </>
     ),
@@ -32,10 +32,11 @@ const painPoints = [
       <>
         Кому-то надо{" "}
         <span className="text-yellow-darker">
-          прямо <br />
+          прямо <br className="hidden md:block" />
           сейчас
         </span>
-        , кому-то <span className="text-yellow-darker">не дошло</span>
+        , <br className="md:hidden" />
+        кому-то <span className="text-yellow-darker">не дошло</span>
       </>
     ),
   },
@@ -43,7 +44,7 @@ const painPoints = [
 
 export const Problems: FC = () => {
   return (
-    <section className="pt-[100px] md:pt-[130px]" id="problems">
+    <section className="pt-[60px] md:pt-[130px]" id="problems">
       <div className="container">
         <h2 className="text-h2-clamp font-black font-apple text-yellow-darker uppercase text-balance md:mb-8 mb-5">
           И в какой-то момент начинается то, что меня всегда раздражало…

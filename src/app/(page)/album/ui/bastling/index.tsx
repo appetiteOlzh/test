@@ -6,7 +6,12 @@ import s from "./style.module.css";
 
 const painPoints = [
   {
-    description: "Мобилограф скидывает что-то в чат",
+    description: (
+      <>
+        Мобилограф скидывает{" "}
+        <span className="whitespace-nowrap">что-то в чат</span>
+      </>
+    ),
   },
   {
     description: "Что-то потерялось по пути",
@@ -27,7 +32,7 @@ const painPoints = [
 
 export const Bastling: FC = () => {
   return (
-    <section className="pt-[100px] md:pt-[130px] overflow-hidden" id="bastling">
+    <section className="pt-[60px] md:pt-[130px] overflow-hidden" id="bastling">
       <div className="container">
         <h2 className="text-h2-mon font-black font-apple text-yellow-darker uppercase md:mb-8 mb-5">
           вместо того, чтобы вести мероприятие и держать внимание на главном, ты
@@ -82,7 +87,7 @@ const ProblemItem: FC<{ children: React.ReactNode; index: number }> = ({
 }) => {
   return (
     <div className={cn("bg-[#101010] p-6 rounded-3xl h-full", s.bastlingItem)}>
-      <div className="flex flex-wrap">
+      <div className="flex flex-wrap items-center">
         <span className="text-yellow-darker text-2xl font-bold w-8 leading-8 basis-12 pr-4">
           0{index + 1}
         </span>

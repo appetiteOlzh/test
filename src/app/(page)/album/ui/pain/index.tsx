@@ -5,7 +5,7 @@ import { FC } from "react";
 
 export const Pain: FC = () => {
   return (
-    <section className="pt-[100px] md:pt-[130px]" id="pain">
+    <section className="pt-[60px] md:pt-[130px]" id="pain">
       <div className="container">
         <div className="flex flex-wrap">
           <div className="basis-full xl:basis-1/2 md:basis-7/12 mb-6 md:mb-0">

@@ -1,0 +1,4 @@
+.bgRadial {
+  background: radial-gradient(50% 198.85% at 50% 50%, #101010 0%, #0c0c0c 100%);
+  border-radius: 32px;
+}

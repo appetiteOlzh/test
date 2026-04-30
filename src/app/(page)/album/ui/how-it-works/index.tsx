@@ -23,7 +23,7 @@ const howItWorks = [
 
 export const HowItWorks: FC = () => {
   return (
-    <section id="how-it-works" className="pt-[100px] md:pt-[130px]">
+    <section id="how-it-works" className="pt-[60px] md:pt-[130px]">
       <div className="container">
         <h2 className="text-h2-clamp text-yellow-darker uppercase font-black font-apple text-center mb-4 md:mb-8">
           Всего 3 шага
@@ -45,7 +45,7 @@ const HowItWorksItem: FC<{
   src: string;
 }> = ({ title, description, src }) => {
   return (
-    <div className="bg-[#1A1A1A] rounded-3xl md:rounded-[32px] overflow-hidden">
+    <div className="bg-[#101010] rounded-3xl md:rounded-[32px] overflow-hidden">
       <figure>
         <Image
           src={src}

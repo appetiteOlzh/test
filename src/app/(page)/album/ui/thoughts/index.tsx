@@ -26,7 +26,7 @@ const benefits = [
 
 export const Thoughts: FC = () => {
   return (
-    <section id="thoughts" className="pt-[100px] md:pt-[130px]">
+    <section id="thoughts" className="pt-[60px] md:pt-[130px]">
       <div className="container">
         <h2 className="text-h2-clamp text-yellow-darker uppercase font-black font-apple mb-6 md:mb-8">
           И внезапно я поймал себя на мысли…

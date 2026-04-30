@@ -49,7 +49,7 @@ const advantages = [
 
 export const Advantages: FC = () => {
   return (
-    <section id="advantages" className="pt-[100px] md:pt-[130px]">
+    <section id="advantages" className="pt-[60px] md:pt-[130px]">
       <div className="container">
         <h2 className="text-h2-clamp text-yellow-darker uppercase font-black font-apple xl:text-center max-w-[706px] xl:mx-auto mb-8">
           Удобно для клиента. Выгодно для Вас.

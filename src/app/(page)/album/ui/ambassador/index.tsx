@@ -18,7 +18,7 @@ const imageList = [
 
 export const Ambassador: FC = () => {
   return (
-    <section className="pt-[100px] md:pt-[130px]" id="ambassador">
+    <section className="pt-[60px] md:pt-[130px]" id="ambassador">
       <div className="container">
         <div className="flex flex-wrap flex-row-reverse">
           <div className="basis-full md:basis-1/2 xl:basis-5/12 xl:pl-10 md:pl-6 pt-10 mb-6">

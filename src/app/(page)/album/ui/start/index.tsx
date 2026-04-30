@@ -5,7 +5,7 @@ import { FC } from "react";
 
 export const Start: FC = () => {
   return (
-    <section className="pt-[100px] md:pt-[130px]" id="start">
+    <section className="pt-[60px] md:pt-[130px]" id="start">
       <div className="container">
         <h2 className="text-h2-clamp text-yellow-darker uppercase font-black font-apple mb-3 md:mb-6">
           И я начал думать…
