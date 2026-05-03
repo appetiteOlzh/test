@@ -9,11 +9,9 @@ import "swiper/css/pagination";
 import "swiper/css/navigation";
 
 const imageList = [
-  "/assets/img/organize/ambassador/1.png",
-  "/assets/img/organize/ambassador/2.png",
-  "/assets/img/organize/ambassador/3.png",
-  "/assets/img/organize/ambassador/4.png",
-  "/assets/img/organize/ambassador/5.png",
+  "/assets/img/organize/ambassador/1.png?v=2",
+  "/assets/img/organize/ambassador/2.jpg?v=2",
+  "/assets/img/organize/ambassador/3.png?v=2",
 ];
 
 export const Ambassador: FC = () => {
@@ -26,10 +24,10 @@ export const Ambassador: FC = () => {
               Александр Шумский
             </h2>
             <ul className="list-disc pl-7 text-lg !leading-snug">
-              <li>15+ лет в event-индустрии</li>
-              <li>500+ мероприятий позади</li>
+              <li>20 лет в event-индустрии</li>
+              <li>1000+ мероприятий позади</li>
               <li>Ведущий-новатор</li>
-              <li>Владелец shum.kz</li>
+              <li>Основатель shum.kz</li>
             </ul>
           </div>
           <div className="basis-full md:basis-1/2 xl:basis-7/12 min-w-0">
