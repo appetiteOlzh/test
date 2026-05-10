@@ -40,6 +40,7 @@ const config: Config = {
         "h1-mon": ["clamp(2rem, 6.4vw, 3.5rem)", { lineHeight: "1.2" }],
         "h2-mon": ["clamp(1.75rem, 7.5vw, 2.25rem)", { lineHeight: "1.2" }],
         "desc-mon": ["clamp(1.125rem, 4.8vw, 1.5rem)", { lineHeight: "1.2" }],
+        "h2-wed": ["clamp(1.75rem, 4.5vw, 3.5rem)", { lineHeight: "1.2" }],
       },
       borderRadius: {
         "5xl": "3.75rem",
