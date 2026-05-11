@@ -15,12 +15,14 @@ export const HeaderNew: FC<{
   eventName?: string;
   eventNameGoogleplay?: string;
   eventNameAppstore?: string;
+  buttonText?: string;
 }> = ({
   noSocial = false,
   className,
   eventName,
   eventNameGoogleplay,
   eventNameAppstore,
+  buttonText,
 }) => {
   const t = useTranslations("Space");
 
@@ -69,7 +71,7 @@ export const HeaderNew: FC<{
           )}
           <div className={cn("basis-auto ml-auto", { "md:ml-12": !noSocial })}>
             <AppOpenerButton
-              buttonText={t("button")}
+              buttonText={buttonText || t("button")}
               className="rounded-full md:px-8 md:py-3 md:text-lg px-4 py-3 text-sm bg-white text-[#333]"
               eventName={eventName}
               eventNameGoogleplay={eventNameGoogleplay}

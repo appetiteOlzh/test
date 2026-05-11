@@ -15,6 +15,7 @@ const ROW_1_IMAGES = [
   "/assets/img/wedding/moment/4.png",
   "/assets/img/wedding/moment/5.png",
   "/assets/img/wedding/moment/6.png",
+  "/assets/img/wedding/moment/7.png",
 ];
 
 const ROW_2_IMAGES = [
@@ -40,7 +41,7 @@ export const Moment: FC = () => {
         row1Ref.current,
         { x: "0%" },
         {
-          x: "-55%",
+          x: "-35%",
           ease: "none",
           scrollTrigger: {
             trigger: containerRef.current,
@@ -54,7 +55,7 @@ export const Moment: FC = () => {
       // Bottom row moves right
       gsap.fromTo(
         row2Ref.current,
-        { x: "-55%" },
+        { x: "-35%" },
         {
           x: "0%",
           ease: "none",
@@ -71,7 +72,7 @@ export const Moment: FC = () => {
   );
 
   return (
-    <section className="py-20 md:py-32 relative h-[300vh] md:h-[200vh]">
+    <section className="py-20 md:py-32 relative h-[300vh] md:h-[180vh]">
       <div
         className="sticky top-[15vh] md:top-[20vh]  overflow-hidden"
         ref={containerRef}

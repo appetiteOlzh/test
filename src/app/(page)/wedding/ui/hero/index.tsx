@@ -4,7 +4,7 @@ import { AppOpener } from "@/features/app-opener";
 export const Hero: FC = () => {
   return (
     <section
-      className="relative md:pt-[180px] pt-[130px] overflow-hidden before:absolute before:bottom-0 before:left-0 before:w-full before:h-full before:bg-gradient-to-r before:from-[#0C0C0C] before:via-transparent before:to-transparent"
+      className="relative md:pt-[300px] md:pb-[300px] pt-[130px] overflow-hidden before:absolute before:bottom-0 before:left-0 before:w-full before:h-full before:bg-gradient-to-r before:from-[#0C0C0C] before:via-transparent before:to-transparent bg-[#0C0C0C]"
       style={{
         backgroundImage: "url(/assets/img/wedding/hero.png)",
         backgroundSize: "cover",
@@ -13,18 +13,18 @@ export const Hero: FC = () => {
     >
       <div className="w-full container">
         <div className="flex flex-wrap">
-          <div className="basis-full lg:basis-1/2 lg:pb-16 flex flex-col flex-wrap relative z-10">
+          <div className="basis-full lg:basis-7/12 lg:pb-16 flex flex-col flex-wrap relative z-10">
             <p className="text-lg md:text-2xl mb-8 font-bold">
               Wedding = one day, so many guests, countless moments
             </p>
-            <h1 className="text-h1-clamp text-yellow-darker font-black font-apple mb-4">
+            <h1 className="text-h1-wed text-yellow-darker font-black font-apple mb-4">
               MonClips = one real-time album that brings them all together
             </h1>
-            <p className="text-lg md:text-2xl mb-8 font-bold">
+            <p className="text-lg md:text-2xl mb-10 font-bold">
               One QR code. One shared memory.
             </p>
             <AppOpener
-              buttonText="Скачать приложение"
+              buttonText="Create your wedding album"
               className="rounded-full w-full md:w-[300px] py-[22px] text-center"
               eventName="wedding_hero_popup"
               eventNameGoogleplay="wedding_hero_googleplay"
