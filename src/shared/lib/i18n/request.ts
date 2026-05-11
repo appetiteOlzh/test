@@ -11,7 +11,11 @@ const isRu = (pathname: string | null | undefined) => {
   );
 };
 const isEn = (pathname: string | null | undefined) => {
-  return pathname?.endsWith("/applicaion") || pathname?.endsWith("/");
+  return (
+    pathname?.endsWith("/applicaion") ||
+    pathname?.endsWith("/") ||
+    pathname?.endsWith("/wedding")
+  );
 };
 
 export default getRequestConfig(async () => {
