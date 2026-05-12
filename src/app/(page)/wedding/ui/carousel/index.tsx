@@ -69,7 +69,7 @@ export const CarouselSection: FC = () => {
             const i = idx + 1;
             return (
               <div
-                className="basis-[580px] shrink-0 grow-0 rounded-3xl relative overflow-hidden mr-5"
+                className="basis-full md:basis-[580px] shrink-0 grow-0 rounded-3xl relative overflow-hidden mr-5"
                 key={i}
                 ref={(el) => {
                   sliderItems.current[i - 1] = el;

@@ -62,7 +62,7 @@ export const StepsSection: FC = () => {
                 if (el) cardsRef.current[i] = el;
               }}
             >
-              <div className="rounded-[48px] bg-[#101010] px-10 pb-11 text-center">
+              <div className="rounded-[48px] bg-[#101010] px-10 pb-11 text-center h-full">
                 <Image
                   src={step.img}
                   alt={step.title}

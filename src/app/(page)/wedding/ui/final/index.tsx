@@ -6,7 +6,7 @@ export const FinalSection = () => {
     <section className="py-36">
       <div className="container">
         <div className="flex flex-wrap flex-row-reverse items-center">
-          <div className="basis-1/2 md:pl-8">
+          <div className="basis-full md:basis-1/2 md:pl-8 mb-14 md:mb-0 text-center md:text-left">
             <h2 className="text-h2-wed text-yellow-darker font-black font-apple mb-8 md:mb-4">
               Bring every moment together
             </h2>
@@ -21,8 +21,8 @@ export const FinalSection = () => {
               eventNameAppstore="wedding_final_appstore"
             />
           </div>
-          <div className="basis-1/2 pr-7">
-            <div className="relative before:absolute before:bottom-0 before:left-0 before:w-full before:h-full before:bg-gradient-to-r before:from-[#0C0C0C] before:via-transparent before:to-transparent after:absolute after:top-0 after:right-0 after:w-full after:h-full after:bg-gradient-to-l after:from-[#0C0C0C] after:via-transparent after:to-transparent">
+          <div className="basis-full md:basis-1/2 md:pr-7">
+            <div className="relative before:absolute before:bottom-0 before:left-0 before:w-full before:h-full before:bg-gradient-to-r before:from-[#0C0C0C] before:via-transparent before:to-transparent md:after:absolute md:after:top-0 md:after:right-0 md:after:w-full md:after:h-full md:after:bg-gradient-to-l md:after:from-[#0C0C0C] md:after:via-transparent md:after:to-transparent">
               <Image
                 src="/assets/img/wedding/final.png"
                 alt=""

@@ -66,11 +66,11 @@ export const QrSection: FC = () => {
   );
 
   return (
-    <section ref={sectionRef} className="bg-[#0C0C0C] overflow-hidden">
+    <section ref={sectionRef}>
       <div className="container py-20 md:py-32">
         <div className="flex flex-wrap items-start -mx-5 min-h-[80vh]">
           {/* Left Block - Sticky Text */}
-          <div className="basis-full md:basis-1/2 px-5 sticky top-0 pt-14">
+          <div className="basis-full md:basis-1/2 px-5">
             <div className="max-w-xl">
               <h2 className="text-h2-wed font-black font-apple text-yellow-darker leading-[1.1] mb-6 md:mb-10">
                 Guests scan.
