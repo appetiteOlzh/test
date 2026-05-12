@@ -85,7 +85,7 @@ export const CarouselSection: FC = () => {
                       alt=""
                       width={580}
                       height={437}
-                      className="w-full h-full object-cover"
+                      className="w-full h-full object-cover object-[68%]"
                     />
                     <div className="absolute bottom-0 left-0 w-full max-h-full md:p-10 p-7">
                       <h4 className="text-yellow-darker text-2xl font-black text-balance">
