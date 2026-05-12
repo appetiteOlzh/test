@@ -3,13 +3,7 @@ import { AppOpener } from "@/features/app-opener";
 
 export const Hero: FC = () => {
   return (
-    <section
-      className="relative overflow-hidden before:absolute before:bottom-0 before:left-0 before:w-full before:h-full before:bg-gradient-to-r before:from-[#0C0C0C] before:via-transparent before:to-transparent bg-[#0C0C0C] bg-right 2xl:bg-center"
-      style={{
-        backgroundImage: "url(/assets/img/wedding/hero.png)",
-        backgroundSize: "cover",
-      }}
-    >
+    <section className="relative overflow-hidden before:absolute before:bottom-0 before:left-0 before:w-full before:h-full before:bg-gradient-to-r before:from-[#0C0C0C] before:via-transparent before:to-transparent bg-[#0C0C0C] bg-right 2xl:bg-center bg-cover bg-[url(/assets/img/wedding/hero-mob.png)] md:bg-[url(/assets/img/wedding/hero.png)]">
       <div className="w-full container">
         <div className="flex flex-wrap md:h-auto h-dvh min-h-[480px] md:items-center items-end md:pt-[300px] md:pb-[300px] pb-10">
           <div className="basis-full xl:basis-7/12 lg:basis-8/12 lg:pb-16 flex flex-col flex-wrap relative z-10">
