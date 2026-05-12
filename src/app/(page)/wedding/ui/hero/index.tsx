@@ -13,7 +13,7 @@ export const Hero: FC = () => {
       <div className="w-full container">
         <div className="flex flex-wrap md:h-auto h-dvh min-h-[480px] md:items-center items-end md:pt-[300px] md:pb-[300px] pb-10">
           <div className="basis-full xl:basis-7/12 lg:basis-8/12 lg:pb-16 flex flex-col flex-wrap relative z-10">
-            <p className="text-lg md:text-2xl mb-8 font-bold">
+            <p className="text-lg md:text-2xl md:mb-8 mb-3 font-bold text-balance">
               Wedding = one day, so many guests, countless moments
             </p>
             <h1 className="text-h1-wed text-yellow-darker font-black font-apple mb-4 text-balance">

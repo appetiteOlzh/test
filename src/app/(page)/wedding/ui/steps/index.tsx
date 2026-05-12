@@ -14,6 +14,11 @@ export const StepsSection: FC = () => {
 
   useGSAP(
     () => {
+      // Force refresh to fix mobile initialization issues
+      const refreshTimeout = setTimeout(() => {
+        ScrollTrigger.refresh();
+      }, 100);
+
       gsap.from(cardsRef.current, {
         opacity: 0,
         y: 40,
@@ -22,9 +27,11 @@ export const StepsSection: FC = () => {
         ease: "power2.out",
         scrollTrigger: {
           trigger: sectionRef.current,
-          start: "top top",
+          start: "top 80%",
         },
       });
+
+      return () => clearTimeout(refreshTimeout);
     },
     { scope: sectionRef },
   );
@@ -70,7 +77,7 @@ export const StepsSection: FC = () => {
                   width={272}
                   height={268}
                 />
-                <h3 className="text-2xl md:text-3xl font-bold text-yellow-darker mb-1 tracking-wide">
+                <h3 className="text-2xl md:text-3xl font-bold text-yellow-darker">
                   {step.title}
                 </h3>
                 <p className="text-lg">{step.desc}</p>

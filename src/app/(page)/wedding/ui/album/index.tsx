@@ -20,10 +20,11 @@ export const Album: FC = () => {
             <div className="rounded-[60px] overflow-hidden bg-[#101010]">
               <video
                 src="/assets/video/wedding-gallery.mp4"
-                autoPlay
-                loop
-                muted
                 playsInline
+                autoPlay
+                muted
+                loop
+                className="-mt-5 md:mt-0"
               ></video>
             </div>
           </div>
