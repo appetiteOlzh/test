@@ -19,13 +19,19 @@ export const Album: FC = () => {
           <div className="basis-full md:basis-5/12 px-2.5">
             <div className="rounded-[60px] overflow-hidden bg-[#101010]">
               <video
-                src="/assets/video/wedding-gallery.mp4"
                 playsInline
                 autoPlay
                 muted
                 loop
+                preload="auto"
                 className="-mt-5 md:mt-0"
-              ></video>
+              >
+                <source
+                  src="/assets/video/wedding-gallery.mp4"
+                  type="video/mp4"
+                />
+                Your browser does not support the video tag.
+              </video>
             </div>
           </div>
         </div>

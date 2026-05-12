@@ -72,7 +72,7 @@ export const Moment: FC = () => {
   );
 
   return (
-    <section className="py-20 md:py-32 relative h-[180vh]">
+    <section className="py-20 md:py-32 relative md:h-[180vh] h-screen">
       <div
         className="sticky top-[15vh] md:top-[20vh]  overflow-hidden"
         ref={containerRef}

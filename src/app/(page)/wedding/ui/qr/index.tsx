@@ -60,10 +60,12 @@ export const QrSection: FC = () => {
               trigger: sectionRef.current,
               start: "top top",
               end: isMobile ? "+=150%" : "+=50%",
-              scrub: 1,
+              scrub: isMobile ? true : 1,
               pin: true,
               anticipatePin: 1,
               invalidateOnRefresh: true,
+              fastScrollEnd: true,
+              preventOverlaps: true,
             },
           });
 

@@ -31,7 +31,7 @@ export const FinalSection = () => {
                 className="w-full h-[404px] object-cover object-left"
               />
               <div className="absolute top-0 left-0 w-44 h-full flex flex-col justify-around">
-                <div className="w-full text-center px-3.5 text-xl text-balance">
+                <div className="w-full text-center px-3.5 md:text-xl text-balance">
                   <Image
                     src="/assets/icons/wedding/qrCode.svg"
                     alt=""
@@ -41,7 +41,7 @@ export const FinalSection = () => {
                   />
                   One QR code
                 </div>
-                <div className="w-full text-center px-3.5 text-xl text-balance">
+                <div className="w-full text-center px-3.5 md:text-xl text-balance">
                   <Image
                     src="/assets/icons/wedding/linkSimple.svg"
                     alt=""
@@ -51,7 +51,7 @@ export const FinalSection = () => {
                   />
                   One link
                 </div>
-                <div className="w-full text-center px-3.5 text-xl text-balance">
+                <div className="w-full text-center px-3.5 md:text-xl text-balance">
                   <Image
                     src="/assets/icons/wedding/heart.svg"
                     alt=""
