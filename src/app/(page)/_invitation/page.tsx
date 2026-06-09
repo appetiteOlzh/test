@@ -7,11 +7,11 @@ import { Hero } from "@/widgets/hero";
 import { notFound } from "next/navigation";
 
 type Props = {
-  params: { invitation: string };
+  params: { username: string };
 };
-
+// due the route conflict with @[username]/[catId] [invitation] renamed to [username]
 export async function generateMetadata({ params }: Props): Promise<Metadata> {
-  const configKey = `/${params.invitation}` as keyof typeof REDIRECT_CONFIG;
+  const configKey = `/${params.username}` as keyof typeof REDIRECT_CONFIG;
   const config = REDIRECT_CONFIG[configKey];
 
   if (!config) {
@@ -51,12 +51,12 @@ export async function generateMetadata({ params }: Props): Promise<Metadata> {
 
 export function generateStaticParams() {
   return Object.keys(REDIRECT_CONFIG).map((key) => ({
-    invitation: key.replace(/^\//, ""),
+    username: key.replace(/^\//, ""),
   }));
 }
 
 export default function InvitationPage({ params }: Props) {
-  const configKey = `/${params.invitation}` as keyof typeof REDIRECT_CONFIG;
+  const configKey = `/${params.username}` as keyof typeof REDIRECT_CONFIG;
   const config = REDIRECT_CONFIG[configKey];
 
   if (!config) notFound();

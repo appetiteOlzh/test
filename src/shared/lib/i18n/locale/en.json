@@ -4,12 +4,16 @@
     "description": "Add from camera roll or any chat. Never miss a practice session. Rewatch. Take notes. Go deeper. Mark as done. Be proud of yourself."
   },
   "category_meta": {
-    "title": "The folder \"{folder}\" was shared with you",
-    "description": "The folder \"{folder}\" was shared with you in the Monclips Gallery app. Click the link to view the photos."
+    "title": "Monclips | Album \"{folder}\"",
+    "description": ""
+  },
+  "author_meta": {
+    "title": "Monclips | User albums {username}",
+    "description": ""
   },
   "post_meta": {
-    "title": "The post was shared with you",
-    "description": "The post was shared with you in the Monclips Gallery app. Click the link to view the photos."
+    "title": "The post has been shared with you",
+    "description": "The post was shared with you in the Monclips app"
   },
   "Hero": {
     "title": "Your Video <br />Gallery",
@@ -60,7 +64,11 @@
     "qr": "Scan the QR code to download </br>the MonClips app",
     "download_from_stores": "Download from app stores",
     "download_from_stores_extended_text": "Download the mobile app for an easy way to view and upload photos",
-    "no_qr": "Take advantage of all the features of the application"
+    "no_qr": "Take advantage of all the features of the application",
+    "copied": "Copied",
+    "share": "Share",
+    "connect": "Connect",
+    "date": "Date"
   },
   "footer": {
     "term": "Terms of use",
