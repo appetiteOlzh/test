@@ -8,13 +8,19 @@ export const Author: FC<{ author: CategoryProps["author"] }> = ({ author }) => {
   return (
     <div className="px-2.5 basis-full mb-6 md:mb-10 max-w-[570px]">
       <div className="flex flex-wrap flex-row items-center gap-4 md:gap-5">
-        <Image
-          src={author.avatar}
-          alt=""
-          width={100}
-          height={100}
-          className="rounded-full w-12 md:w-[100px] h-12 md:h-[100px]"
-        />
+        {author.avatar ? (
+          <Image
+            src={author.avatar}
+            alt={author.name}
+            width={100}
+            height={100}
+            className="rounded-full w-12 md:w-[100px] h-12 md:h-[100px]"
+          />
+        ) : (
+          <div className="rounded-full w-12 md:w-[100px] h-12 md:h-[100px] bg-gray-500 flex items-center justify-center text-white font-bold text-xl">
+            {author.name.slice(0, 2).toUpperCase()}
+          </div>
+        )}
         <div className="flex-1 min-w-0">
           <h4 className="text-xl font-bold mb-2.5 text-accent leading-none">
             {author.name}
