@@ -1,5 +1,3 @@
-import { use } from "react";
-import { useLocale } from "next-intl";
 import { Category, PostCardList, serializePost } from "@/widgets/sharing";
 import { getUser } from "@/shared/api/sharing";
 import { notFound } from "next/navigation";
@@ -80,7 +78,7 @@ export async function generateMetadata({ params }: Props): Promise<Metadata> {
 export default async function Sharing({ params }: Props) {
   const { slug, catId } = await params; // Разворачиваем Promise параметров через React.use()
 
-  let username = getCleanUsername(slug);
+  const username = getCleanUsername(slug);
   if (!username) return notFound();
 
   const locale = await getLocale();
