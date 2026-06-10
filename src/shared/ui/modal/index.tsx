@@ -10,6 +10,7 @@ import React, {
 import ReactDOM from "react-dom";
 import cn from "classnames";
 import s from "./style.module.css";
+import Image from "next/image";
 
 type ModalProps = {
   isOpen: boolean;
@@ -40,7 +41,7 @@ export const Modal: FC<ModalProps> = ({
 }) => {
   const [isVisible, setVisible] = useState(isOpen);
   const [portalContainer, setPortalContainer] = useState<HTMLElement | null>(
-    null
+    null,
   );
 
   const handleCloseClick: MouseEventHandler = (e) => {
@@ -120,11 +121,32 @@ export const Modal: FC<ModalProps> = ({
               type="button"
               onClick={handleCloseClick}
               className={cn(
-                "w-10 h-10 rounded-full bg-white bg-opacity-10 fixed top-3 right-3 z-10",
-                { absolute: isRestricted }
+                "w-10 h-10 fixed z-10 ",
+                { absolute: isRestricted },
+                {
+                  "top-3 right-3 rounded-full bg-white bg-opacity-10": !isMedia,
+                },
+                {
+                  "top-0 left-0 md:top-9 md:right-6 pt-3 pl-3 md:p-0 md:left-auto md:bg-white md:bg-opacity-10 md:rounded-full w-14 h-14":
+                    isMedia,
+                },
               )}
             >
-              ⨉
+              {isMedia ? (
+                <>
+                  <Image
+                    src="/assets/icons/back.svg"
+                    alt="close"
+                    width={24}
+                    height={24}
+                    unoptimized
+                    className="md:hidden"
+                  />
+                  <span className="md:block hidden">⨉</span>
+                </>
+              ) : (
+                "⨉"
+              )}
             </button>
           </div>
           <div className="modal-body">{children}</div>
