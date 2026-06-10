@@ -3,6 +3,7 @@ import { FC, useState } from "react";
 import { getAlbumList } from "@/shared/api/sharing";
 import InfiniteScroller from "../../infinite-scroller";
 import { AlbumCard } from "../album-card";
+import { useTranslations } from "next-intl";
 
 const POST_PER_PAGE = 20;
 
@@ -10,6 +11,7 @@ export const AlbumCardList: FC<{
   initialList: AlbumProps[];
   username: string;
 }> = ({ initialList, username }) => {
+  const t = useTranslations("Sharing");
   const [page, setPage] = useState(1);
   const [hasMore, setHasMore] = useState(initialList.length >= POST_PER_PAGE);
   const [albumList, setAlbumList] = useState(initialList);
@@ -36,8 +38,14 @@ export const AlbumCardList: FC<{
     }
   };
 
-  if (initialList.length < 1) return null;
-
+  if (initialList.length !== 0)
+    return (
+      <div className="pt-[10vh]">
+        <p className="text-sm text-center text-[#466765] font-medium">
+          {t("no_albums")}
+        </p>
+      </div>
+    );
   return (
     <>
       <InfiniteScroller hasMore={hasMore} loadMore={loadMorePosts}>
