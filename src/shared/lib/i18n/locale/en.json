@@ -68,7 +68,9 @@
     "copied": "Copied",
     "share": "Share",
     "connect": "Connect",
-    "date": "Date"
+    "date": "Date",
+    "no_about": "No description",
+    "no_albums": "No albums created yet"
   },
   "footer": {
     "term": "Terms of use",
