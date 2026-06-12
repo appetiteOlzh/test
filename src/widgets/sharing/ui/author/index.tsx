@@ -24,27 +24,27 @@ export const Author: FC<{ author: UserProps }> = ({ author }) => {
               fill="none"
               xmlns="http://www.w3.org/2000/svg"
             >
-              <g clip-path="url(#clip0_10729_73930)">
+              <g clipPath="url(#clip0_10729_73930)">
                 <path
                   d="M16.1583 17.0409C16.065 17.0276 15.945 17.0276 15.8383 17.0409C13.4917 16.9609 11.625 15.041 11.625 12.681C11.625 10.2676 13.5717 8.30762 15.9983 8.30762C18.4117 8.30762 20.3717 10.2676 20.3717 12.681C20.3583 15.041 18.505 16.9609 16.1583 17.0409Z"
                   stroke="#466765"
-                  stroke-width="2"
-                  stroke-linecap="round"
-                  stroke-linejoin="round"
+                  strokeWidth="2"
+                  strokeLinecap="round"
+                  strokeLinejoin="round"
                 />
                 <path
                   d="M24.9831 25.8411C22.6098 28.0144 19.4631 29.3344 15.9964 29.3344C12.5298 29.3344 9.3831 28.0144 7.00977 25.8411C7.1431 24.5877 7.9431 23.3611 9.36977 22.4011C13.0231 19.9744 18.9964 19.9744 22.6231 22.4011C24.0498 23.3611 24.8498 24.5877 24.9831 25.8411Z"
                   stroke="#466765"
-                  stroke-width="2"
-                  stroke-linecap="round"
-                  stroke-linejoin="round"
+                  strokeWidth="2"
+                  strokeLinecap="round"
+                  strokeLinejoin="round"
                 />
                 <path
                   d="M15.9993 29.3337C23.3631 29.3337 29.3327 23.3641 29.3327 16.0003C29.3327 8.63653 23.3631 2.66699 15.9993 2.66699C8.63555 2.66699 2.66602 8.63653 2.66602 16.0003C2.66602 23.3641 8.63555 29.3337 15.9993 29.3337Z"
                   stroke="#466765"
-                  stroke-width="2"
-                  stroke-linecap="round"
-                  stroke-linejoin="round"
+                  strokeWidth="2"
+                  strokeLinecap="round"
+                  strokeLinejoin="round"
                 />
               </g>
               <defs>
