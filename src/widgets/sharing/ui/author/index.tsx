@@ -1,7 +1,6 @@
 import Image from "next/image";
 import { FC } from "react";
 import { useTranslations } from "next-intl";
-import { ShareButton } from "@/features/share-button";
 
 export const Author: FC<{ author: UserProps }> = ({ author }) => {
   const t = useTranslations("Sharing");
