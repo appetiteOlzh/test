@@ -1,9 +1,16 @@
+"use client";
+
 import Image from "next/image";
-import { FC } from "react";
+import { FC, useMemo } from "react";
 import { useTranslations } from "next-intl";
 
 export const Author: FC<{ author: UserProps }> = ({ author }) => {
   const t = useTranslations("Sharing");
+  const isMobile = useMemo(() => {
+    if (typeof navigator === "undefined") return false;
+    return /Android|iPhone|iPad/i.test(navigator.userAgent);
+  }, []);
+
   return (
     <div className="px-2.5 basis-full mb-6 md:mb-10 w-[375px] max-w-full">
       <div className="flex flex-wrap flex-row gap-4">
@@ -56,15 +63,22 @@ export const Author: FC<{ author: UserProps }> = ({ author }) => {
           </div>
         )}
         <div className="flex-1 min-w-0 pt-3">
-          <h4 className="text-2xl font-bold mb-2 leading-none">
-            {author.name}
-          </h4>
-          <p className="text-xs text-[#999999] font-medium leading-normal mb-4">
+          <h4
+            className="text-2xl font-bold mb-2 leading-none"
+            dangerouslySetInnerHTML={{
+              __html: author.name.replace(/\s+/g, "<br/>"),
+            }}
+          />
+          <p className="text-sm text-[#999999] font-medium leading-normal mb-4">
             {author.about || t("no_about")}
           </p>
           <div className="flex w-full gap-1.5">
             {author.phone && (
-              <a href={`tel:${author.phone}`}>
+              <a
+                href={`tel:${author.phone}`}
+                target={isMobile ? "_blank" : "_self"}
+                rel="noopener noreferrer"
+              >
                 <Image
                   src="/assets/icons/social/phone.svg"
                   alt="Phone"
@@ -74,7 +88,11 @@ export const Author: FC<{ author: UserProps }> = ({ author }) => {
               </a>
             )}
             {author.whatsappPhone && (
-              <a href={`https://wa.me/${author.whatsappPhone}`}>
+              <a
+                href={`https://wa.me/${author.whatsappPhone}`}
+                target={isMobile ? "_blank" : "_self"}
+                rel="noopener noreferrer"
+              >
                 <Image
                   src="/assets/icons/social/wa.svg"
                   alt="WhatsApp"
@@ -84,7 +102,11 @@ export const Author: FC<{ author: UserProps }> = ({ author }) => {
               </a>
             )}
             {author.telegramAccount && (
-              <a href={`https://t.me/${author.telegramAccount}`}>
+              <a
+                href={`https://t.me/${author.telegramAccount}`}
+                target={isMobile ? "_blank" : "_self"}
+                rel="noopener noreferrer"
+              >
                 <Image
                   src="/assets/icons/social/tg.svg"
                   alt="Telegram"
@@ -94,7 +116,11 @@ export const Author: FC<{ author: UserProps }> = ({ author }) => {
               </a>
             )}
             {author.instagramLink && (
-              <a href={`https://www.instagram.com/${author.instagramLink}`}>
+              <a
+                href={`https://www.instagram.com/${author.instagramLink}`}
+                target={isMobile ? "_blank" : "_self"}
+                rel="noopener noreferrer"
+              >
                 <Image
                   src="/assets/icons/social/insta.svg"
                   alt="Instagram"
@@ -104,7 +130,11 @@ export const Author: FC<{ author: UserProps }> = ({ author }) => {
               </a>
             )}
             {author.tiktokLink && (
-              <a href={`https://www.tiktok.com/@${author.tiktokLink}`}>
+              <a
+                href={`https://www.tiktok.com/@${author.tiktokLink}`}
+                target={isMobile ? "_blank" : "_self"}
+                rel="noopener noreferrer"
+              >
                 <Image
                   src="/assets/icons/social/ttok.svg"
                   alt="TikTok"

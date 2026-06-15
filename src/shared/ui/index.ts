@@ -4,7 +4,7 @@ export {
   GoogleplayCustomButton,
   GoogleplayButton,
 } from "./button-apps";
-export { Loader } from "./loader";
+export { Loader, Loader2 } from "./loader";
 export * as FormUI from "./form";
 export { Modal } from "./modal";
 export * as CheckboxUI from "./checkbox";
