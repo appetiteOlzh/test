@@ -17,6 +17,8 @@ export const AlbumCardList: FC<{
   const [albumList, setAlbumList] = useState(initialList);
   const [isLoading, setIsLoading] = useState(false);
 
+  console.log(initialList);
+
   const loadMorePosts = async () => {
     if (isLoading || !hasMore) return;
 
@@ -38,7 +40,7 @@ export const AlbumCardList: FC<{
     }
   };
 
-  if (initialList.length !== 0)
+  if (initialList.length === 0)
     return (
       <div className="pt-[10vh]">
         <p className="text-sm text-center text-[#466765] font-medium">
