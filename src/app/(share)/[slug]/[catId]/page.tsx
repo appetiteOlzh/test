@@ -76,28 +76,23 @@ export async function generateMetadata({ params }: Props): Promise<Metadata> {
 // 2. КОМПОНЕНТ СТРАНИЦЫ ШЕРИНГА КАТЕГОРИИ
 // ==========================================
 export default async function Sharing({ params }: Props) {
+  const locale = await getLocale();
   const { slug, catId } = await params; // Разворачиваем Promise параметров через React.use()
 
   const username = getCleanUsername(slug);
   if (!username) return notFound();
 
-  const locale = await getLocale();
-  const author = await getUser(username);
+  const [author, category, rawPosts] = await Promise.all([
+    getUser(username),
+    getCategoryByNumberId(catId),
+    getPostListByUsernameAndCategoryId({ username, categoryId: catId }),
+  ]);
+
   if (isError(author) || !author) return notFound();
-
-  const category = await getCategoryByNumberId(catId);
   if (isError(category) || !category) return notFound();
+  if (isError(rawPosts)) return notFound();
 
-  const posts = await getPostListByUsernameAndCategoryId({
-    username,
-    categoryId: catId,
-  }).then((data) => {
-    return data.map((post) => serializePost({ post, locale }));
-  });
-
-  if (isError(posts)) {
-    return notFound();
-  }
+  const posts = rawPosts.map((post) => serializePost({ post, locale }));
 
   return (
     <main className="pt-8 md:pt-20 pb-14 md:pb-28">
