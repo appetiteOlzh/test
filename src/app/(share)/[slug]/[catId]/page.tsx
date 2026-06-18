@@ -31,8 +31,10 @@ export async function generateMetadata({ params }: Props): Promise<Metadata> {
     return { title: "Not Found", robots: { index: false, follow: false } };
   }
 
-  const t = await getTranslations("category_meta");
-  const category = await getCategoryByNumberId(catId);
+  const [t, category] = await Promise.all([
+    getTranslations("category_meta"),
+    getCategoryByNumberId(catId),
+  ]);
 
   if (!category) {
     return {
@@ -42,8 +44,8 @@ export async function generateMetadata({ params }: Props): Promise<Metadata> {
     };
   }
 
-  const canonicalUrl = `https://share.monclips.com/@${username}/${catId}`;
-  const fallbackOgImage = "https://share.monclips.com/assets/img/og-bg.png";
+  const canonicalUrl = `https://monclips.com/@${username}/${catId}`;
+  const fallbackOgImage = "https://monclips.com/assets/img/og-bg.png";
 
   return {
     title: t("title", { folder: category.title }),
