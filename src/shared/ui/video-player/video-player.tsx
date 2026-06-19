@@ -130,7 +130,7 @@ export const VideoPlayer = forwardRef<VideoPlayerRef, Props>(
           playsInline
           preload="metadata"
           onClick={togglePlay}
-          className="w-full h-full bg-contain bg-center bg-no-repeat"
+          className="w-full h-full bg-contain bg-center bg-no-repeat z-20 relative"
           style={{
             backgroundImage: `url(${previewUrl})`,
           }}
@@ -151,7 +151,7 @@ export const VideoPlayer = forwardRef<VideoPlayerRef, Props>(
             setIsMuted(muted);
           }}
         />
-        <div className="absolute bottom-6 left-0 w-full px-4">
+        <div className="absolute bottom-6 left-0 w-full px-4 z-20">
           <CustomControls
             currentTime={currentTime}
             duration={duration}

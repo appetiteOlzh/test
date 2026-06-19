@@ -64,12 +64,9 @@ export const Author: FC<{ author: UserProps }> = ({ author }) => {
         )}
         <div className="flex-1 min-w-0 pt-3">
           <h4
-            className="text-2xl font-bold mb-2 leading-none"
-            dangerouslySetInnerHTML={{
-              __html: author.name.replace(/\s+/g, "<br/>"),
-            }}
-          />
-          <p className="text-sm text-[#999999] font-medium leading-normal mb-4">
+            className="text-2xl font-bold mb-2 leading-none max-w-[260px]"
+          >{author.name}</h4>
+          <p className="text-sm text-[#999999] font-medium leading-normal mb-4 whitespace-pre-line">
             {author.about || t("no_about")}
           </p>
           <div className="flex w-full gap-1.5">
