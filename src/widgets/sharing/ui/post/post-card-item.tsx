@@ -42,7 +42,7 @@ export const PostCardItem: FC<PostCardProps> = ({
 
   return (
     <article
-      className={`rounded-lg md:rounded-xl relative bg-cover bg-center after:pb-[var(--asp)] after:block bg-white bg-opacity-5 cursor-pointer`}
+      className="rounded-2xl relative bg-cover bg-center after:pb-[var(--asp)] after:block bg-white bg-opacity-5 cursor-pointer"
       style={
         {
           backgroundImage: `url(${media.previewUrl})`,
@@ -78,14 +78,15 @@ export const PostCardItem: FC<PostCardProps> = ({
             height={48}
             className="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 pointer-events-none"
           />
-          <div className="absolute bottom-2 right-2 text-[10px] font-bold bg-black/80 px-1.5 rounded-2xl">
+          <div className="absolute bottom-1.5 right-1 text-[10px] font-bold px-1.5 rounded-2xl z-10">
             {normalizeDuration(media.duration)}
           </div>
+          <div className="absolute bottom-0 left-0 w-full h-7 bg-gradient-to-b from-[#1A1A1A]/0 to-[#1A1A1A]/80 pointer-events-none"></div>
         </>
       )}
       {count > 1 && (
-        <div className="min-w-5 bg-white absolute top-3 right-3 px-1 py-0.5 rounded text-center after:block after:absolute after:w-full after:h-full after:-top-1 after:left-1 after:rounded after:border-2 after:border-white pointer-events-none">
-          <p className="text-xs font-medium text-background">{count}</p>
+        <div className="absolute top-3 right-3 z-20 px-1.5 py-1 rounded-2xl bg-[#466765]/80 text-white text-[10px] font-semibold min-w-7 text-center pointer-events-none">
+          {count}
         </div>
       )}
     </article>

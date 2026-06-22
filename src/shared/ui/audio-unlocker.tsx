@@ -11,7 +11,6 @@ export const AudioUnlocker = () => {
         await audio.play();
         window.isAudioUnlocked = true;
         // После успешного клика убираем глобальные слушатели
-        console.log("Success");
 
         window.removeEventListener("click", unlock);
         window.removeEventListener("touchstart", unlock);

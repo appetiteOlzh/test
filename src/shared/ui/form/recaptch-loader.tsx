@@ -9,7 +9,7 @@ declare global {
       ready: (cb: () => void) => void;
       execute: (
         siteKey: string,
-        options: { action: string }
+        options: { action: string },
       ) => Promise<string>;
     };
   }
@@ -64,9 +64,8 @@ export function RecaptchaLoader({
             window.grecaptcha
               .execute(siteKey, { action: "submitForm" })
               .then((token) => {
-                console.log(token);
                 const tokenInput = document.getElementById(
-                  "recaptcha-token"
+                  "recaptcha-token",
                 ) as HTMLInputElement;
                 if (tokenInput) {
                   tokenInput.value = token;

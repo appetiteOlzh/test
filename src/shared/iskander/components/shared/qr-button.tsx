@@ -32,8 +32,6 @@ export function QrGlowButton({
   const [isOpen, setOpen] = useState(false);
 
   const onClick = (e: React.MouseEvent<HTMLAnchorElement>) => {
-    console.log(matchDevice(userAgent));
-
     if (matchDevice(userAgent).isWeb) {
       e.preventDefault();
       setHovered(false);

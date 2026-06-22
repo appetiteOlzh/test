@@ -36,7 +36,6 @@ export const Form: FC = () => {
     });
     const response = await res.json();
     setLoading(false);
-    console.log(response, response.ok);
 
     if (response.statusCode >= 200 && response.statusCode < 300) {
       reset();

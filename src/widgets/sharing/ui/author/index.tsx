@@ -63,85 +63,100 @@ export const Author: FC<{ author: UserProps }> = ({ author }) => {
           </div>
         )}
         <div className="flex-1 min-w-0 pt-3">
-          <h4
-            className="text-2xl font-bold mb-2 leading-none max-w-[260px]"
-          >{author.name}</h4>
+          <h4 className="text-2xl font-bold mb-2 leading-none max-w-[260px]">
+            {author.name}
+          </h4>
           <p className="text-sm text-[#999999] font-medium leading-normal mb-4 whitespace-pre-line">
             {author.about || t("no_about")}
           </p>
-          <div className="flex w-full gap-1.5">
-            {author.phone && (
-              <a
-                href={`tel:${author.phone}`}
-                target={isMobile ? "_blank" : "_self"}
-                rel="noopener noreferrer"
-              >
-                <Image
-                  src="/assets/icons/social/phone.svg"
-                  alt="Phone"
-                  width={40}
-                  height={40}
-                />
-              </a>
-            )}
-            {author.whatsappPhone && (
-              <a
-                href={`https://wa.me/${author.whatsappPhone}`}
-                target={isMobile ? "_blank" : "_self"}
-                rel="noopener noreferrer"
-              >
-                <Image
-                  src="/assets/icons/social/wa.svg"
-                  alt="WhatsApp"
-                  width={40}
-                  height={40}
-                />
-              </a>
-            )}
-            {author.telegramAccount && (
-              <a
-                href={`https://t.me/${author.telegramAccount}`}
-                target={isMobile ? "_blank" : "_self"}
-                rel="noopener noreferrer"
-              >
-                <Image
-                  src="/assets/icons/social/tg.svg"
-                  alt="Telegram"
-                  width={40}
-                  height={40}
-                />
-              </a>
-            )}
-            {author.instagramLink && (
-              <a
-                href={`https://www.instagram.com/${author.instagramLink}`}
-                target={isMobile ? "_blank" : "_self"}
-                rel="noopener noreferrer"
-              >
-                <Image
-                  src="/assets/icons/social/insta.svg"
-                  alt="Instagram"
-                  width={40}
-                  height={40}
-                />
-              </a>
-            )}
-            {author.tiktokLink && (
-              <a
-                href={`https://www.tiktok.com/@${author.tiktokLink}`}
-                target={isMobile ? "_blank" : "_self"}
-                rel="noopener noreferrer"
-              >
-                <Image
-                  src="/assets/icons/social/ttok.svg"
-                  alt="TikTok"
-                  width={40}
-                  height={40}
-                />
-              </a>
-            )}
-          </div>
         </div>
+      </div>
+      <div className="flex w-full gap-1.5">
+        <div className="flex-1 max-w-[110px]"></div>
+        {author.phone && (
+          <a
+            href={`tel:${author.phone}`}
+            target={!isMobile ? "_blank" : "_self"}
+            rel="noopener noreferrer"
+          >
+            <Image
+              src="/assets/icons/social/phone.svg"
+              alt="Phone"
+              width={32}
+              height={32}
+            />
+          </a>
+        )}
+        {author.whatsappPhone && (
+          <a
+            href={`https://wa.me/${author.whatsappPhone}`}
+            target={!isMobile ? "_blank" : "_self"}
+            rel="noopener noreferrer"
+          >
+            <Image
+              src="/assets/icons/social/wa.svg"
+              alt="WhatsApp"
+              width={32}
+              height={32}
+            />
+          </a>
+        )}
+        {author.telegramAccount && (
+          <a
+            href={`https://t.me/${author.telegramAccount}`}
+            target={!isMobile ? "_blank" : "_self"}
+            rel="noopener noreferrer"
+          >
+            <Image
+              src="/assets/icons/social/tg.svg"
+              alt="Telegram"
+              width={32}
+              height={32}
+            />
+          </a>
+        )}
+        {author.instagramLink && (
+          <a
+            href={author.instagramLink}
+            target={!isMobile ? "_blank" : "_self"}
+            rel="noopener noreferrer"
+          >
+            <Image
+              src="/assets/icons/social/insta.svg"
+              alt="Instagram"
+              width={32}
+              height={32}
+            />
+          </a>
+        )}
+        {author.tiktokLink && (
+          <a
+            href={author.tiktokLink}
+            target={!isMobile ? "_blank" : "_self"}
+            rel="noopener noreferrer"
+          >
+            <Image
+              src="/assets/icons/social/ttok.svg"
+              alt="TikTok"
+              width={32}
+              height={32}
+            />
+          </a>
+        )}
+        {author.youtubeLink && (
+          <a
+            href={author.youtubeLink}
+            target={!isMobile ? "_blank" : "_self"}
+            rel="noopener noreferrer"
+          >
+            <Image
+              src="/assets/icons/social/youtube.svg"
+              alt="YouTube"
+              width={32}
+              height={32}
+            />
+          </a>
+        )}
       </div>
     </div>
   );

@@ -1,5 +1,4 @@
 "use client";
-import Image from "next/image";
 import { FC, useState } from "react";
 import { useTranslations } from "next-intl";
 import { ShowMore } from "@re-dev/react-truncate";
@@ -19,16 +18,6 @@ export const PostItem: FC<{
 
   return (
     <div className="bg-dark md:rounded-[32px] md:p-9 max-h-dvh overflow-hidden md:overflow-auto basis-full relative">
-      <div className="absolute top-0 left-0 w-full h-28 z-10 pointer-events-none md:hidden">
-        <Image
-          src="/assets/img/overlay.png"
-          alt="overlay"
-          width={375}
-          height={110}
-          unoptimized
-          className="w-full h-full object-cover object-top"
-        />
-      </div>
       <MediaSlider
         mediaList={post.medias}
         isActive={isActive}
@@ -86,64 +75,64 @@ export const PostItem: FC<{
             )}
           </div>
         </div>
-        <DownloadButton url={post.medias[0].url} filename={post.createdAt} />
+        {/* <DownloadButton url={post.medias[0].url} filename={post.createdAt} /> */}
       </div>
     </div>
   );
 };
 
-type Props = {
-  url: string;
-  filename?: string;
-};
+// type Props = {
+//   url: string;
+//   filename?: string;
+// };
 
-export const DownloadButton = ({ url, filename = "file" }: Props) => {
-  const handleDownload = async () => {
-    try {
-      const response = await fetch(url, {
-        method: "GET",
-        mode: "cors", // Явно указываем CORS
-      });
+// export const DownloadButton = ({ url, filename = "file" }: Props) => {
+//   const handleDownload = async () => {
+//     try {
+//       const response = await fetch(url, {
+//         method: "GET",
+//         mode: "cors", // Явно указываем CORS
+//       });
 
-      if (!response.ok) throw new Error("Network response was not ok");
+//       if (!response.ok) throw new Error("Network response was not ok");
 
-      const blob = await response.blob();
-      const blobUrl = window.URL.createObjectURL(blob);
+//       const blob = await response.blob();
+//       const blobUrl = window.URL.createObjectURL(blob);
 
-      const link = document.createElement("a");
-      link.href = blobUrl;
-      link.download = filename;
+//       const link = document.createElement("a");
+//       link.href = blobUrl;
+//       link.download = filename;
 
-      // Важно для Safari: добавляем в DOM
-      document.body.appendChild(link);
+//       // Важно для Safari: добавляем в DOM
+//       document.body.appendChild(link);
 
-      link.click();
+//       link.click();
 
-      // Чистим память с небольшой задержкой
-      setTimeout(() => {
-        link.remove();
-        window.URL.revokeObjectURL(blobUrl);
-      }, 100);
-    } catch {
-      // Если CORS не настроен на CDN, fetch не сработает.
-      // Единственный вариант — открыть в новой вкладке.
-      window.open(url, "_blank");
-    }
-  };
+//       // Чистим память с небольшой задержкой
+//       setTimeout(() => {
+//         link.remove();
+//         window.URL.revokeObjectURL(blobUrl);
+//       }, 100);
+//     } catch {
+//       // Если CORS не настроен на CDN, fetch не сработает.
+//       // Единственный вариант — открыть в новой вкладке.
+//       window.open(url, "_blank");
+//     }
+//   };
 
-  return (
-    <button
-      className="absolute top-0 right-0 p-4 md:top-9 md:right-6 w-14 h-14 pointer-events-auto md:m-0 md:p-4 md:bg-white/20 rounded-full z-20"
-      onClick={handleDownload}
-    >
-      <Image
-        className="w-full h-full relative z-10"
-        src="/assets/icons/download.svg"
-        alt="download"
-        width={36}
-        height={36}
-        unoptimized
-      />
-    </button>
-  );
-};
+//   return (
+//     <button
+//       className="absolute top-0 right-0 p-4 md:top-9 md:right-6 w-14 h-14 pointer-events-auto md:m-0 md:p-4 md:bg-white/20 rounded-full z-20"
+//       onClick={handleDownload}
+//     >
+//       <Image
+//         className="w-full h-full relative z-10"
+//         src="/assets/icons/download.svg"
+//         alt="download"
+//         width={36}
+//         height={36}
+//         unoptimized
+//       />
+//     </button>
+//   );
+// };

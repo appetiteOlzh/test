@@ -23,8 +23,6 @@ class VideoPool {
 
   // 🧩 register
   register(id: string, el: HTMLVideoElement) {
-    console.log("reg", el);
-
     if (this.videos.has(id)) {
       this.unregister(id);
     }
@@ -43,8 +41,6 @@ class VideoPool {
 
   // 🧩 unregister
   unregister(id: string) {
-    console.log("unregister", this.videos.get(id)?.el);
-
     const entry = this.videos.get(id);
     if (!entry) return;
 
@@ -66,8 +62,6 @@ class VideoPool {
     stayMuted: boolean,
     callback?: (muted: boolean) => void,
   ) {
-    console.log("setActive");
-
     if (this.decoder.lastActiveId === id) {
       this.decoder.stayMuted = stayMuted;
       const entry = this.videos.get(id!);
@@ -109,13 +103,9 @@ class VideoPool {
     stayMuted: boolean,
     callback?: (muted: boolean) => void,
   ) {
-    console.log("activate");
-
     const video = entry.el;
 
     entry.state = "active";
-
-    console.log(!video.src, video.dataset.src);
 
     if (!video.src && video.dataset.src) {
       video.src = video.dataset.src;
@@ -132,8 +122,6 @@ class VideoPool {
     stayMuted: boolean,
     callback?: (muted: boolean) => void,
   ) => {
-    console.log("safePlay");
-
     try {
       // Wait until browser has enough data
       if (video.readyState < 2) {
@@ -292,8 +280,6 @@ class VideoPool {
 
   // 🧹 stop helper
   public stop(video: HTMLVideoElement) {
-    console.log("stop");
-
     video.pause();
 
     video.removeAttribute("src");

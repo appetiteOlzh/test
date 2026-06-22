@@ -10,4 +10,5 @@ type UserProps = {
   telegramAccount: string | null;
   instagramLink: string | null;
   tiktokLink: string | null;
+  youtubeLink: string | null;
 };

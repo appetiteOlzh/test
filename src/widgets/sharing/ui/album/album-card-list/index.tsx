@@ -17,8 +17,6 @@ export const AlbumCardList: FC<{
   const [albumList, setAlbumList] = useState(initialList);
   const [isLoading, setIsLoading] = useState(false);
 
-  console.log(initialList);
-
   const loadMorePosts = async () => {
     if (isLoading || !hasMore) return;
 
