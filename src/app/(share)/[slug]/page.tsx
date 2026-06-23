@@ -1,6 +1,5 @@
 import { Metadata } from "next";
 import { notFound } from "next/navigation";
-import { getTranslations } from "next-intl/server";
 
 // Импорты для Invitation (бывший статический роут)
 import { REDIRECT_CONFIG } from "@/shared/data";
@@ -29,7 +28,6 @@ export async function generateMetadata({ params }: Props): Promise<Metadata> {
   // КЕЙС А: Это профиль пользователя (начинается с @)
   if (decodedSlug.startsWith("@")) {
     const username = decodedSlug.replace("@", "");
-    const t = await getTranslations("author_meta");
     const user = await getUser(username);
 
     if (!user) {
@@ -40,21 +38,24 @@ export async function generateMetadata({ params }: Props): Promise<Metadata> {
     }
 
     return {
-      title: t("title", { username: user.username }),
-      alternates: { canonical: `https://share.monclips.com/@${username}` },
+      title: `@${user.username}`,
+      description: user.about,
+      alternates: { canonical: `https://monclips.com/@${username}` },
       openGraph: {
         type: "website",
         siteName: "Monclips",
-        url: `https://share.monclips.com/@${username}`,
-        images: [{ url: "https://share.monclips.com/assets/img/og-bg.png" }],
-        title: t("title", { username: user.username }),
+        url: `https://monclips.com/@${username}`,
+        images: [
+          { url: user.avatar || "https://monclips.com/assets/img/og-bg.png" },
+        ],
+        title: `@${user.username}`,
       },
       twitter: {
         card: "summary_large_image",
         site: "@monclips",
         creator: "@monclips",
-        images: "https://share.monclips.com/assets/img/og-bg.png",
-        title: t("title", { username: user.username }),
+        images: user.avatar || "https://monclips.com/assets/img/og-bg.png",
+        title: `@${user.username}`,
       },
       robots: { index: false, follow: false },
     };

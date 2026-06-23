@@ -12,9 +12,10 @@ export const AlbumCard: FC<AlbumProps & { username: string }> = ({
   return (
     <Link
       href={`/${username}/${id}`}
-      className="block aspect-[3/4] rounded-2xl relative overflow-hidden"
+      className="block aspect-[3/4] rounded-2xl relative overflow-hidden active:scale-95 transition-transform group"
       prefetch={false}
     >
+      <div className="absolute inset-0 bg-white opacity-0 group-hover:opacity-5 group-active:opacity-20 transition-opacity pointer-events-none z-30"></div>
       <div className="absolute bg-gradient-to-t from-[#1A1A1A] to-[#1A1A1A]/0 opacity-60 inset-0 pointer-events-none z-10"></div>
       {previewUrl ? (
         <Image
