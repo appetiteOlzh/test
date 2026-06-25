@@ -87,6 +87,21 @@ export const Author: FC<{ author: UserProps }> = ({ author }) => {
             />
           </a>
         )}
+        {author.email && (
+          <a
+            href={`mailto:${author.email}`}
+            target={!isMobile ? "_blank" : "_self"}
+            rel="noopener noreferrer"
+            className="p-1.5 rounded-full bg-[#fff]"
+          >
+            <Image
+              src="/assets/icons/social/gmail.svg"
+              alt="Gmail"
+              width={20}
+              height={20}
+            />
+          </a>
+        )}
         {author.whatsappPhone && (
           <a
             href={`https://wa.me/${author.whatsappPhone}`}

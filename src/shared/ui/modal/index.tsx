@@ -137,8 +137,8 @@ export const Modal: FC<ModalProps> = ({
                   <Image
                     src="/assets/icons/back.svg"
                     alt="close"
-                    width={24}
-                    height={24}
+                    width={28}
+                    height={28}
                     unoptimized
                     className="md:hidden"
                   />

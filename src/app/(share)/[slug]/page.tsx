@@ -38,26 +38,45 @@ export async function generateMetadata({ params }: Props): Promise<Metadata> {
     }
 
     return {
-      title: `@${user.username}`,
+      title: user.name,
       description: user.about,
       alternates: { canonical: `https://monclips.com/@${username}` },
       openGraph: {
-        type: "website",
+        type: "profile",
+        username: user.username,
         siteName: "Monclips",
         url: `https://monclips.com/@${username}`,
         images: [
           { url: user.avatar || "https://monclips.com/assets/img/og-bg.png" },
         ],
-        title: `@${user.username}`,
+        title: user.name,
       },
       twitter: {
         card: "summary_large_image",
         site: "@monclips",
         creator: "@monclips",
         images: user.avatar || "https://monclips.com/assets/img/og-bg.png",
-        title: `@${user.username}`,
+        title: user.name,
       },
       robots: { index: false, follow: false },
+      other: {
+        // Соцсети (из предыдущего шага)
+        ...(user.instagramLink && { "profile:instagram": user.instagramLink }),
+        ...(user.telegramAccount && {
+          "profile:telegram": user.telegramAccount,
+        }),
+        ...(user.youtubeLink && { "profile:youtube": user.youtubeLink }),
+        ...(user.tiktokLink && { "profile:tiktok": user.tiktokLink }),
+        ...(user.whatsappPhone && { "profile:whatsapp": user.whatsappPhone }),
+
+        // Телефон и Email (проверяем на существование, чтобы не спамить пустыми тегами)
+        ...(user.phone && { "og:phone_number": user.phone }),
+        ...(user.email && { "og:email": user.email }),
+
+        // Альтернативные стандартные теги (для некоторых парсеров)
+        ...(user.phone && { "contact:phone": user.phone }),
+        ...(user.email && { "contact:email": user.email }),
+      },
     };
   }
 

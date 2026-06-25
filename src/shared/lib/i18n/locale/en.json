@@ -70,7 +70,8 @@
     "connect": "Connect",
     "date": "Date",
     "no_about": "No description",
-    "no_albums": "No albums created yet"
+    "no_albums": "No albums created yet",
+    "empty_album": "Album is empty"
   },
   "footer": {
     "term": "Terms of use",

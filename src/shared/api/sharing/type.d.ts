@@ -11,4 +11,5 @@ type UserProps = {
   instagramLink: string | null;
   tiktokLink: string | null;
   youtubeLink: string | null;
+  email: string | null;
 };

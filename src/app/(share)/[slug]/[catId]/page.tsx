@@ -97,7 +97,7 @@ export default async function Sharing({ params }: Props) {
   const posts = rawPosts.map((post) => serializePost({ post, locale }));
 
   return (
-    <main className="pt-8 md:pt-20 pb-14 md:pb-28">
+    <main>
       <Category {...category}>
         <PostCardList initialList={posts} catId={catId} username={username} />
       </Category>

@@ -1,5 +1,5 @@
 "use client";
-import { useLocale } from "next-intl";
+import { useLocale, useTranslations } from "next-intl";
 import { FC, useRef, useState } from "react";
 import { SwiperRef } from "swiper/react";
 import Masonry from "react-masonry-css";
@@ -20,6 +20,7 @@ export const PostCardList: FC<{
   username?: string;
 }> = ({ initialList, catId, username }) => {
   const locale = useLocale();
+  const t = useTranslations("Sharing");
   const [page, setPage] = useState(1);
   const [hasMore, setHasMore] = useState(initialList.length >= POST_PER_PAGE);
   const [postList, setPostList] = useState(initialList);
@@ -64,7 +65,14 @@ export const PostCardList: FC<{
     }
   };
 
-  if (initialList.length < 1) return null;
+  if (initialList.length < 1)
+    return (
+      <div className="pt-[10vh]">
+        <p className="text-sm text-center text-[#466765] font-medium">
+          {t("empty_album")}
+        </p>
+      </div>
+    );
 
   const onEndReached = () => {
     loadMorePosts();
