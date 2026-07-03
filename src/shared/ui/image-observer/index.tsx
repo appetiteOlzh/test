@@ -17,7 +17,7 @@ export const ImageViewportObserver: FC<MediaProps> = ({
       width={width ?? 376}
       height={height ?? 670}
       alt="monclips gallery media"
-      className="md:w-[376px] w-full md:h-[670px] h-dvh m-auto object-contain "
+      className="md:w-[376px] w-full md:h-[670px] h-dvh m-auto object-contain relative z-10"
       loading="lazy"
       onContextMenu={(e) => e.preventDefault()}
       draggable={false}
