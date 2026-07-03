@@ -15,6 +15,7 @@ type PostModalProps = {
   onEndReached: () => void;
   modalIndex: number;
   onClose: () => void;
+  title: string;
 };
 
 export const PostModal: FC<PostModalProps> = ({
@@ -23,6 +24,7 @@ export const PostModal: FC<PostModalProps> = ({
   onEndReached,
   modalIndex,
   onClose,
+  title,
 }) => {
   const [activeIndex, setActiveIndex] = useState(modalIndex);
 
@@ -39,6 +41,7 @@ export const PostModal: FC<PostModalProps> = ({
       size="lg"
       isTransparent
       isMedia
+      title={title}
     >
       <Swiper
         direction="vertical"

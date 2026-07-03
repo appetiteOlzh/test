@@ -18,7 +18,8 @@ export const PostCardList: FC<{
   initialList: PostPropsWithAuthor[];
   catId: string;
   username?: string;
-}> = ({ initialList, catId, username }) => {
+  title: string;
+}> = ({ initialList, catId, username, title }) => {
   const locale = useLocale();
   const t = useTranslations("Sharing");
   const [page, setPage] = useState(1);
@@ -118,6 +119,7 @@ export const PostCardList: FC<{
         swiperRef={postModalSliderRef}
         modalIndex={modalIndex}
         onClose={() => setModalIndex(-1)}
+        title={title}
       />
     </>
   );

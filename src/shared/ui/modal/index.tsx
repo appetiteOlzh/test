@@ -21,6 +21,7 @@ type ModalProps = {
   isMedia?: boolean;
   isRestricted?: boolean;
   portalId?: string;
+  title?: string;
 };
 
 const modalOverlay = "fixed top-0 left-0 bottom-0 right-0 bg-black/60  z-50";
@@ -38,6 +39,7 @@ export const Modal: FC<ModalProps> = ({
   isMedia,
   isRestricted,
   portalId = "modal-root",
+  title,
 }) => {
   const [isVisible, setVisible] = useState(isOpen);
   const [portalContainer, setPortalContainer] = useState<HTMLElement | null>(
@@ -148,6 +150,11 @@ export const Modal: FC<ModalProps> = ({
                 "⨉"
               )}
             </button>
+            {title && (
+              <h2 className="font-secondary font-bold md:text-3xl text-xl leading-none flex-1 min-w-0 text-center absolute top-7 left-0 px-16 z-20 w-full md:hidden pointer-events-none whitespace-nowrap overflow-hidden text-ellipsis">
+                {title}
+              </h2>
+            )}
           </div>
           <div className="modal-body">{children}</div>
         </div>

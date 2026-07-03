@@ -99,7 +99,12 @@ export default async function Sharing({ params }: Props) {
   return (
     <main>
       <Category {...category}>
-        <PostCardList initialList={posts} catId={catId} username={username} />
+        <PostCardList
+          initialList={posts}
+          catId={catId}
+          username={username}
+          title={category.title}
+        />
       </Category>
     </main>
   );
