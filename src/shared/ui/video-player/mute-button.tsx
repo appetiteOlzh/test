@@ -52,7 +52,7 @@ export const MuteButton = ({
   return (
     <button
       onClick={toggleMute}
-      className="absolute md:top-6 top-2.5 md:right-4 right-1 z-50 flex h-12 w-12 items-center justify-center rounded-full md:bg-white/20 md:backdrop-blur-md transition-all md:hover:bg-white/40 active:scale-90"
+      className="absolute md:top-6 top-3.5 md:right-4 right-1 z-50 flex h-12 w-12 items-center justify-center rounded-full md:bg-white/20 md:backdrop-blur-md transition-all md:hover:bg-white/40 active:scale-90"
       aria-label={isMuted ? "Включить звук" : "Выключить звук"}
     >
       {isMuted ? (
