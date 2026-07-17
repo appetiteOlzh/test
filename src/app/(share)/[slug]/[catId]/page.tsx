@@ -13,10 +13,9 @@ type Props = {
 };
 
 // Вспомогательная функция для безопасного извлечения юзернейма
-const getCleanUsername = (slug: string): string | null => {
+const getCleanUsernameItem = (slug: string): string => {
   const decodedSlug = decodeURIComponent(slug);
-  if (!decodedSlug.startsWith("@")) return null;
-  return decodedSlug.replace("@", "");
+  return decodedSlug.startsWith("@") ? decodedSlug.slice(1) : decodedSlug;
 };
 
 // ==========================================
@@ -24,19 +23,19 @@ const getCleanUsername = (slug: string): string | null => {
 // ==========================================
 export async function generateMetadata({ params }: Props): Promise<Metadata> {
   const { slug, catId } = await params;
-  const username = getCleanUsername(slug);
+  const usernameItem = getCleanUsernameItem(slug);
 
-  // Если слаг не начинается с @, это не страница пользователя. Отдаем заглушку
-  if (!username) {
+  // Если слаг пустой, это не страница пользователя. Отдаем заглушку
+  if (!usernameItem) {
     return { title: "Not Found", robots: { index: false, follow: false } };
   }
 
-  const [t, category] = await Promise.all([
+  const [t, categoryItem] = await Promise.all([
     getTranslations("category_meta"),
     getCategoryByNumberId(catId),
   ]);
 
-  if (!category) {
+  if (!categoryItem) {
     return {
       title: "Not Found 404 | MonClips",
       description: "This category no longer exists.",
@@ -44,11 +43,11 @@ export async function generateMetadata({ params }: Props): Promise<Metadata> {
     };
   }
 
-  const canonicalUrl = `https://monclips.com/@${username}/${catId}`;
+  const canonicalUrl = `https://monclips.com/${usernameItem}/${catId}`;
   const fallbackOgImage = "https://monclips.com/assets/img/og-bg.png";
 
   return {
-    title: t("title", { folder: category.title }),
+    title: t("title", { folder: categoryItem.title }),
     alternates: {
       canonical: canonicalUrl,
     },
@@ -58,19 +57,19 @@ export async function generateMetadata({ params }: Props): Promise<Metadata> {
       url: canonicalUrl,
       images: [
         {
-          url: category.previewSquareUrl ?? fallbackOgImage,
+          url: categoryItem.previewSquareUrl ?? fallbackOgImage,
         },
       ],
-      title: t("title", { folder: category.title }),
+      title: t("title", { folder: categoryItem.title }),
     },
     twitter: {
       card: "summary_large_image",
       site: "@monclips",
       creator: "@monclips",
-      images: category.previewSquareUrl ?? fallbackOgImage,
-      title: t("title", { folder: category.title }),
+      images: categoryItem.previewSquareUrl ?? fallbackOgImage,
+      title: t("title", { folder: categoryItem.title }),
     },
-    robots: { index: category.isPublic, follow: category.isPublic },
+    robots: { index: categoryItem.isPublic, follow: categoryItem.isPublic },
   };
 }
 
@@ -81,29 +80,34 @@ export default async function Sharing({ params }: Props) {
   const locale = await getLocale();
   const { slug, catId } = await params; // Разворачиваем Promise параметров через React.use()
 
-  const username = getCleanUsername(slug);
-  if (!username) return notFound();
+  const usernameItem = getCleanUsernameItem(slug);
+  if (!usernameItem) return notFound();
 
-  const [author, category, rawPosts] = await Promise.all([
-    getUser(username),
+  const [authorItem, categoryItem, rawPostList] = await Promise.all([
+    getUser(usernameItem),
     getCategoryByNumberId(catId),
-    getPostListByUsernameAndCategoryId({ username, categoryId: catId }),
+    getPostListByUsernameAndCategoryId({
+      username: usernameItem,
+      categoryId: catId,
+    }),
   ]);
 
-  if (isError(author) || !author) return notFound();
-  if (isError(category) || !category) return notFound();
-  if (isError(rawPosts)) return notFound();
+  if (isError(authorItem) || !authorItem) return notFound();
+  if (isError(categoryItem) || !categoryItem) return notFound();
+  if (isError(rawPostList)) return notFound();
 
-  const posts = rawPosts.map((post) => serializePost({ post, locale }));
+  const postList = rawPostList.map((postItem) =>
+    serializePost({ post: postItem, locale }),
+  );
 
   return (
     <main>
-      <Category {...category}>
+      <Category {...categoryItem}>
         <PostCardList
-          initialList={posts}
+          initialList={postList}
           catId={catId}
-          username={username}
-          title={category.title}
+          username={usernameItem}
+          title={categoryItem.title}
         />
       </Category>
     </main>

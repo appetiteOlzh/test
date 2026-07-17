@@ -5,7 +5,7 @@ import Link from "next/link";
 export const Category: FC<CategoryProps & { children: ReactNode }> = ({
   title,
   children,
-  author,
+  author: authorItem,
 }) => {
   return (
     <div className="container mx-auto px-4">
@@ -13,7 +13,7 @@ export const Category: FC<CategoryProps & { children: ReactNode }> = ({
         <div className="basis-full min-w-0 px-2.5">
           <div className="flex flex-wrap items-center">
             <div className="basis-10">
-              <Link href={`/@${author.username}`}>
+              <Link href={`/${authorItem.username}`}>
                 <Image
                   src="/assets/icons/back.svg"
                   alt="Back"

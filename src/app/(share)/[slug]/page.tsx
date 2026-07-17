@@ -25,89 +25,91 @@ export async function generateMetadata({ params }: Props): Promise<Metadata> {
   const { slug } = await params;
   const decodedSlug = decodeURIComponent(slug);
 
-  // КЕЙС А: Это профиль пользователя (начинается с @)
-  if (decodedSlug.startsWith("@")) {
-    const username = decodedSlug.replace("@", "");
-    const user = await getUser(username);
+  // КЕЙС Б: Это инвитейшн (статический конфиг, без @)
+  const configKey = `/${decodedSlug}` as keyof typeof REDIRECT_CONFIG;
+  const configItem = REDIRECT_CONFIG[configKey];
 
-    if (!user) {
-      return {
-        title: "Not Found 404 | MonClips",
-        robots: { index: false, follow: false },
-      };
-    }
+  if (configItem) {
+    const { title, description } = configItem.meta;
 
     return {
-      title: user.name,
-      description: user.about,
-      alternates: { canonical: `https://monclips.com/@${username}` },
+      metadataBase: new URL("https://monclips.com"),
+      title,
+      description,
       openGraph: {
-        type: "profile",
-        username: user.username,
+        type: "website",
         siteName: "Monclips",
-        url: `https://monclips.com/@${username}`,
-        images: [
-          { url: user.avatar || "https://monclips.com/assets/img/og-bg.png" },
-        ],
-        title: user.name,
+        images: [{ url: "https://monclips.com/assets/img/og-bg.png" }],
+        description,
       },
       twitter: {
         card: "summary_large_image",
         site: "@monclips",
         creator: "@monclips",
-        images: user.avatar || "https://monclips.com/assets/img/og-bg.png",
-        title: user.name,
+        images: "https://monclips.com/assets/img/og-bg.png",
+        description,
       },
-      robots: { index: false, follow: false },
-      other: {
-        // Соцсети (из предыдущего шага)
-        ...(user.instagramLink && { "profile:instagram": user.instagramLink }),
-        ...(user.telegramAccount && {
-          "profile:telegram": user.telegramAccount,
-        }),
-        ...(user.youtubeLink && { "profile:youtube": user.youtubeLink }),
-        ...(user.tiktokLink && { "profile:tiktok": user.tiktokLink }),
-        ...(user.whatsappPhone && { "profile:whatsapp": user.whatsappPhone }),
-
-        // Телефон и Email (проверяем на существование, чтобы не спамить пустыми тегами)
-        ...(user.phone && { "og:phone_number": user.phone }),
-        ...(user.email && { "og:email": user.email }),
-
-        // Альтернативные стандартные теги (для некоторых парсеров)
-        ...(user.phone && { "contact:phone": user.phone }),
-        ...(user.email && { "contact:email": user.email }),
-      },
+      icons: { icon: "/favicon.ico" },
     };
   }
 
-  // КЕЙС Б: Это инвитейшн (статический конфиг, без @)
-  const configKey = `/${decodedSlug}` as keyof typeof REDIRECT_CONFIG;
-  const config = REDIRECT_CONFIG[configKey];
+  // КЕЙС А: Это профиль пользователя (без @ в начале)
+  const usernameItem = decodedSlug.startsWith("@")
+    ? decodedSlug.slice(1)
+    : decodedSlug;
+  const userItem = await getUser(usernameItem);
 
-  if (!config) {
-    return { title: "Not Found" };
+  if (!userItem) {
+    return {
+      title: "Not Found 404 | MonClips",
+      robots: { index: false, follow: false },
+    };
   }
 
-  const { title, description } = config.meta;
-
   return {
-    metadataBase: new URL("https://monclips.com"),
-    title,
-    description,
+    title: userItem.name,
+    description: userItem.about,
+    alternates: { canonical: `https://monclips.com/${usernameItem}` },
     openGraph: {
-      type: "website",
+      type: "profile",
+      username: userItem.username,
       siteName: "Monclips",
-      images: [{ url: "https://monclips.com/assets/img/og-bg.png" }],
-      description,
+      url: `https://monclips.com/${usernameItem}`,
+      images: [
+        { url: userItem.avatar || "https://monclips.com/assets/img/og-bg.png" },
+      ],
+      title: userItem.name,
     },
     twitter: {
       card: "summary_large_image",
       site: "@monclips",
       creator: "@monclips",
-      images: "https://monclips.com/assets/img/og-bg.png",
-      description,
+      images: userItem.avatar || "https://monclips.com/assets/img/og-bg.png",
+      title: userItem.name,
     },
-    icons: { icon: "/favicon.ico" },
+    robots: { index: false, follow: false },
+    other: {
+      // Соцсети (из предыдущего шага)
+      ...(userItem.instagramLink && {
+        "profile:instagram": userItem.instagramLink,
+      }),
+      ...(userItem.telegramAccount && {
+        "profile:telegram": userItem.telegramAccount,
+      }),
+      ...(userItem.youtubeLink && { "profile:youtube": userItem.youtubeLink }),
+      ...(userItem.tiktokLink && { "profile:tiktok": userItem.tiktokLink }),
+      ...(userItem.whatsappPhone && {
+        "profile:whatsapp": userItem.whatsappPhone,
+      }),
+
+      // Телефон и Email (проверяем на существование, чтобы не спамить пустыми тегами)
+      ...(userItem.phone && { "og:phone_number": userItem.phone }),
+      ...(userItem.email && { "og:email": userItem.email }),
+
+      // Альтернативные стандартные теги (для некоторых парсеров)
+      ...(userItem.phone && { "contact:phone": userItem.phone }),
+      ...(userItem.email && { "contact:email": userItem.email }),
+    },
   };
 }
 
@@ -127,49 +129,44 @@ export default async function DynamicSlugPage({ params }: Props) {
   const { slug } = await params; // Разворачиваем Promise через React.use()
   const decodedSlug = decodeURIComponent(slug);
 
-  // КЕЙС А: Рендерим профиль с альбомами (если есть @)
-  if (decodedSlug.startsWith("@")) {
-    const username = decodedSlug.replace("@", "");
-    const author = await getUser(username);
+  // КЕЙС Б: Рендерим инвитейшн (если есть в конфиге)
+  const configKey = `/${decodedSlug}` as keyof typeof REDIRECT_CONFIG;
+  const configItem = REDIRECT_CONFIG[configKey];
 
-    if (isError(author) || !author) {
-      return notFound();
-    }
-
-    const albumList = await getAlbumList({ username });
-
-    if (isError(albumList)) {
-      return notFound();
-    }
-
+  if (configItem) {
     return (
-      <main className="pt-8 md:pt-20 pb-14 md:pb-28">
-        <Album author={author}>
-          <AlbumCardList
-            initialList={albumList}
-            username={`@${author.username}`}
-          />
-        </Album>
-      </main>
+      <>
+        <Header />
+        <Hero
+          title={configItem.content.title}
+          description={configItem.content.description}
+        />
+        <Footer />
+      </>
     );
   }
 
-  // КЕЙС Б: Рендерим инвитейшн (если нет @)
-  const configKey = `/${decodedSlug}` as keyof typeof REDIRECT_CONFIG;
-  const config = REDIRECT_CONFIG[configKey];
+  // КЕЙС А: Рендерим профиль с альбомами (если нет инвитейшна)
+  const usernameItem = decodedSlug.startsWith("@")
+    ? decodedSlug.slice(1)
+    : decodedSlug;
+  const authorItem = await getUser(usernameItem);
 
-  if (!config) {
+  if (isError(authorItem) || !authorItem) {
+    return notFound();
+  }
+
+  const albumList = await getAlbumList({ username: usernameItem });
+
+  if (isError(albumList)) {
     return notFound();
   }
 
   return (
-    <>
-      <Header />
-      <Hero
-        title={config.content.title}
-        description={config.content.description}
-      />
-      <Footer />
-    </>
+    <main className="pt-8 md:pt-20 pb-14 md:pb-28">
+      <Album author={authorItem}>
+        <AlbumCardList initialList={albumList} username={authorItem.username} />
+      </Album>
+    </main>
   );
 }
