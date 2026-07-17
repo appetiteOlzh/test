@@ -67,7 +67,7 @@ export const VerticalScroll = () => {
         ))}
         {isMobile ? (
           <SwiperSlide className="h-full select-none">
-            <Post img="/assets/img/application/footer.png?v=1" />
+            <Post img="/assets/img/application/footer.png?v=3" />
             <div className="absolute top-0 bottom-0 left-0 right-0 flex flex-col content-end px-4 select-none">
               <div className="mt-auto mb-9">
                 <div className="text-center">
