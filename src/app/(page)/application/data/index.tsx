@@ -48,8 +48,8 @@ export const swiperData = [
     img: "/assets/img/application/post-6.png?v=11",
     title: (
       <>
-        Make it easier for <br />
-        brands to choose you
+        Make it easier <br />
+        for brands to choose you
       </>
     ),
   },
