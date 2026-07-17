@@ -1,30 +1,55 @@
 export const swiperData = [
   {
-    img: "/assets/img/application/post-1.png?v=no-cache",
-    title: "Your space for everything you love",
-  },
-  {
-    img: "/assets/img/application/post-2.png?v=no-cache",
-    title: "Add from camera roll or any chat",
-  },
-  {
-    img: "/assets/img/application/post-3.png?v=no-cache",
+    img: "/assets/img/application/post-1.png?v=11",
     title: (
       <>
-        Never miss <br />a practice session
+        Create your <br />
+        portfolio in minutes
       </>
     ),
   },
   {
-    img: "/assets/img/application/post-4.png?v=no-cache",
-    title: "Rewatch. Take notes. Go deeper.",
-  },
-  {
-    img: "/assets/img/application/post-5.png?v=no-cache",
+    img: "/assets/img/application/post-2.png?v=11",
     title: (
       <>
-        Mark as done. <br />
-        Be proud of yourself.
+        Add your bio, <br />
+        links and contacts
+      </>
+    ),
+  },
+  {
+    img: "/assets/img/application/post-3.png?v=11",
+    title: (
+      <>
+        Organize your <br />
+        work into albums
+      </>
+    ),
+  },
+  {
+    img: "/assets/img/application/post-4.png?v=11",
+    title: (
+      <>
+        Upload directly <br />
+        from your phone
+      </>
+    ),
+  },
+  {
+    img: "/assets/img/application/post-5.png?v=11",
+    title: (
+      <>
+        Share a portfolio <br />
+        that stands out
+      </>
+    ),
+  },
+  {
+    img: "/assets/img/application/post-6.png?v=11",
+    title: (
+      <>
+        Make it easier for <br />
+        brands to choose you
       </>
     ),
   },
