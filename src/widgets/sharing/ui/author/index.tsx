@@ -72,7 +72,7 @@ export const Author: FC<{ author: UserProps }> = ({ author }) => {
         </div>
       </div>
       <div className="flex w-full gap-1.5">
-        {/* <div className="flex-1 max-w-[110px]"></div> */}
+        <div className="flex-1 max-w-[110px]"></div>
         {author.phone && (
           <a
             href={`tel:${author.phone}`}
