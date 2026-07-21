@@ -50,13 +50,11 @@ export const REDIRECT_CONFIG = {
     },
     content: {
       title: "Create your portfolio in 5 minutes",
-      description:
-        "Right from your phone",
+      description: "Right from your phone",
     },
     meta: {
       title: "Create your portfolio in 5 minutes",
-      description:
-        "Create your portfolio in 5 minutes right from your phone.",
+      description: "Create your portfolio in 5 minutes right from your phone.",
     },
   },
   "/shumskiy": {
@@ -64,7 +62,7 @@ export const REDIRECT_CONFIG = {
       url: "https://play.google.com/store/apps/details?id=com.monclips&utm_source=shumskiy&utm_medium=cpa&utm_campaign=shumskiy",
       event: "shumskiy_googleplay",
     },
-    iOS{
+    iOS: {
       url: "https://apps.apple.com/app/apple-store/id6502268873?pt=127217049&ct=shumskiy&mt=8",
       event: "shumskiy_appstore",
     },
