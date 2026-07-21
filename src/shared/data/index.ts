@@ -49,14 +49,14 @@ export const REDIRECT_CONFIG = {
       event: "trynow_appstore",
     },
     content: {
-      title: "Scroll your camera roll like a TTok",
+      title: "Create your portfolio in 5 minutes",
       description:
-        "Delete what you don't need. <br/>Gallery cleanup - easy and simple",
+        "Right from your phone",
     },
     meta: {
-      title: "Scroll your camera roll like a TTok",
+      title: "Create your portfolio in 5 minutes",
       description:
-        "Delete what you don't need. Gallery cleanup - easy and simple",
+        "Create your portfolio in 5 minutes right from your phone.",
     },
   },
   "/shumskiy": {
@@ -64,7 +64,7 @@ export const REDIRECT_CONFIG = {
       url: "https://play.google.com/store/apps/details?id=com.monclips&utm_source=shumskiy&utm_medium=cpa&utm_campaign=shumskiy",
       event: "shumskiy_googleplay",
     },
-    iOS: {
+    iOS{
       url: "https://apps.apple.com/app/apple-store/id6502268873?pt=127217049&ct=shumskiy&mt=8",
       event: "shumskiy_appstore",
     },
