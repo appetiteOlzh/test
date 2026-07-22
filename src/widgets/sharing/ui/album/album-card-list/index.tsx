@@ -12,7 +12,7 @@ export const AlbumCardList: FC<{
   username: string;
 }> = ({ initialList, username }) => {
   const t = useTranslations("Sharing");
-  const [page, setPage] = useState(1);
+  const [page, setPage] = useState(0);
   const [hasMore, setHasMore] = useState(initialList.length >= POST_PER_PAGE);
   const [albumList, setAlbumList] = useState(initialList);
   const [isLoading, setIsLoading] = useState(false);
