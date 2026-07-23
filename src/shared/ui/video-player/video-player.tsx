@@ -11,6 +11,7 @@ import { videoPool } from "./video-controller";
 import { CustomControls } from "./custom-controller";
 import { MuteButton } from "./mute-button";
 import { useStayMuted } from "./stay-muted-provider";
+import { RubberBandZoom } from "../rubber-band-zoom";
 
 interface Props {
   id: number;
@@ -124,24 +125,26 @@ export const VideoPlayer = forwardRef<VideoPlayerRef, Props>(
 
     return (
       <>
-        <video
-          ref={videoRef}
-          src={src}
-          playsInline
-          preload="metadata"
-          onClick={togglePlay}
-          className="w-full h-full bg-contain bg-center bg-no-repeat z-20 relative"
-          style={{
-            backgroundImage: `url(${previewUrl})`,
-          }}
-          onEnded={(e) => {
-            e.currentTarget.currentTime = 0;
-            e.currentTarget.play().catch(() => {});
-          }}
-          disablePictureInPicture
-          controlsList="nodownload noplaybackrate"
-          muted={stayMuted}
-        />
+        <RubberBandZoom>
+          <video
+            ref={videoRef}
+            src={src}
+            playsInline
+            preload="metadata"
+            onClick={togglePlay}
+            className="w-full h-full bg-contain bg-center bg-no-repeat z-20 relative"
+            style={{
+              backgroundImage: `url(${previewUrl})`,
+            }}
+            onEnded={(e) => {
+              e.currentTarget.currentTime = 0;
+              e.currentTarget.play().catch(() => {});
+            }}
+            disablePictureInPicture
+            controlsList="nodownload noplaybackrate"
+            muted={stayMuted}
+          />
+        </RubberBandZoom>
 
         <MuteButton
           videoRef={videoRef}
@@ -166,7 +169,7 @@ export const VideoPlayer = forwardRef<VideoPlayerRef, Props>(
         </div>
       </>
     );
-  },
+  }
 );
 
 VideoPlayer.displayName = "VideoPlayer";

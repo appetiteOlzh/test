@@ -11,3 +11,4 @@ export * as CheckboxUI from "./checkbox";
 export { AccordionItem } from "./accordion";
 export { VideoPlayer } from "./video-player";
 export { ImageViewportObserver } from "./image-observer";
+export { RubberBandZoom } from "./rubber-band-zoom";

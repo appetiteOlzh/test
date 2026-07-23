@@ -29,7 +29,8 @@ export const MediaItem: FC<
           />
         </div>
         <ImageViewportObserver {...media} />
-        <div className="absolute left-1/2 top-1/2 -translate-x-1/2 -translate-y-1/2 w-16 h-16 text-yellow-darker">
+
+        <div className="absolute left-1/2 top-1/2 -translate-x-1/2 -translate-y-1/2 w-16 h-16 text-yellow-darker z-10">
           <Loader2 />
         </div>
       </div>
@@ -59,7 +60,7 @@ export const MediaItem: FC<
           }}
         />
 
-        <div className="absolute left-1/2 top-1/2 -translate-x-1/2 -translate-y-1/2 w-16 h-16 text-yellow-darker">
+        <div className="absolute left-1/2 top-1/2 -translate-x-1/2 -translate-y-1/2 w-16 h-16 text-yellow-darker z-10">
           <Loader2 />
         </div>
       </div>
